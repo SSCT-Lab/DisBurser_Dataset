@@ -1,0 +1,1181 @@
+10:03:31.153 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+10:03:31.389 [main] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@289fdb08[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:31.391 [main] DEBUG o.a.a.t.failover.FailoverTransport - Reconnect was triggered but transport is not started yet. Wait for start to connect the transport.
+10:03:31.496 [main] DEBUG o.a.a.t.failover.FailoverTransport - Started unconnected
+10:03:31.497 [main] DEBUG o.a.a.t.failover.FailoverTransport - Waking up reconnect task
+10:03:31.501 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.2:61616, tcp://10.2.0.3:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:31.539 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.2:61616
+10:03:31.549 [ActiveMQ Task-1] DEBUG o.a.a.transport.WireFormatNegotiator - Sending: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:03:31.553 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Connection established
+10:03:31.553 [ActiveMQ Task-1] INFO  o.a.a.t.failover.FailoverTransport - Successfully connected to tcp://10.2.0.2:61616
+10:03:31.630 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.transport.InactivityMonitor - Using min of local: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]} and remote: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:03:31.630 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.transport.WireFormatNegotiator - Received WireFormat: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:03:31.630 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.2:61616@39324 before negotiation: OpenWireFormat{version=12, cacheEnabled=false, stackTraceEnabled=false, tightEncodingEnabled=false, sizePrefixDisabled=false, maxFrameSize=9223372036854775807}
+10:03:31.630 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.2:61616@39324 after negotiation: OpenWireFormat{version=12, cacheEnabled=true, stackTraceEnabled=true, tightEncodingEnabled=true, sizePrefixDisabled=false, maxFrameSize=104857600}
+10:03:31.666 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+10:03:32.170 [qtp1173643169-16] INFO  io.redit.execution.EventService - Event E1 received!
+10:03:32.171 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+10:03:32.172 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+10:03:32.194 [qtp1173643169-14] INFO  io.redit.execution.EventService - Event E2 received!
+10:03:32.195 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+10:03:32.278 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:1
+10:03:32.283 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:2 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:1
+10:03:32.283 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:1 syncCount: 0
+10:03:32.283 [Thread-24] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Session Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@3b1f8575[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:32.316 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:2
+10:03:32.317 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:3:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:2:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:2:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:2, messageCount = 1, poisonCause = null}
+10:03:32.318 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:3 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:2
+10:03:32.318 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:2 syncCount: 1
+10:03:32.322 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:3:1, lastDeliveredSequenceId: 7
+10:03:32.325 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:3
+10:03:32.325 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:4 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:3
+10:03:32.326 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:3 syncCount: 0
+10:03:32.335 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:4
+10:03:32.335 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:5:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:4:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:4:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:4, messageCount = 1, poisonCause = null}
+10:03:32.335 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:5 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:4
+10:03:32.335 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:4 syncCount: 1
+10:03:32.338 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:5:1, lastDeliveredSequenceId: 12
+10:03:32.339 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:5
+10:03:32.339 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:6 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:5
+10:03:32.339 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:5 syncCount: 0
+10:03:32.347 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:6
+10:03:32.347 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:7:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:6:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:6:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:6, messageCount = 1, poisonCause = null}
+10:03:32.347 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:7 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:6
+10:03:32.347 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:6 syncCount: 1
+10:03:32.349 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:7:1, lastDeliveredSequenceId: 17
+10:03:32.351 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:7
+10:03:32.351 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:8 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:7
+10:03:32.351 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:7 syncCount: 0
+10:03:32.355 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:8
+10:03:32.356 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:9:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:8:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:8:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:8, messageCount = 1, poisonCause = null}
+10:03:32.356 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:9 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:8
+10:03:32.356 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:8 syncCount: 1
+10:03:32.358 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:9:1, lastDeliveredSequenceId: 22
+10:03:32.359 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:9
+10:03:32.360 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:10 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:9
+10:03:32.360 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:9 syncCount: 0
+10:03:32.381 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:10
+10:03:32.382 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:11:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:10:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:10:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:10, messageCount = 1, poisonCause = null}
+10:03:32.382 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:11 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:10
+10:03:32.382 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:10 syncCount: 1
+10:03:32.384 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:11:1, lastDeliveredSequenceId: 27
+10:03:32.387 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:11
+10:03:32.388 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:12 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:11
+10:03:32.390 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:11 syncCount: 0
+10:03:32.394 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:12
+10:03:32.394 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:13:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:12:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:12:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:12, messageCount = 1, poisonCause = null}
+10:03:32.394 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:13 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:12
+10:03:32.395 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:12 syncCount: 1
+10:03:32.406 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:13:1, lastDeliveredSequenceId: 32
+10:03:32.408 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:13
+10:03:32.408 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:14 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:13
+10:03:32.408 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:13 syncCount: 0
+10:03:32.428 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:14
+10:03:32.428 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:15:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:14:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:14:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:14, messageCount = 1, poisonCause = null}
+10:03:32.428 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:15 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:14
+10:03:32.428 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:14 syncCount: 1
+10:03:32.441 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:15:1, lastDeliveredSequenceId: 37
+10:03:32.449 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:15
+10:03:32.449 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:16 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:15
+10:03:32.449 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:15 syncCount: 0
+10:03:32.465 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:16
+10:03:32.465 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:17:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:16:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:16:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:16, messageCount = 1, poisonCause = null}
+10:03:32.466 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:17 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:16
+10:03:32.466 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:16 syncCount: 1
+10:03:32.473 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:17:1, lastDeliveredSequenceId: 42
+10:03:32.475 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:17
+10:03:32.475 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:18 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:17
+10:03:32.475 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:17 syncCount: 0
+10:03:32.493 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:18
+10:03:32.493 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:19:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:18:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:18:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:18, messageCount = 1, poisonCause = null}
+10:03:32.493 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:19 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:18
+10:03:32.493 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:18 syncCount: 1
+10:03:32.496 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:19:1, lastDeliveredSequenceId: 47
+10:03:32.497 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:19
+10:03:32.498 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:20 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:19
+10:03:32.498 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:19 syncCount: 0
+10:03:32.505 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:20
+10:03:32.505 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:21:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:20:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:20:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:20, messageCount = 1, poisonCause = null}
+10:03:32.505 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:21 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:20
+10:03:32.505 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:20 syncCount: 1
+10:03:32.506 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:21:1, lastDeliveredSequenceId: 52
+10:03:32.510 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:21
+10:03:32.510 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:22 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:21
+10:03:32.510 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:21 syncCount: 0
+10:03:32.515 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:22
+10:03:32.515 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:23:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:22:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:22:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:22, messageCount = 1, poisonCause = null}
+10:03:32.516 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:23 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:22
+10:03:32.516 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:22 syncCount: 1
+10:03:32.518 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:23:1, lastDeliveredSequenceId: 57
+10:03:32.519 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:23
+10:03:32.519 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:24 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:23
+10:03:32.520 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:23 syncCount: 0
+10:03:32.524 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:24
+10:03:32.524 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:25:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:24:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:24:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:24, messageCount = 1, poisonCause = null}
+10:03:32.524 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:25 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:24
+10:03:32.524 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:24 syncCount: 1
+10:03:32.527 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:25:1, lastDeliveredSequenceId: 62
+10:03:32.529 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:25
+10:03:32.529 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:26 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:25
+10:03:32.529 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:25 syncCount: 0
+10:03:32.532 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:26
+10:03:32.532 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:27:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:26:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:26:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:26, messageCount = 1, poisonCause = null}
+10:03:32.532 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:27 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:26
+10:03:32.532 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:26 syncCount: 1
+10:03:32.534 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:27:1, lastDeliveredSequenceId: 67
+10:03:32.536 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:27
+10:03:32.536 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:28 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:27
+10:03:32.536 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:27 syncCount: 0
+10:03:32.539 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:28
+10:03:32.539 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:29:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:28:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:28:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:28, messageCount = 1, poisonCause = null}
+10:03:32.539 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:29 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:28
+10:03:32.540 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:28 syncCount: 1
+10:03:32.542 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:29:1, lastDeliveredSequenceId: 72
+10:03:32.543 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:29
+10:03:32.543 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:30 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:29
+10:03:32.543 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:29 syncCount: 0
+10:03:32.547 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:30
+10:03:32.547 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:31:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:30:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:30:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:30, messageCount = 1, poisonCause = null}
+10:03:32.548 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:31 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:30
+10:03:32.548 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:30 syncCount: 1
+10:03:32.551 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:31:1, lastDeliveredSequenceId: 77
+10:03:32.552 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:31
+10:03:32.552 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:32 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:31
+10:03:32.552 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:31 syncCount: 0
+10:03:32.557 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:32
+10:03:32.557 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:33:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:32:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:32:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:32, messageCount = 1, poisonCause = null}
+10:03:32.557 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:33 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:32
+10:03:32.558 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:32 syncCount: 1
+10:03:32.560 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:33:1, lastDeliveredSequenceId: 82
+10:03:32.562 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:33
+10:03:32.565 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:34 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:33
+10:03:32.565 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:33 syncCount: 0
+10:03:32.570 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:34
+10:03:32.570 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:35:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:34:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:34:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:34, messageCount = 1, poisonCause = null}
+10:03:32.570 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:35 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:34
+10:03:32.571 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:34 syncCount: 1
+10:03:32.573 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:35:1, lastDeliveredSequenceId: 87
+10:03:32.574 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:35
+10:03:32.574 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:36 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:35
+10:03:32.575 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:35 syncCount: 0
+10:03:32.580 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:36
+10:03:32.580 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:37:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:36:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:36:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:36, messageCount = 1, poisonCause = null}
+10:03:32.580 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:37 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:36
+10:03:32.580 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:36 syncCount: 1
+10:03:32.584 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:37:1, lastDeliveredSequenceId: 92
+10:03:32.605 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:37
+10:03:32.605 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:38 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:37
+10:03:32.605 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:37 syncCount: 0
+10:03:32.630 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:38
+10:03:32.630 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:39:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:38:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:38:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:38, messageCount = 1, poisonCause = null}
+10:03:32.630 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:39 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:38
+10:03:32.630 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:38 syncCount: 1
+10:03:32.635 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:39:1, lastDeliveredSequenceId: 97
+10:03:32.637 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:39
+10:03:32.637 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:40 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:39
+10:03:32.637 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:39 syncCount: 0
+10:03:32.646 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:40
+10:03:32.647 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:41:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:40:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:40:1:1, destination = queue://otherQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:40, messageCount = 1, poisonCause = null}
+10:03:32.647 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:41 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:40
+10:03:32.647 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:40 syncCount: 1
+10:03:32.649 [main] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:41:1, lastDeliveredSequenceId: 102
+10:03:32.649 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+10:03:32.654 [qtp1173643169-14] INFO  io.redit.execution.EventService - Event E3 received!
+10:03:32.657 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+10:03:32.659 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Restarting node server1 ...
+10:03:43.188 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server1 is restarted!
+10:03:43.188 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Restarting node server2 ...
+10:03:51.631 [ActiveMQ InactivityMonitor WriteCheckTimer] DEBUG o.a.a.t.AbstractInactivityMonitor - WriteChecker: 10000ms elapsed since last write check.
+10:03:51.635 [ActiveMQ InactivityMonitor Worker] DEBUG o.a.a.t.AbstractInactivityMonitor - Running WriteCheck[tcp://10.2.0.2:61616]
+10:03:53.226 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.activemq.util.ThreadPoolUtils - Shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@7da4f9d7[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1] is shutdown: true and terminated: true took: 0.000 seconds.
+10:03:53.227 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp:///10.2.0.2:61616@39324
+10:03:53.227 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@2f350eb8[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:53.227 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[addr=/10.2.0.2,port=61616,localport=39324]
+10:03:53.228 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@2f350eb8[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+10:03:53.230 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] WARN  o.a.a.t.failover.FailoverTransport - Transport (tcp://10.2.0.2:61616) failed , attempting to automatically reconnect: {}
+java.io.EOFException: null
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:53.231 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.apache.activemq.ActiveMQConnection - transport interrupted - processing required, dispatchers: 1
+10:03:53.231 [ActiveMQ Transport: tcp:///10.2.0.2:61616@39324] DEBUG o.apache.activemq.ActiveMQConnection - notified failover transport (unconnected) of pending interruption processing for: ID:zmb-virtual-machine-41223-1672797811394-1:1
+10:03:53.237 [ActiveMQConnection[ID:zmb-virtual-machine-41223-1672797811394-1:1] Scheduler] DEBUG o.a.activemq.ActiveMQMessageConsumer - ID:zmb-virtual-machine-41223-1672797811394-1:1:1:1 clearing unconsumed list (0) on transport interrupt
+10:03:53.237 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:53.237 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 10 ms before attempting connection
+10:03:53.237 [ActiveMQConnection[ID:zmb-virtual-machine-41223-1672797811394-1:1] Scheduler] DEBUG o.apache.activemq.ActiveMQConnection - transportInterruptionProcessingComplete: 0 for:ID:zmb-virtual-machine-41223-1672797811394-1:1
+10:03:53.247 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.3:61616
+10:03:53.248 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:53.248 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:53.248 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@2d45333[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:53.250 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:53.250 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@2d45333[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:53.250 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.2:61616
+10:03:53.783 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 is restarted!
+10:03:54.277 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.277 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.277 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@82c3843[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.278 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.278 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@82c3843[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+10:03:54.279 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 20 ms before attempting connection
+10:03:54.279 [ActiveMQConnection[ID:zmb-virtual-machine-41223-1672797811394-1:1] Scheduler] DEBUG o.apache.activemq.ActiveMQConnection - notified failover transport (unconnected) of interruption completion for: ID:zmb-virtual-machine-41223-1672797811394-1:1
+10:03:54.299 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:54.299 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 1th connect to: tcp://10.2.0.3:61616
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@6dc3387f[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.300 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@6dc3387f[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 1th connect to: tcp://10.2.0.2:61616
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.300 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@15aeea4d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.307 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.307 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@15aeea4d[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.307 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 40 ms before attempting connection
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 2th connect to: tcp://10.2.0.3:61616
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@59759d72[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.348 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@59759d72[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.348 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 2th connect to: tcp://10.2.0.2:61616
+10:03:54.349 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.349 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.349 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@eaae24d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.349 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.349 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@eaae24d[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.349 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 80 ms before attempting connection
+10:03:54.430 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:54.430 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 3th connect to: tcp://10.2.0.3:61616
+10:03:54.430 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.430 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:54.430 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@5c248793[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.431 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@5c248793[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 3th connect to: tcp://10.2.0.2:61616
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@4db1a16f[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.431 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@4db1a16f[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.431 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 160 ms before attempting connection
+10:03:54.592 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:54.592 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 4th connect to: tcp://10.2.0.3:61616
+10:03:54.592 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.592 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:54.592 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@6441d43d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.592 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.593 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@6441d43d[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.593 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 4th connect to: tcp://10.2.0.2:61616
+10:03:54.593 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.593 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.593 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@34f27db1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.597 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.597 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@34f27db1[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.597 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 320 ms before attempting connection
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 5th connect to: tcp://10.2.0.3:61616
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@4c4afbbb[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.918 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@4c4afbbb[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:54.918 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 5th connect to: tcp://10.2.0.2:61616
+10:03:54.919 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:54.919 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:54.919 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@5fca3b5e[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:54.922 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:54.922 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@5fca3b5e[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+10:03:54.922 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 640 ms before attempting connection
+10:03:55.563 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:55.563 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 6th connect to: tcp://10.2.0.3:61616
+10:03:55.563 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:55.563 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:55.563 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@633ae3f8[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:55.564 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@633ae3f8[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 6th connect to: tcp://10.2.0.2:61616
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@49f7443d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:55.564 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@49f7443d[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:55.564 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 1280 ms before attempting connection
+10:03:55.783 [main] INFO  i.r.samples.activemq7337.SampleTest - server1 startServer...
+10:03:56.321 [main] INFO  i.r.samples.activemq7337.SampleTest - server2 startServer...
+10:03:56.845 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:56.845 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 7th connect to: tcp://10.2.0.3:61616
+10:03:56.846 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:56.846 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:56.846 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@76f45bd0[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:56.863 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:56.863 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@76f45bd0[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:56.863 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 7th connect to: tcp://10.2.0.2:61616
+10:03:56.863 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:56.863 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:56.863 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@4cd1a0b1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:56.870 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:56.871 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@4cd1a0b1[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:56.871 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 2560 ms before attempting connection
+10:03:59.431 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:03:59.431 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 8th connect to: tcp://10.2.0.3:61616
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.3:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.3:61616
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@14fd67b2[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:59.432 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@14fd67b2[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 8th connect to: tcp://10.2.0.2:61616
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connect fail to: tcp://10.2.0.2:61616, reason: {}
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:169)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.failover.FailoverTransport.doReconnect(FailoverTransport.java:1017)
+	at org.apache.activemq.transport.failover.FailoverTransport$2.iterate(FailoverTransport.java:148)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp://10.2.0.2:61616
+10:03:59.432 [ActiveMQ Task-2] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@737fa03a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+10:03:59.436 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[unconnected]
+10:03:59.437 [ActiveMQ Task-2] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@737fa03a[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+10:03:59.437 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 5120 ms before attempting connection
+10:04:02.571 [main] INFO  i.r.samples.activemq7337.SampleTest - server1 checkServer...
+10:04:02.977 [main] INFO  i.r.samples.activemq7337.SampleTest - server1: cd /activemq/activemq-5.15.9/mq1 && bin/activemq status
+10:04:02.977 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq1//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '63')
+
+10:04:03.086 [main] INFO  i.r.samples.activemq7337.SampleTest - server1: cd /activemq/activemq-5.15.9/mq2 && bin/activemq status
+10:04:03.086 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq2//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '113')
+
+10:04:03.215 [main] INFO  i.r.samples.activemq7337.SampleTest - server1: cd /activemq/activemq-5.15.9/mq3 && bin/activemq status
+10:04:03.215 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq3//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '166')
+
+10:04:03.215 [main] INFO  i.r.samples.activemq7337.SampleTest - server2 checkServer...
+10:04:03.345 [main] INFO  i.r.samples.activemq7337.SampleTest - server2: cd /activemq/activemq-5.15.9/mq1 && bin/activemq status
+10:04:03.345 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq1//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '52')
+
+10:04:03.476 [main] INFO  i.r.samples.activemq7337.SampleTest - server2: cd /activemq/activemq-5.15.9/mq2 && bin/activemq status
+10:04:03.476 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq2//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '102')
+
+10:04:03.608 [main] INFO  i.r.samples.activemq7337.SampleTest - server2: cd /activemq/activemq-5.15.9/mq3 && bin/activemq status
+10:04:03.608 [main] INFO  i.r.samples.activemq7337.SampleTest - INFO: Loading '/activemq/activemq-5.15.9/mq3//bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+ActiveMQ is running (pid '154')
+
+10:04:03.608 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X1 ...
+10:04:03.626 [qtp1173643169-13] INFO  io.redit.execution.EventService - Event X1 received!
+10:04:03.626 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E4 ...
+10:04:04.557 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+10:04:04.557 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 9th connect to: tcp://10.2.0.3:61616
+10:04:04.558 [ActiveMQ Task-2] DEBUG o.a.a.transport.WireFormatNegotiator - Sending: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:04:04.566 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.InactivityMonitor - Using min of local: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]} and remote: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:04:04.566 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.WireFormatNegotiator - Received WireFormat: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+10:04:04.566 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@47408 before negotiation: OpenWireFormat{version=12, cacheEnabled=false, stackTraceEnabled=false, tightEncodingEnabled=false, sizePrefixDisabled=false, maxFrameSize=9223372036854775807}
+10:04:04.566 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@47408 after negotiation: OpenWireFormat{version=12, cacheEnabled=true, stackTraceEnabled=true, tightEncodingEnabled=true, sizePrefixDisabled=false, maxFrameSize=104857600}
+10:04:04.567 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - conn: ID:zmb-virtual-machine-41223-1672797811394-1:1
+10:04:04.567 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - session: ID:zmb-virtual-machine-41223-1672797811394-1:1:-1
+10:04:04.567 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - consumer: ID:zmb-virtual-machine-41223-1672797811394-1:1:-1:1
+10:04:04.567 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - session: ID:zmb-virtual-machine-41223-1672797811394-1:1:1
+10:04:04.567 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - consumer: ID:zmb-virtual-machine-41223-1672797811394-1:1:1:1
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 10, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:1:1, destination = queue://mainQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 15, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:3:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 31, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:5:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 47, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:7:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 63, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:9:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 79, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:11:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 95, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:13:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 111, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:15:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 127, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:17:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 143, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:19:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 159, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:21:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 175, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:23:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 191, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:25:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 207, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:27:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 223, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:29:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.568 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 239, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:31:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 255, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:33:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 271, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:35:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 287, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:37:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 303, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:39:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - command: MessagePull {commandId = 319, responseRequired = false, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:41:1, destination = queue://otherQueue, timeout = 0}
+10:04:04.569 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connection established
+10:04:04.569 [ActiveMQ Task-2] INFO  o.a.a.t.failover.FailoverTransport - Successfully reconnected to tcp://10.2.0.3:61616
+10:04:04.579 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 1}}for command id: 1
+10:04:04.587 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 2}}for command id: 2
+10:04:04.595 [ActiveMQ Transport: tcp:///10.2.0.3:61616@47408] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 6}}for command id: 6
+10:04:04.603 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:3:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:3:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.604 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:5:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:5:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.604 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:7:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:7:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.606 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:9:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:9:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.611 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:11:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:11:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.613 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:13:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:13:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.613 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:15:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:15:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.615 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:17:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:17:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.616 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:19:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:19:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.618 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:21:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:21:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.619 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:23:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:23:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.620 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:25:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:25:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.633 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:27:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:27:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.633 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:29:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:29:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.636 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:31:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:31:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.642 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:33:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:33:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.644 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:35:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:35:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.645 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:37:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:37:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.647 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:39:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:39:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.648 [ActiveMQ Connection Executor: tcp://10.2.0.3:61616] DEBUG o.apache.activemq.ActiveMQConnection - Async exception with no exception listener: java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:41:1
+java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-41223-1672797811394-1:1:41:1
+	at org.apache.activemq.broker.region.AbstractRegion.messagePull(AbstractRegion.java:538)
+	at org.apache.activemq.broker.region.RegionBroker.messagePull(RegionBroker.java:496)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.BrokerFilter.messagePull(BrokerFilter.java:94)
+	at org.apache.activemq.broker.TransportConnection.processMessagePull(TransportConnection.java:596)
+	at org.apache.activemq.command.MessagePull.visit(MessagePull.java:49)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+10:04:04.651 [main] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:41
+10:04:04.651 [main] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:42 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:41
+10:04:04.651 [main] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:41 syncCount: 0
+10:04:04.666 [Thread-24] DEBUG o.apache.activemq.TransactionContext - Begin:TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:42
+10:04:04.666 [Thread-24] DEBUG o.a.activemq.ActiveMQMessageConsumer - ackLater: sending: MessageAck {commandId = 0, responseRequired = false, ackType = 0, consumerId = ID:zmb-virtual-machine-41223-1672797811394-1:1:1:1, firstMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:42:1:1, lastMessageId = ID:zmb-virtual-machine-41223-1672797811394-1:1:42:1:1, destination = queue://mainQueue, transactionId = TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:42, messageCount = 1, poisonCause = null}
+10:04:04.666 [Thread-24] DEBUG org.apache.activemq.ActiveMQSession - ID:zmb-virtual-machine-41223-1672797811394-1:1:1 Transaction Commit :TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:42
+10:04:04.666 [Thread-24] DEBUG o.apache.activemq.TransactionContext - Commit: TX:ID:zmb-virtual-machine-41223-1672797811394-1:1:42 syncCount: 1
+10:04:04.670 [Thread-24] DEBUG o.a.activemq.ActiveMQMessageConsumer - remove: ID:zmb-virtual-machine-41223-1672797811394-1:1:1:1, lastDeliveredSequenceId: 7
+messageReceived.get(): true
+10:04:04.670 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E4 ...
+10:04:04.674 [qtp1173643169-14] INFO  io.redit.execution.EventService - Event E4 received!
+10:04:04.675 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+10:04:04.675 [main] INFO  i.r.samples.activemq7337.SampleTest - completed !!!

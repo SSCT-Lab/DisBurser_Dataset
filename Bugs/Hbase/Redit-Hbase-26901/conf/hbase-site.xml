@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://mycluster/hbase</value>
+  </property>
+  <property>
+    <name>hbase.tmp.dir</name>
+    <value>./tmp</value>
+  </property>
+  <property>
+    <name>hbase.unsafe.stream.capability.enforce</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>/zookeeper/apache-zookeeper-3.7.1-bin/zkdata</value>
+  </property>
+
+  <property>
+    <name>hbase.bucketcache.ioengine</name>
+    <value>offheap</value>
+  </property>
+  <property>
+    <name>hbase.bucketcache.size</name>
+    <value>512</value>
+  </property>
+  <property>
+    <name>hbase.server.allocator.pool.enabled</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.server.allocator.buffer.size</name>
+    <value>5120</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.thread.compaction.small</name>
+    <value>10</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.thread.compaction.large</name>
+    <value>10</value>
+  </property>
+  <!--add zookeeper配置-->
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>10.2.0.7:2181,10.2.0.6:2181,10.2.0.13:2181</value>
+  </property>
+</configuration>

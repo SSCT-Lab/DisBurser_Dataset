@@ -1,0 +1,14 @@
+[2022-12-14 12:11:12,783][INFO ][node                     ] [node-2] version[1.4.0], pid[39], build[bc94bd8/2014-11-05T14:26:12Z]
+[2022-12-14 12:11:12,783][INFO ][node                     ] [node-2] initializing ...
+[2022-12-14 12:11:12,785][INFO ][plugins                  ] [node-2] loaded [], sites []
+[2022-12-14 12:11:13,806][INFO ][node                     ] [node-2] initialized
+[2022-12-14 12:11:13,806][INFO ][node                     ] [node-2] starting ...
+[2022-12-14 12:11:13,945][INFO ][transport                ] [node-2] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.2.0.2:9300]}
+[2022-12-14 12:11:13,954][INFO ][discovery                ] [node-2] es-clusters/9wCCp18vRLWtyuXfI7Kxtw
+[2022-12-14 12:11:16,992][INFO ][cluster.service          ] [node-2] detected_master [node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]], added {[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]],}, reason: zen-disco-receive(from master [[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]]])
+[2022-12-14 12:11:17,026][INFO ][http                     ] [node-2] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.2.0.2:9200]}
+[2022-12-14 12:11:17,026][INFO ][node                     ] [node-2] started
+[2022-12-14 12:11:19,203][INFO ][cluster.service          ] [node-2] added {[node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]],}, reason: zen-disco-receive(from master [[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]]])
+[2022-12-14 12:11:20,998][INFO ][discovery.zen            ] [node-2] master_left [[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]]], reason [no longer master]
+[2022-12-14 12:11:20,999][WARN ][discovery.zen            ] [node-2] master left (reason = no longer master), current nodes: {[node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]],[node-2][9wCCp18vRLWtyuXfI7Kxtw][server3][inet[/10.2.0.2:9300]],}
+[2022-12-14 12:11:20,999][INFO ][cluster.service          ] [node-2] removed {[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]],}, reason: zen-disco-master_failed ([node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]])

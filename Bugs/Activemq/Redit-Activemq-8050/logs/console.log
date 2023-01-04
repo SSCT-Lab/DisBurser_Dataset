@@ -1,0 +1,222 @@
+17:40:37.690 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+17:40:37.861 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+17:40:38.775 [qtp1702660825-13] INFO  io.redit.execution.EventService - Event E1 received!
+17:40:38.775 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+17:40:38.793 [main] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@610df783[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+17:40:38.794 [main] DEBUG o.a.a.t.failover.FailoverTransport - Reconnect was triggered but transport is not started yet. Wait for start to connect the transport.
+17:40:38.910 [main] DEBUG o.a.a.t.failover.FailoverTransport - Started unconnected
+17:40:38.910 [main] DEBUG o.a.a.t.failover.FailoverTransport - Waking up reconnect task
+17:40:38.922 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+17:40:38.997 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.3:61616
+17:40:39.029 [ActiveMQ Task-1] DEBUG o.a.a.transport.WireFormatNegotiator - Sending: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.037 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Connection established
+17:40:39.037 [ActiveMQ Task-1] INFO  o.a.a.t.failover.FailoverTransport - Successfully connected to tcp://10.2.0.3:61616
+17:40:39.057 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43402] DEBUG o.a.a.transport.InactivityMonitor - Using min of local: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]} and remote: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.064 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43402] DEBUG o.a.a.transport.WireFormatNegotiator - Received WireFormat: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.064 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43402] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@43402 before negotiation: OpenWireFormat{version=12, cacheEnabled=false, stackTraceEnabled=false, tightEncodingEnabled=false, sizePrefixDisabled=false, maxFrameSize=9223372036854775807}
+17:40:39.064 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43402] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@43402 after negotiation: OpenWireFormat{version=12, cacheEnabled=true, stackTraceEnabled=true, tightEncodingEnabled=true, sizePrefixDisabled=false, maxFrameSize=104857600}
+17:40:39.090 [main] DEBUG o.apache.activemq.TransactionContext - Start: io.redit.samples.activemq8050.SampleTest$1@5c10285a, flags: TMNOFLAGS
+17:40:39.097 [main] DEBUG o.apache.activemq.TransactionContext - TransactionContext{transactionId=XID:[86,globalId=001ffffff857c277633,branchId=001ffffff857c277633],connection=ActiveMQConnection {id=ID:zmb-virtual-machine-37199-1672825238806-1:1,clientId=PRODUCER,started=true}} started XA transaction XID:[86,globalId=001ffffff857c277633,branchId=001ffffff857c277633]
+17:40:39.150 [main] DEBUG o.apache.activemq.TransactionContext - End: io.redit.samples.activemq8050.SampleTest$1@5c10285a, flags: TMSUCCESS
+17:40:39.151 [main] DEBUG o.apache.activemq.TransactionContext - TransactionContext{transactionId=XID:[86,globalId=001ffffff857c277633,branchId=001ffffff857c277633],connection=ActiveMQConnection {id=ID:zmb-virtual-machine-37199-1672825238806-1:1,clientId=PRODUCER,started=true}} ended XA transaction XID:[86,globalId=001ffffff857c277633,branchId=001ffffff857c277633]
+17:40:39.151 [main] DEBUG o.apache.activemq.TransactionContext - Prepare: io.redit.samples.activemq8050.SampleTest$1@5c10285a
+17:40:39.154 [main] DEBUG o.apache.activemq.TransactionContext - Commit: io.redit.samples.activemq8050.SampleTest$1@5c10285a, onePhase=false
+17:40:39.157 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+17:40:39.167 [qtp1702660825-16] INFO  io.redit.execution.EventService - Event E2 received!
+17:40:39.169 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+17:40:39.170 [main] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@7ea08277[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+17:40:39.171 [main] DEBUG o.a.a.t.failover.FailoverTransport - Reconnect was triggered but transport is not started yet. Wait for start to connect the transport.
+17:40:39.171 [main] DEBUG o.a.a.t.failover.FailoverTransport - Started unconnected
+17:40:39.171 [main] DEBUG o.a.a.t.failover.FailoverTransport - Waking up reconnect task
+17:40:39.171 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.3:61616, tcp://10.2.0.2:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+17:40:39.171 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.3:61616
+17:40:39.172 [ActiveMQ Task-1] DEBUG o.a.a.transport.WireFormatNegotiator - Sending: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.172 [ActiveMQ Task-1] DEBUG o.a.a.t.failover.FailoverTransport - Connection established
+17:40:39.172 [ActiveMQ Task-1] INFO  o.a.a.t.failover.FailoverTransport - Successfully connected to tcp://10.2.0.3:61616
+17:40:39.179 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43406] DEBUG o.a.a.transport.InactivityMonitor - Using min of local: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]} and remote: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.179 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43406] DEBUG o.a.a.transport.WireFormatNegotiator - Received WireFormat: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.179 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43406] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@43406 before negotiation: OpenWireFormat{version=12, cacheEnabled=false, stackTraceEnabled=false, tightEncodingEnabled=false, sizePrefixDisabled=false, maxFrameSize=9223372036854775807}
+17:40:39.179 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43406] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.3:61616@43406 after negotiation: OpenWireFormat{version=12, cacheEnabled=true, stackTraceEnabled=true, tightEncodingEnabled=true, sizePrefixDisabled=false, maxFrameSize=104857600}
+17:40:39.200 [ActiveMQ Transport: tcp:///10.2.0.3:61616@43406] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Session Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@430ef825[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+17:40:39.207 [main] DEBUG o.apache.activemq.TransactionContext - Start: io.redit.samples.activemq8050.SampleTest$1@30501e60, flags: TMNOFLAGS
+17:40:39.207 [main] DEBUG o.apache.activemq.TransactionContext - TransactionContext{transactionId=XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8],connection=ActiveMQConnection {id=ID:zmb-virtual-machine-37199-1672825238806-1:2,clientId=CONSUMER,started=true}} started XA transaction XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]
+17:40:39.216 [main] INFO  i.r.samples.activemq8050.SampleTest - Found message
+17:40:39.216 [main] DEBUG o.apache.activemq.TransactionContext - End: io.redit.samples.activemq8050.SampleTest$1@30501e60, flags: TMSUCCESS
+17:40:39.228 [main] DEBUG o.apache.activemq.TransactionContext - TransactionContext{transactionId=XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8],connection=ActiveMQConnection {id=ID:zmb-virtual-machine-37199-1672825238806-1:2,clientId=CONSUMER,started=true}} ended XA transaction XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]
+17:40:39.228 [main] DEBUG o.apache.activemq.TransactionContext - Prepare: io.redit.samples.activemq8050.SampleTest$1@30501e60
+17:40:39.241 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+17:40:39.257 [qtp1702660825-16] INFO  io.redit.execution.EventService - Event E3 received!
+17:40:39.257 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+17:40:39.272 [main] INFO  i.r.samples.activemq8050.SampleTest - Simulating dropped connection ...
+17:40:39.273 [main] DEBUG o.a.a.transport.tcp.TcpTransport - Stopping transport tcp:///10.2.0.3:61616@43406
+17:40:39.273 [main] DEBUG o.a.a.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@6ac0b715[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+17:40:39.277 [ActiveMQ Task-1] DEBUG o.a.a.transport.tcp.TcpTransport - Closed socket Socket[addr=/10.2.0.3,port=61616,localport=43406]
+17:40:39.278 [main] DEBUG o.a.activemq.util.ThreadPoolUtils - Forcing shutdown of ExecutorService: java.util.concurrent.ThreadPoolExecutor@6ac0b715[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+17:40:39.288 [main] WARN  o.a.a.t.failover.FailoverTransport - Transport (tcp://10.2.0.3:61616) failed , attempting to automatically reconnect: {}
+java.io.IOException: Fake fail
+	at io.redit.samples.activemq8050.SampleTest.lambda$testFailoverWithExceptionProgrammaticBrokers$4(SampleTest.java:117)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:317)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:300)
+	at io.redit.samples.activemq8050.SampleTest.testFailoverWithExceptionProgrammaticBrokers(SampleTest.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+17:40:39.302 [main] DEBUG o.apache.activemq.ActiveMQConnection - transport interrupted - processing required, dispatchers: 1
+17:40:39.302 [main] DEBUG o.apache.activemq.ActiveMQConnection - notified failover transport (unconnected) of pending interruption processing for: ID:zmb-virtual-machine-37199-1672825238806-1:2
+17:40:39.303 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - urlList connectionList:[tcp://10.2.0.2:61616, tcp://10.2.0.3:61616], from: [tcp://10.2.0.3:61616, tcp://10.2.0.2:61616]
+17:40:39.303 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Waiting 10 ms before attempting connection
+17:40:39.315 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Attempting 0th connect to: tcp://10.2.0.2:61616
+17:40:39.316 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.a.activemq.ActiveMQMessageConsumer - ID:zmb-virtual-machine-37199-1672825238806-1:2:1:1 clearing unconsumed list (0) on transport interrupt
+17:40:39.316 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.apache.activemq.ActiveMQConnection - transportInterruptionProcessingComplete: 0 for:ID:zmb-virtual-machine-37199-1672825238806-1:2
+17:40:39.317 [ActiveMQ Task-2] DEBUG o.a.a.transport.WireFormatNegotiator - Sending: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.326 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.InactivityMonitor - Using min of local: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=9223372036854775807, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]} and remote: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.326 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.WireFormatNegotiator - Received WireFormat: WireFormatInfo { version=12, properties={TcpNoDelayEnabled=true, SizePrefixDisabled=false, CacheSize=1024, ProviderName=ActiveMQ, StackTraceEnabled=true, PlatformDetails=Java, CacheEnabled=true, TightEncodingEnabled=true, MaxFrameSize=104857600, MaxInactivityDuration=30000, MaxInactivityDurationInitalDelay=10000, ProviderVersion=5.15.9}, magic=[A,c,t,i,v,e,M,Q]}
+17:40:39.326 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.2:61616@37330 before negotiation: OpenWireFormat{version=12, cacheEnabled=false, stackTraceEnabled=false, tightEncodingEnabled=false, sizePrefixDisabled=false, maxFrameSize=9223372036854775807}
+17:40:39.326 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.WireFormatNegotiator - tcp:///10.2.0.2:61616@37330 after negotiation: OpenWireFormat{version=12, cacheEnabled=true, stackTraceEnabled=true, tightEncodingEnabled=true, sizePrefixDisabled=false, maxFrameSize=104857600}
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - conn: ID:zmb-virtual-machine-37199-1672825238806-1:2
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - session: ID:zmb-virtual-machine-37199-1672825238806-1:2:1
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - restore consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:1:1 in pull mode pending recovery, overriding prefetch: 1000
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:1:1
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - session: ID:zmb-virtual-machine-37199-1672825238806-1:2:-1
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - restore consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:-1:1 in pull mode pending recovery, overriding prefetch: 1000
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:-1:1
+17:40:39.327 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - tx: XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]
+17:40:39.328 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - tx replay: TransactionInfo {commandId = 5, responseRequired = false, type = 0, connectionId = ID:zmb-virtual-machine-37199-1672825238806-1:2, transactionId = XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]}
+17:40:39.328 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - tx replay: TransactionInfo {commandId = 7, responseRequired = true, type = 7, connectionId = ID:zmb-virtual-machine-37199-1672825238806-1:2, transactionId = XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]}
+17:40:39.328 [ActiveMQ Task-2] DEBUG o.a.a.state.ConnectionStateTracker - tx replay: TransactionInfo {commandId = 8, responseRequired = true, type = 1, connectionId = ID:zmb-virtual-machine-37199-1672825238806-1:2, transactionId = XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]}
+17:40:39.328 [ActiveMQ Task-2] DEBUG o.a.a.t.failover.FailoverTransport - Connection established
+17:40:39.328 [ActiveMQ Task-2] INFO  o.a.a.t.failover.FailoverTransport - Successfully reconnected to tcp://10.2.0.2:61616
+17:40:39.330 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.a.a.state.ConnectionStateTracker - restored recovering consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:-1:1 with: 1000
+17:40:39.333 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.a.a.state.ConnectionStateTracker - restored recovering consumer: ID:zmb-virtual-machine-37199-1672825238806-1:2:1:1 with: 1000
+17:40:39.333 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.apache.activemq.ActiveMQConnection - notified failover transport (tcp://10.2.0.2:61616) of interruption completion for: ID:zmb-virtual-machine-37199-1672825238806-1:2
+17:40:39.333 [ActiveMQConnection[ID:zmb-virtual-machine-37199-1672825238806-1:2] Scheduler] DEBUG o.a.activemq.ActiveMQMessageConsumer - ID:zmb-virtual-machine-37199-1672825238806-1:2:1:1 tracking existing transacted null delivered list (1) on transport interrupt
+17:40:39.351 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 1}}for command id: 1
+17:40:39.352 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 4}}for command id: 4
+17:40:39.354 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 2}}for command id: 2
+17:40:39.364 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {Response {commandId = 0, responseRequired = false, correlationId = 7}}for command id: 7
+17:40:39.364 [ActiveMQ Transport: tcp:///10.2.0.2:61616@37330] DEBUG o.a.a.transport.ResponseCorrelator - Received unexpected response: {IntegerResponse {commandId = 0, responseRequired = false, correlationId = 8, result = 3}}for command id: 8
+17:40:39.459 [main] DEBUG o.apache.activemq.TransactionContext - Commit: io.redit.samples.activemq8050.SampleTest$1@30501e60, onePhase=false
+17:40:39.462 [main] WARN  o.apache.activemq.TransactionContext - commit of: XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8] failed with: javax.jms.JMSException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+javax.jms.JMSException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:54)
+	at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1403)
+	at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1436)
+	at org.apache.activemq.TransactionContext.commit(TransactionContext.java:585)
+	at io.redit.samples.activemq8050.SampleTest.lambda$testFailoverWithExceptionProgrammaticBrokers$4(SampleTest.java:122)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:317)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:300)
+	at io.redit.samples.activemq8050.SampleTest.testFailoverWithExceptionProgrammaticBrokers(SampleTest.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: javax.transaction.xa.XAException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+	at org.apache.activemq.transaction.Transaction.newXAException(Transaction.java:213)
+	at org.apache.activemq.broker.TransactionBroker.getTransaction(TransactionBroker.java:351)
+	at org.apache.activemq.broker.TransactionBroker.commitTransaction(TransactionBroker.java:251)
+	at org.apache.activemq.broker.BrokerFilter.commitTransaction(BrokerFilter.java:114)
+	at org.apache.activemq.broker.TransportConnection.processCommitTransactionTwoPhase(TransportConnection.java:544)
+	at org.apache.activemq.command.TransactionInfo.visit(TransactionInfo.java:102)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+
+java.lang.RuntimeException: javax.transaction.xa.XAException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+
+	at io.redit.samples.activemq8050.SampleTest.lambda$testFailoverWithExceptionProgrammaticBrokers$4(SampleTest.java:124)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:317)
+	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:300)
+	at io.redit.samples.activemq8050.SampleTest.testFailoverWithExceptionProgrammaticBrokers(SampleTest.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: javax.transaction.xa.XAException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+	at org.apache.activemq.TransactionContext.toXAException(TransactionContext.java:793)
+	at org.apache.activemq.TransactionContext.commit(TransactionContext.java:622)
+	at io.redit.samples.activemq8050.SampleTest.lambda$testFailoverWithExceptionProgrammaticBrokers$4(SampleTest.java:122)
+	... 27 more
+Caused by: javax.transaction.xa.XAException: Transaction 'XID:[86,globalId=001ffffff857c2776ffffffa8,branchId=001ffffff857c2776ffffffa8]' has not been started. xaErrorCode:-4
+	at org.apache.activemq.transaction.Transaction.newXAException(Transaction.java:213)
+	at org.apache.activemq.broker.TransactionBroker.getTransaction(TransactionBroker.java:351)
+	at org.apache.activemq.broker.TransactionBroker.commitTransaction(TransactionBroker.java:251)
+	at org.apache.activemq.broker.BrokerFilter.commitTransaction(BrokerFilter.java:114)
+	at org.apache.activemq.broker.TransportConnection.processCommitTransactionTwoPhase(TransportConnection.java:544)
+	at org.apache.activemq.command.TransactionInfo.visit(TransactionInfo.java:102)
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Thread.java:748)
+

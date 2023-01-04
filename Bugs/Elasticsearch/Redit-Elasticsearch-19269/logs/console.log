@@ -1,0 +1,148 @@
+19:51:47.357 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+19:51:47.534 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+19:51:47.534 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "name" : "node-1",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "2.3.0",
+    "build_hash" : "8371be8d5fe5df7fb9c0516c474d77b9feddd888",
+    "build_timestamp" : "2016-03-29T07:54:48Z",
+    "build_snapshot" : false,
+    "lucene_version" : "5.5.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+19:51:47.590 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server2: curl -X GET http://localhost:9200/?pretty
+19:51:47.590 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "name" : "node-2",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "2.3.0",
+    "build_hash" : "8371be8d5fe5df7fb9c0516c474d77b9feddd888",
+    "build_timestamp" : "2016-03-29T07:54:48Z",
+    "build_snapshot" : false,
+    "lucene_version" : "5.5.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+19:51:47.668 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server3: curl -X GET http://localhost:9200/?pretty
+19:51:47.668 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "name" : "node-3",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "2.3.0",
+    "build_hash" : "8371be8d5fe5df7fb9c0516c474d77b9feddd888",
+    "build_timestamp" : "2016-03-29T07:54:48Z",
+    "build_snapshot" : false,
+    "lucene_version" : "5.5.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+19:51:47.668 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+19:51:47.870 [qtp2142080121-21] INFO  io.redit.execution.EventService - Event E1 received!
+19:51:47.871 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+19:51:47.973 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - Current master: node-1. Ip address: 10.2.0.4
+19:51:47.973 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+19:51:47.979 [qtp2142080121-49] INFO  io.redit.execution.EventService - Event E2 received!
+19:51:47.980 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+19:51:48.134 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server1: curl  -XPUT 'localhost:9200/foo?pretty'
+19:51:48.135 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "acknowledged" : true
+}
+
+19:51:48.246 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server1: curl 'localhost:9200/_cat/indices?v'
+19:51:48.246 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - health status index pri rep docs.count docs.deleted store.size pri.store.size
+red    open   foo     1   1          0            0       130b           130b
+
+19:51:48.453 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server1: curl -XPUT 'localhost:9200/foo/bar/1?pretty' -d '{ "value": "origin" }'
+19:51:48.453 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "_index" : "foo",
+  "_type" : "bar",
+  "_id" : "1",
+  "_version" : 1,
+  "_shards" : {
+    "total" : 2,
+    "successful" : 2,
+    "failed" : 0
+  },
+  "created" : true
+}
+
+19:51:48.453 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+19:51:48.458 [qtp2142080121-23] INFO  io.redit.execution.EventService - Event E3 received!
+19:51:53.459 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E4 ...
+19:51:53.551 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - shardInfo:
+foo 0 p STARTED 1  130b 10.2.0.3 node-2
+foo 0 r STARTED 1 2.9kb 10.2.0.2 node-3
+
+19:51:53.551 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - PrimaryShardServer: server2; Ip address: 10.2.0.3
+19:51:53.551 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E4 ...
+19:51:53.557 [qtp2142080121-25] INFO  io.redit.execution.EventService - Event E4 received!
+19:51:53.557 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E5 ...
+19:51:53.558 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E5 ...
+19:51:53.561 [qtp2142080121-57] INFO  io.redit.execution.EventService - Event E5 received!
+19:51:53.562 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+19:51:53.563 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - --> start disrupting network
+19:51:53.563 [main] INFO  i.r.e.NetworkPartitionManager - Applying network partition [server2]-[server1,server3] ...
+19:51:53.714 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X1 ...
+19:51:53.718 [qtp2142080121-24] INFO  io.redit.execution.EventService - Event X1 received!
+19:51:56.720 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E6 ...
+19:52:01.815 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server2: curl --connect-timeout 5 -m 5 -XPOST 'localhost:9200/foo/bar/1/_update?pretty' -d '{"doc": { "value": "dirty value" }}'
+19:52:01.815 [main] WARN  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    35    0     0  100    35      0      6  0:00:05  0:00:05 --:--:--     6
+curl: (28) Operation timed out after 5001 milliseconds with 0 bytes received
+
+19:52:01.911 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "_index" : "foo",
+  "_type" : "bar",
+  "_id" : "1",
+  "_version" : 2,
+  "found" : true,
+  "_source" : {
+    "value" : "dirty value"
+  }
+}
+
+19:52:04.912 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E6 ...
+19:52:04.923 [qtp2142080121-27] INFO  io.redit.execution.EventService - Event E6 received!
+19:52:04.923 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E7 ...
+19:52:05.041 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - server1: curl --connect-timeout 5 -m 5 -XPOST 'localhost:9200/foo/bar/1/_update?pretty' -d '{"doc": { "value": "something else" }}'
+19:52:05.041 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "_index" : "foo",
+  "_type" : "bar",
+  "_id" : "1",
+  "_version" : 2,
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  }
+}
+
+19:52:05.041 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E7 ...
+19:52:05.044 [qtp2142080121-34] INFO  io.redit.execution.EventService - Event E7 received!
+19:52:05.044 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X2 ...
+19:52:05.045 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - --> remove disrupting network
+19:52:05.045 [main] INFO  i.r.e.NetworkPartitionManager - Removing network partition [server2]-[server1,server3] ...
+19:52:05.189 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X2 ...
+19:52:05.192 [qtp2142080121-51] INFO  io.redit.execution.EventService - Event X2 received!
+19:52:08.194 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E8 ...
+19:52:08.309 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - {
+  "_index" : "foo",
+  "_type" : "bar",
+  "_id" : "1",
+  "_version" : 2,
+  "found" : true,
+  "_source" : {
+    "value" : "something else"
+  }
+}
+
+19:52:08.309 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E8 ...
+19:52:08.312 [qtp2142080121-21] INFO  io.redit.execution.EventService - Event E8 received!
+19:52:08.313 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+19:52:08.313 [main] INFO  i.r.s.b.e.io.redit.samples.activemq7337.SampleTest - completed !!!

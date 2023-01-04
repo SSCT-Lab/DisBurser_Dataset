@@ -1,0 +1,13 @@
+[2022-12-14 11:51:41,139][INFO ][node                     ] [node-3] version[2.3.0], pid[72], build[8371be8/2016-03-29T07:54:48Z]
+[2022-12-14 11:51:41,139][INFO ][node                     ] [node-3] initializing ...
+[2022-12-14 11:51:41,329][INFO ][plugins                  ] [node-3] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2022-12-14 11:51:41,336][INFO ][env                      ] [node-3] using [1] data paths, mounts [[/ (overlay)]], net usable_space [70.9gb], net total_space [97.8gb], spins? [possibly], types [overlay]
+[2022-12-14 11:51:41,336][INFO ][env                      ] [node-3] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-12-14 11:51:41,818][INFO ][node                     ] [node-3] initialized
+[2022-12-14 11:51:41,818][INFO ][node                     ] [node-3] starting ...
+[2022-12-14 11:51:41,912][INFO ][transport                ] [node-3] publish_address {10.2.0.2:9300}, bound_addresses {0.0.0.0:9300}
+[2022-12-14 11:51:41,914][INFO ][discovery                ] [node-3] es-clusters/NQuqm1KJRS-Y3CrwEwojzQ
+[2022-12-14 11:51:44,944][INFO ][cluster.service          ] [node-3] detected_master {node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}, added {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true},}, reason: zen-disco-receive(from master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}])
+[2022-12-14 11:51:44,987][INFO ][http                     ] [node-3] publish_address {10.2.0.2:9200}, bound_addresses {0.0.0.0:9200}
+[2022-12-14 11:51:44,987][INFO ][node                     ] [node-3] started
+[2022-12-14 11:51:59,596][INFO ][cluster.service          ] [node-3] removed {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}, reason: zen-disco-receive(from master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}])

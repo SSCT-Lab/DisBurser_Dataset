@@ -1,0 +1,11 @@
+cluster.name: es-clusters
+node.name: node-0
+http.port: 9200
+network.host: 0.0.0.0
+ingest.geoip.downloader.enabled: false
+path:
+  data: /var/lib/elasticsearch
+  logs: /var/log/elasticsearch
+discovery.zen.minimum_master_nodes: 3
+# add config
+discovery.seed_hosts: ["10.2.0.4:9300", "10.2.0.3:9300", "10.2.0.2:9300"]

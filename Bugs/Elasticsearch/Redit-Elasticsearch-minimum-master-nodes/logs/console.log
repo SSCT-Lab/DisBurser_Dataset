@@ -1,0 +1,114 @@
+20:11:20.155 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+20:11:20.201 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - discovery.zen.minimum_master_nodes:3, master eligible node: 3
+20:11:20.582 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl --connect-timeout 10 -m 15 -XPUT 'localhost:9200/customer?pretty'
+20:11:20.582 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "acknowledged" : true
+}
+
+20:11:20.707 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl --connect-timeout 10 -m 15 'localhost:9200/_cat/indices?v'
+20:11:20.707 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - health status index    pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   customer   5   1          0            0       575b           575b
+
+20:11:20.707 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+20:11:20.867 [qtp1983025922-21] INFO  io.redit.execution.EventService - Event E1 received!
+20:11:20.867 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+20:11:20.868 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server2 ...
+20:11:21.135 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 is killed!
+20:11:21.135 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X1 ...
+20:11:21.141 [qtp1983025922-34] INFO  io.redit.execution.EventService - Event X1 received!
+20:11:24.143 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+20:11:24.147 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - discovery.zen.minimum_master_nodes:3, master eligible node: 2
+20:11:24.240 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:24.241 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:27.328 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:27.328 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:30.418 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:30.418 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:33.518 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:33.518 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:36.604 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:36.605 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:39.698 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - server1: curl -X GET http://localhost:9200/?pretty
+20:11:39.699 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - {
+  "status" : 503,
+  "name" : "node-0",
+  "cluster_name" : "es-clusters",
+  "version" : {
+    "number" : "1.4.0",
+    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
+    "build_timestamp" : "2014-11-05T14:26:12Z",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+20:11:42.699 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+20:11:42.714 [qtp1983025922-24] INFO  io.redit.execution.EventService - Event E2 received!
+20:11:42.715 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+20:11:42.715 [main] INFO  i.r.s.b.e.m.io.redit.samples.activemq7337.SampleTest - completed !!!

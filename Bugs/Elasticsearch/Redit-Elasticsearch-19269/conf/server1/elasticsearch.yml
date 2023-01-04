@@ -1,0 +1,17 @@
+cluster.name: es-clusters
+node.name: node-1
+node.master: true
+node.data: false
+http.port: 9200
+ingest.geoip.downloader.enabled: false
+path:
+  data: /var/lib/elasticsearch
+  logs: /var/log/elasticsearch
+index.number_of_replicas : 1
+index.number_of_shards: 1
+discovery.zen.fd.ping_timeout: 5s
+discovery.zen.fd.ping_retries: 1
+network.host: 0.0.0.0
+# add config
+network.publish_host: 10.2.0.4
+discovery.zen.ping.unicast.hosts: ["10.2.0.4:9300", "10.2.0.3:9300", "10.2.0.2:9300"]

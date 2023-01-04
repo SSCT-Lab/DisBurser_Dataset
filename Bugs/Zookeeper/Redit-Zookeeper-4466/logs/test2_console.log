@@ -1,0 +1,73 @@
+19:04:54.220 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+19:04:54.222 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper2355.io.redit.samples.activemq7337.SampleTest$$Lambda$62/1296612741@58a120b0
+19:04:54.222 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+19:04:54.222 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+19:04:54.236 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+19:04:54.236 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181.
+19:04:54.236 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+19:04:54.237 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:50630, server: 10.2.0.3/10.2.0.3:2181
+19:04:54.237 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+19:04:54.241 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.2.0.3/10.2.0.3:2181, session id = 0x2000019565c0001, negotiated timeout = 4000
+19:04:54.242 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+19:04:54.243 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+19:04:54.247 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 1,106  replyHeader:: 1,4294967302,0  request:: '/a,1  response:: 0
+19:04:54.248 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 2,106  replyHeader:: 2,4294967302,0  request:: '/a/b,0  response:: 0
+19:04:54.253 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.253 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeCreated path:/a for session id 0x2000019565c0001
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeCreated path:/a
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a]
+19:04:54.253 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 3,1  replyHeader:: 3,4294967303,0  request:: '/a,,v{s{31,s{'world,'anyone}}},0  response:: '/a
+19:04:54.257 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.257 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeCreated path:/a/b for session id 0x2000019565c0001
+other PERSISTENT watcher get event:WatchedEvent state:SyncConnected type:NodeCreated path:/a/b
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeCreated path:/a/b
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b]
+19:04:54.257 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 4,1  replyHeader:: 4,4294967304,0  request:: '/a/b,,v{s{31,s{'world,'anyone}}},0  response:: '/a/b
+19:04:54.261 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.261 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c for session id 0x2000019565c0001
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c]
+19:04:54.261 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.262 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b for session id 0x2000019565c0001
+other PERSISTENT watcher get event:WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b]
+19:04:54.262 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 5,1  replyHeader:: 5,4294967305,0  request:: '/a/b/c,,v{s{31,s{'world,'anyone}}},0  response:: '/a/b/c
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c for session id 0x2000019565c0001
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0000
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c for session id 0x2000019565c0000
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c]
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b for session id 0x2000019565c0001
+now events: [WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c]
+other PERSISTENT watcher get event:WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b]
+19:04:54.267 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 6,2  replyHeader:: 6,4294967306,0  request:: '/a/b/c,-1  response:: null
+19:04:54.272 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0000
+19:04:54.272 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.272 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b for session id 0x2000019565c0000
+19:04:54.272 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b for session id 0x2000019565c0001
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b
+other PERSISTENT watcher get event:WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b
+now events: [WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b]
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b]
+19:04:54.272 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 7,2  replyHeader:: 7,4294967307,0  request:: '/a/b,-1  response:: null
+19:04:54.277 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0001
+19:04:54.277 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification session id: 0x2000019565c0000
+19:04:54.277 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a for session id 0x2000019565c0001
+19:04:54.277 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDeleted path:/a for session id 0x2000019565c0000
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a
+PERSISTENT_RECURSIVE watcher get event: WatchedEvent state:SyncConnected type:NodeDeleted path:/a
+now events: [WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a]
+now events: [WatchedEvent state:SyncConnected type:NodeCreated path:/a, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b, WatchedEvent state:SyncConnected type:NodeCreated path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b/c, WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a/b, WatchedEvent state:SyncConnected type:NodeDeleted path:/a]
+19:04:54.278 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply session id: 0x2000019565c0001, packet:: clientPath:null serverPath:null finished:false header:: 8,2  replyHeader:: 8,4294967308,0  request:: '/a,-1  response:: null
+19:04:54.278 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+19:04:54.280 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+19:04:54.281 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+19:04:54.282 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+19:04:54.282 [main] INFO  i.r.samples.zookeeper2355.io.redit.samples.activemq7337.SampleTest - completed !!!

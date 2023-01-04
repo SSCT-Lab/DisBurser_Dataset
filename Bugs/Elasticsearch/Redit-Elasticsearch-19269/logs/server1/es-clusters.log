@@ -1,0 +1,28 @@
+[2022-12-14 11:51:18,392][INFO ][node                     ] [node-1] version[2.3.0], pid[53], build[8371be8/2016-03-29T07:54:48Z]
+[2022-12-14 11:51:18,393][INFO ][node                     ] [node-1] initializing ...
+[2022-12-14 11:51:18,585][INFO ][plugins                  ] [node-1] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2022-12-14 11:51:18,593][INFO ][env                      ] [node-1] using [1] data paths, mounts [[/ (overlay)]], net usable_space [71gb], net total_space [97.8gb], spins? [possibly], types [overlay]
+[2022-12-14 11:51:18,593][INFO ][env                      ] [node-1] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-12-14 11:51:19,105][INFO ][node                     ] [node-1] initialized
+[2022-12-14 11:51:19,105][INFO ][node                     ] [node-1] starting ...
+[2022-12-14 11:51:19,232][INFO ][transport                ] [node-1] publish_address {10.2.0.4:9300}, bound_addresses {0.0.0.0:9300}
+[2022-12-14 11:51:19,234][INFO ][discovery                ] [node-1] es-clusters/8uZzu5__QFuID8BWfcn73g
+[2022-12-14 11:51:22,244][INFO ][cluster.service          ] [node-1] new_master {node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-12-14 11:51:22,261][INFO ][http                     ] [node-1] publish_address {10.2.0.4:9200}, bound_addresses {0.0.0.0:9200}
+[2022-12-14 11:51:22,261][INFO ][node                     ] [node-1] started
+[2022-12-14 11:51:22,291][INFO ][gateway                  ] [node-1] recovered [0] indices into cluster_state
+[2022-12-14 11:51:33,567][INFO ][cluster.service          ] [node-1] added {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}, reason: zen-disco-join(join from node[{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}])
+[2022-12-14 11:51:44,938][INFO ][cluster.service          ] [node-1] added {{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false},}, reason: zen-disco-join(join from node[{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}])
+[2022-12-14 11:51:48,040][INFO ][cluster.metadata         ] [node-1] [foo] creating index, cause [api], templates [], shards [1]/[1], mappings []
+[2022-12-14 11:51:48,165][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[foo][0]] ...]).
+[2022-12-14 11:51:48,335][INFO ][cluster.metadata         ] [node-1] [foo] create_mapping [bar]
+[2022-12-14 11:51:48,386][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[foo][0], [foo][0]] ...]).
+[2022-12-14 11:51:59,594][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [GREEN] to [YELLOW] (reason: [[{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}] failed]).
+[2022-12-14 11:51:59,594][INFO ][cluster.service          ] [node-1] removed {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}, reason: zen-disco-node_failed({node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}), reason failed to ping, tried [1] times, each with maximum [5s] timeout
+[2022-12-14 11:51:59,618][INFO ][cluster.routing          ] [node-1] delaying allocation for [1] unassigned shards, next check in [1m]
+[2022-12-14 11:52:08,373][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [YELLOW] to [RED] (reason: [[{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}] failed]).
+[2022-12-14 11:52:08,374][INFO ][cluster.service          ] [node-1] removed {{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false},}, reason: zen-disco-node_failed({node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}), reason transport disconnected
+[2022-12-14 11:52:08,377][INFO ][cluster.service          ] [node-1] added {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}, reason: zen-disco-join(join from node[{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}])
+[2022-12-14 11:52:08,495][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[foo][0]] ...]).
+[2022-12-14 11:52:08,682][INFO ][cluster.routing.allocation] [node-1] Cluster health status changed from [YELLOW] to [RED] (reason: [[{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}] failed]).
+[2022-12-14 11:52:08,682][INFO ][cluster.service          ] [node-1] removed {{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}, reason: zen-disco-node_failed({node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false}), reason transport disconnected

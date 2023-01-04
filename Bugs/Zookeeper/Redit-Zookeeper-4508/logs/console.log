@@ -1,0 +1,576 @@
+17:11:34.599 [main] INFO  i.r.samples.zookeeper4508.SampleTest - wait for zookeeper...
+17:11:34.600 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server1 startServer...
+17:11:34.608 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server2 startServer...
+17:11:34.611 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server3 startServer...
+17:11:54.626 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server1 checkStatus...
+17:11:55.107 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server1: cd /zookeeper/apache-zookeeper-3.7.1-bin && bin/zkServer.sh status
+17:11:55.107 [main] INFO  i.r.samples.zookeeper4508.SampleTest - Client port found: 2181. Client address: localhost. Client SSL: false.
+Mode: follower
+
+17:11:55.107 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server2 checkStatus...
+17:11:55.493 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server2: cd /zookeeper/apache-zookeeper-3.7.1-bin && bin/zkServer.sh status
+17:11:55.493 [main] INFO  i.r.samples.zookeeper4508.SampleTest - Client port found: 2181. Client address: localhost. Client SSL: false.
+Mode: follower
+
+17:11:55.493 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server3 checkStatus...
+17:11:55.872 [main] INFO  i.r.samples.zookeeper4508.SampleTest - server3: cd /zookeeper/apache-zookeeper-3.7.1-bin && bin/zkServer.sh status
+17:11:55.872 [main] INFO  i.r.samples.zookeeper4508.SampleTest - Client port found: 2181. Client address: localhost. Client SSL: false.
+Mode: leader
+
+17:11:55.947 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.6.3--6401e4ad2087061bc6b9f80dec2d69f2e3c8660a, built on 04/08/2021 16:35 GMT
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:host.name=zmb-virtual-machine
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_342
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Private Build
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/home/zmb/test/idea/idea-IC-202.7660.26/lib/idea_rt.jar:/home/zmb/test/idea/idea-IC-202.7660.26/plugins/junit/lib/junit5-rt.jar:/home/zmb/test/idea/idea-IC-202.7660.26/plugins/junit/lib/junit-rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar:/home/zmb/test/Redit-Benchmark/Special-bug/Redit-Zookeeper-4508/target/classes:/home/zmb/.m2/repository/io/github/martylinzy/redit/0.1.0/redit-0.1.0.jar:/home/zmb/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/zmb/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-server/9.4.12.v20180830/jetty-server-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-http/9.4.12.v20180830/jetty-http-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.12.v20180830/jetty-servlet-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-security/9.4.12.v20180830/jetty-security-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-server/2.22.2/jersey-server-2.22.2.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-client/2.22.2/jersey-client-2.22.2.jar:/home/zmb/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.22.2/jersey-media-jaxb-2.22.2.jar:/home/zmb/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar:/home/zmb/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/zmb/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zmb/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.2/jersey-container-servlet-core-2.22.2.jar:/home/zmb/.m2/repository/com/spotify/docker-client/8.15.1/docker-client-8.15.1-shaded.jar:/home/zmb/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.8/jackson-jaxrs-json-provider-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.8/jackson-jaxrs-base-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.8/jackson-module-jaxb-annotations-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.8/jackson-datatype-guava-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/zmb/.m2/repository/org/glassfish/jersey/connectors/jersey-apache-connector/2.22.2/jersey-apache-connector-2.22.2.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.22.2/jersey-media-json-jackson-2.22.2.jar:/home/zmb/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/zmb/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/home/zmb/.m2/repository/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar:/home/zmb/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/zmb/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/zmb/.m2/repository/org/apache/httpcomponents/httpcore/4.4.5/httpcore-4.4.5.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-unixsocket/0.18/jnr-unixsocket-0.18.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-ffi/2.1.4/jnr-ffi-2.1.4.jar:/home/zmb/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15.jar:/home/zmb/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15-native.jar:/home/zmb/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-constants/0.9.8/jnr-constants-0.9.8.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-enxio/0.16/jnr-enxio-0.16.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-posix/3.0.35/jnr-posix-3.0.35.jar:/home/zmb/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/zmb/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar:/home/zmb/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar:/home/zmb/.m2/repository/net/lingala/zip4j/zip4j/1.3.2/zip4j-1.3.2.jar:/home/zmb/.m2/repository/io/github/martylinzy/reditrt/0.1.0/reditrt-0.1.0.jar:/home/zmb/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zmb/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zmb/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zmb/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zmb/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-moxy/2.25.1/jersey-media-moxy-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.25.1/jersey-entity-filtering-2.25.1.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.moxy/2.6.0/org.eclipse.persistence.moxy-2.6.0.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/2.6.0/org.eclipse.persistence.core-2.6.0.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/2.6.0/org.eclipse.persistence.asm-2.6.0.jar:/home/zmb/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/home/zmb/.m2/repository/org/eclipse/persistence/javax.persistence/2.0.0/javax.persistence-2.0.0.jar:/home/zmb/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/zmb/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-util/9.4.12.v20180830/jetty-util-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-io/9.4.12.v20180830/jetty-io-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/aspectj/aspectjrt/1.9.6/aspectjrt-1.9.6.jar:/home/zmb/.m2/repository/org/apache/curator/curator-framework/5.3.0/curator-framework-5.3.0.jar:/home/zmb/.m2/repository/org/apache/curator/curator-client/5.3.0/curator-client-5.3.0.jar:/home/zmb/.m2/repository/org/apache/zookeeper/zookeeper/3.6.3/zookeeper-3.6.3.jar:/home/zmb/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.6.3/zookeeper-jute-3.6.3.jar:/home/zmb/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/home/zmb/.m2/repository/io/netty/netty-handler/4.1.63.Final/netty-handler-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-common/4.1.63.Final/netty-common-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-resolver/4.1.63.Final/netty-resolver-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-buffer/4.1.63.Final/netty-buffer-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport/4.1.63.Final/netty-transport-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-codec/4.1.63.Final/netty-codec-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport-native-epoll/4.1.63.Final/netty-transport-native-epoll-4.1.63.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.63.Final/netty-transport-native-unix-common-4.1.63.Final.jar:/home/zmb/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/zmb/test/idea/idea-IC-202.7660.26/lib/idea_rt.jar
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.15.0-46-generic
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.name=zmb
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.home=/home/zmb
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/home/zmb/test/Redit-Benchmark/Special-bug/Redit-Zookeeper-4508
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=135MB
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=1760MB
+17:11:55.948 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=172MB
+17:11:55.952 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.15.0.4:2181,10.15.0.3:2181,10.15.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4508.SampleTest$$Lambda$36/22790969@7cab1508
+17:11:55.956 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+17:11:55.964 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+17:11:55.967 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+17:11:55.981 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:11:55.983 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:11:55.983 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:11:55.985 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.15.0.1:37894, server: 10.15.0.4/10.15.0.4:2181
+17:11:55.986 [main-SendThread(10.15.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.15.0.4/10.15.0.4:2181
+17:11:56.006 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.15.0.4/10.15.0.4:2181, session id = 0x100008d381b0000, negotiated timeout = 4000
+17:11:56.012 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server1 ...
+17:11:56.032 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.4/10.15.0.4:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$EndOfStreamException: Unable to read additional data from server sessionid 0x100008d381b0000, likely server has closed socket
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1290)
+17:11:56.219 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server1 is killed!
+17:11:56.219 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server2 ...
+17:11:56.369 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 is killed!
+17:11:56.370 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server3 ...
+17:11:56.533 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server3 is killed!
+17:11:56.679 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.2
+17:11:56.679 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.2/10.15.0.2:2181.
+17:11:56.679 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:11:58.015 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 1881ms for session id 0x100008d381b0000
+17:11:58.015 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.2/10.15.0.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 1881ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:11:58.016 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:11:58.016 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:11:58.687 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.3
+17:11:58.687 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.3/10.15.0.3:2181.
+17:11:58.687 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:00.021 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 1905ms for session id 0x100008d381b0000
+17:12:00.022 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.3/10.15.0.3:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 1905ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:00.022 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:00.022 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:01.152 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:12:01.152 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:12:01.152 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:02.487 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2365ms for session id 0x100008d381b0000
+17:12:02.488 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.4/10.15.0.4:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2365ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:02.488 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:02.488 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:03.155 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.2
+17:12:03.156 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.2/10.15.0.2:2181.
+17:12:03.156 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:04.491 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 1902ms for session id 0x100008d381b0000
+17:12:04.492 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.2/10.15.0.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 1902ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:04.492 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:04.492 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:05.412 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.3
+17:12:05.412 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.3/10.15.0.3:2181.
+17:12:05.412 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:06.747 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2154ms for session id 0x100008d381b0000
+17:12:06.747 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.3/10.15.0.3:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2154ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:06.748 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:06.748 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:08.790 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:12:08.790 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:12:08.791 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:10.126 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 3277ms for session id 0x100008d381b0000
+17:12:10.126 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.4/10.15.0.4:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 3277ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:10.126 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:10.126 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:11.104 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.2
+17:12:11.104 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.2/10.15.0.2:2181.
+17:12:11.104 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:12.438 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2210ms for session id 0x100008d381b0000
+17:12:12.438 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.2/10.15.0.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2210ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:12.438 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:12.439 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:13.509 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.3
+17:12:13.509 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.3/10.15.0.3:2181.
+17:12:13.509 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:14.844 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2305ms for session id 0x100008d381b0000
+17:12:14.844 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.3/10.15.0.3:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2305ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:14.844 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:14.844 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:16.107 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:12:16.108 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:12:16.108 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:17.443 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2498ms for session id 0x100008d381b0000
+17:12:17.443 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.4/10.15.0.4:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2498ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:17.444 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:17.445 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:18.366 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.2
+17:12:18.366 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.2/10.15.0.2:2181.
+17:12:18.366 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:19.701 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2155ms for session id 0x100008d381b0000
+17:12:19.701 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.2/10.15.0.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2155ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:19.701 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:19.702 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:20.582 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.3
+17:12:20.583 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.3/10.15.0.3:2181.
+17:12:20.583 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:21.918 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2116ms for session id 0x100008d381b0000
+17:12:21.918 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.3/10.15.0.3:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2116ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:21.918 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:21.919 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:24.082 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:12:24.082 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:12:24.082 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:25.418 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 3399ms for session id 0x100008d381b0000
+17:12:25.418 [main-SendThread(10.15.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.4/10.15.0.4:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 3399ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:25.418 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:25.418 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:26.551 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.2
+17:12:26.551 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.2/10.15.0.2:2181.
+17:12:26.551 [main-SendThread(10.15.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:27.886 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2367ms for session id 0x100008d381b0000
+17:12:27.886 [main-SendThread(10.15.0.2:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.2/10.15.0.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 2367ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:27.887 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:27.887 [main-SendThread(10.15.0.2:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:28.411 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.3
+17:12:28.411 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.3/10.15.0.3:2181.
+17:12:28.411 [main-SendThread(10.15.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:29.746 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 1758ms for session id 0x100008d381b0000
+17:12:29.746 [main-SendThread(10.15.0.3:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x100008d381b0000 for sever 10.15.0.3/10.15.0.3:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 1758ms for session id 0x100008d381b0000
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1258)
+17:12:29.747 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:193)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:12:29.747 [main-SendThread(10.15.0.3:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1390)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1331)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1309)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:12:31.535 [Thread-0] INFO  io.redit.ReditShutdownHook - Shutdown signal received!
+17:12:31.535 [Thread-0] INFO  io.redit.ReditRunner - Stopping ReditRunner ...
+17:12:31.537 [Thread-0] INFO  io.redit.execution.RuntimeEngine - Stopping the runtime engine ...
+17:12:31.538 [Thread-0] INFO  io.redit.execution.RuntimeEngine - Stopping nodes ...
+17:12:31.538 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Stopping containers ...
+17:12:31.538 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server3 ...
+17:12:31.547 [Thread-0] WARN  i.r.e.s.SingleNodeRuntimeEngine - Error while trying to stop the container for node server3!
+17:12:31.547 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Removing container for node server3 ...
+17:12:31.555 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server3 container is removed!
+17:12:31.556 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server2 ...
+17:12:31.558 [Thread-0] WARN  i.r.e.s.SingleNodeRuntimeEngine - Error while trying to stop the container for node server2!
+17:12:31.558 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Removing container for node server2 ...
+17:12:31.562 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 container is removed!
+17:12:31.562 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server1 ...
+17:12:31.564 [Thread-0] WARN  i.r.e.s.SingleNodeRuntimeEngine - Error while trying to stop the container for node server1!
+17:12:31.564 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Removing container for node server1 ...
+17:12:31.567 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server1 container is removed!
+17:12:31.568 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Deleting docker network 9d04fe811ef512b7d6309968102ad7e85142693dc11dedb1e08f6cc8e1cf7d2e ...
+17:12:31.656 [main-SendThread(10.15.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.15.0.4
+17:12:31.656 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.15.0.4/10.15.0.4:2181.
+17:12:31.656 [main-SendThread(10.15.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+17:12:31.665 [Thread-0] INFO  i.r.e.s.SingleNodeRuntimeEngine - Docker network is deleted successfully!
+17:12:31.666 [Thread-0] INFO  io.redit.execution.RuntimeEngine - Stopping event server ...
+17:12:31.671 [Thread-0] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@41e0e411{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+17:12:31.672 [Thread-0] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+17:12:31.686 [Thread-0] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3a393455{/,null,UNAVAILABLE}
+
+Process finished with exit code 130 (interrupted by signal 2: SIGINT)

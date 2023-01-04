@@ -1,0 +1,35 @@
+[2022-12-14 11:51:29,716][INFO ][node                     ] [node-2] version[2.3.0], pid[63], build[8371be8/2016-03-29T07:54:48Z]
+[2022-12-14 11:51:29,716][INFO ][node                     ] [node-2] initializing ...
+[2022-12-14 11:51:29,904][INFO ][plugins                  ] [node-2] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2022-12-14 11:51:29,911][INFO ][env                      ] [node-2] using [1] data paths, mounts [[/ (overlay)]], net usable_space [71gb], net total_space [97.8gb], spins? [possibly], types [overlay]
+[2022-12-14 11:51:29,911][INFO ][env                      ] [node-2] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-12-14 11:51:30,397][INFO ][node                     ] [node-2] initialized
+[2022-12-14 11:51:30,397][INFO ][node                     ] [node-2] starting ...
+[2022-12-14 11:51:30,535][INFO ][transport                ] [node-2] publish_address {10.2.0.3:9300}, bound_addresses {0.0.0.0:9300}
+[2022-12-14 11:51:30,537][INFO ][discovery                ] [node-2] es-clusters/MHiIioqCTpuRoNmDvgqfig
+[2022-12-14 11:51:33,574][INFO ][cluster.service          ] [node-2] detected_master {node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}, added {{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true},}, reason: zen-disco-receive(from master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}])
+[2022-12-14 11:51:33,620][INFO ][http                     ] [node-2] publish_address {10.2.0.3:9200}, bound_addresses {0.0.0.0:9200}
+[2022-12-14 11:51:33,621][INFO ][node                     ] [node-2] started
+[2022-12-14 11:51:44,945][INFO ][cluster.service          ] [node-2] added {{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false},}, reason: zen-disco-receive(from master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}])
+[2022-12-14 11:51:59,599][INFO ][discovery.zen            ] [node-2] master_left [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}], reason [failed to ping, tried [1] times, each with  maximum [5s] timeout]
+[2022-12-14 11:51:59,599][WARN ][discovery.zen            ] [node-2] master left (reason = failed to ping, tried [1] times, each with  maximum [5s] timeout), current nodes: {{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false},{node-2}{MHiIioqCTpuRoNmDvgqfig}{10.2.0.3}{10.2.0.3:9300}{master=false},}
+[2022-12-14 11:51:59,599][INFO ][cluster.service          ] [node-2] removed {{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true},}, reason: zen-disco-master_failed ({node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true})
+[2022-12-14 11:52:03,350][WARN ][discovery.zen.ping.unicast] [node-2] failed to send ping to [{#zen_unicast_3#}{10.2.0.2}{10.2.0.2:9300}]
+ReceiveTimeoutTransportException[[node-3][10.2.0.2:9300][internal:discovery/zen/unicast] request_id [44] timed out after [3750ms]]
+	at org.elasticsearch.transport.TransportService$TimeoutHandler.run(TransportService.java:679)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2022-12-14 11:52:04,853][WARN ][discovery.zen.ping.unicast] [node-2] failed to send ping to [{#zen_unicast_3#}{10.2.0.2}{10.2.0.2:9300}]
+ReceiveTimeoutTransportException[[node-3][10.2.0.2:9300][internal:discovery/zen/unicast] request_id [47] timed out after [3752ms]]
+	at org.elasticsearch.transport.TransportService$TimeoutHandler.run(TransportService.java:679)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2022-12-14 11:52:05,940][WARN ][discovery.zen.ping.unicast] [node-2] received ping response ping_response{node [{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}], id[11], master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}], hasJoinedOnce [true], cluster_name[es-clusters]} with no matching handler id [2]
+[2022-12-14 11:52:06,452][WARN ][transport                ] [node-2] Received response for a request that has timed out, sent [6852ms] ago, timed out [3102ms] ago, action [internal:discovery/zen/unicast], node [{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}], id [44]
+[2022-12-14 11:52:07,736][WARN ][transport                ] [node-2] Received response for a request that has timed out, sent [6635ms] ago, timed out [2883ms] ago, action [internal:discovery/zen/unicast], node [{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}], id [47]
+[2022-12-14 11:52:08,374][WARN ][action.index             ] [node-2] [foo][0] failed to perform indices:data/write/index[r] on node {node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false}
+NodeDisconnectedException[[node-3][10.2.0.2:9300][indices:data/write/index[r]] disconnected]
+[2022-12-14 11:52:08,374][WARN ][cluster.action.shard     ] [node-2] can't send shard failed for [foo][0], node[NQuqm1KJRS-Y3CrwEwojzQ], [R], v[3], s[STARTED], a[id=fydvwU23TJ-Q6x-0al37Aw], no master known.
+[2022-12-14 11:52:08,378][INFO ][cluster.service          ] [node-2] master {new {node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}}, removed {{node-3}{NQuqm1KJRS-Y3CrwEwojzQ}{10.2.0.2}{10.2.0.2:9300}{master=false},}, added {{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true},}, reason: zen-disco-receive(from master [{node-1}{8uZzu5__QFuID8BWfcn73g}{10.2.0.4}{10.2.0.4:9300}{data=false, master=true}])

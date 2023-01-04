@@ -1,0 +1,41 @@
+18:22:30.521 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+18:22:30.602 [main] INFO  i.r.s.cassandra15297.SampleTest - create snapshot "p/s" ...
+18:22:31.501 [main] INFO  i.r.s.cassandra15297.SampleTest - server1: cd /cassandra/apache-cassandra-3.11.6 && bin/nodetool snapshot -t "p/s"
+18:22:31.501 [main] INFO  i.r.s.cassandra15297.SampleTest - Requested creating snapshot(s) for [all keyspaces] with snapshot name [p/s] and options {skipFlush=false}
+Snapshot directory: p/s
+
+18:22:31.501 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+18:22:31.854 [qtp211968962-16] INFO  io.redit.execution.EventService - Event E1 received!
+18:22:31.855 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+18:22:32.906 [main] INFO  i.r.s.cassandra15297.SampleTest - server1: cd /cassandra/apache-cassandra-3.11.6 && bin/nodetool listsnapshots
+18:22:32.906 [main] INFO  i.r.s.cassandra15297.SampleTest - Snapshot Details:
+Snapshot name Keyspace name      Column family name             True size Size on disk
+p             system_distributed parent_repair_history          0 bytes   13 bytes
+p             system_distributed repair_history                 0 bytes   13 bytes
+p             system_distributed view_build_status              0 bytes   13 bytes
+p             system_auth        roles                          0 bytes   4.98 KiB
+p             system_auth        role_members                   0 bytes   13 bytes
+p             system_auth        resource_role_permissons_index 0 bytes   13 bytes
+p             system_auth        role_permissions               0 bytes   13 bytes
+p             system_traces      sessions                       0 bytes   13 bytes
+p             system_traces      events                         0 bytes   13 bytes
+
+Total TrueDiskSpaceUsed: 0 bytes
+
+
+18:22:32.906 [main] INFO  i.r.s.cassandra15297.SampleTest - server1: cd /opt/cassandra/data_file_directories/system_schema/aggregates-924c55872e3a345bb10c12f37c1ba895/snapshots/p/s && ls -l
+18:22:32.906 [main] INFO  i.r.s.cassandra15297.SampleTest - total 40
+-rw-r--r-- 1 root root   31 Jan  4 10:22 manifest.json
+-rw-r--r-- 2 root root   43 Jan  4 10:22 md-1-big-CompressionInfo.db
+-rw-r--r-- 2 root root   51 Jan  4 10:22 md-1-big-Data.db
+-rw-r--r-- 2 root root   10 Jan  4 10:22 md-1-big-Digest.crc32
+-rw-r--r-- 2 root root   16 Jan  4 10:22 md-1-big-Filter.db
+-rw-r--r-- 2 root root   27 Jan  4 10:22 md-1-big-Index.db
+-rw-r--r-- 2 root root 4750 Jan  4 10:22 md-1-big-Statistics.db
+-rw-r--r-- 2 root root   76 Jan  4 10:22 md-1-big-Summary.db
+-rw-r--r-- 2 root root   92 Jan  4 10:22 md-1-big-TOC.txt
+
+18:22:32.906 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+18:22:32.912 [qtp211968962-13] INFO  io.redit.execution.EventService - Event E2 received!
+18:22:32.912 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+18:22:32.912 [main] INFO  i.r.s.cassandra15297.SampleTest - completed !!!

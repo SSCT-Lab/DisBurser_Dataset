@@ -1,0 +1,20 @@
+11:19:02.456 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+11:19:02.496 [main] INFO  i.r.samples.rocketmq257.SampleTest - startProducer !!!
+11:19:02.576 [main] INFO  i.r.samples.rocketmq257.SampleTest - producer start successful !!!
+11:19:02.577 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+11:19:02.760 [qtp112619572-22] INFO  io.redit.execution.EventService - Event E1 received!
+11:19:02.761 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+第1条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB6E0000, offsetMsgId=0A02000300002A9F0000000000000000, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-a, queueId=3], queueOffset=0]
+第2条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB810001, offsetMsgId=0A02000200002A9F0000000000000000, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-b, queueId=0], queueOffset=0]
+第3条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB900002, offsetMsgId=0A02000200002A9F00000000000000C4, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-b, queueId=1], queueOffset=0]
+第4条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB910003, offsetMsgId=0A02000200002A9F0000000000000188, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-b, queueId=2], queueOffset=0]
+第5条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB920004, offsetMsgId=0A02000200002A9F000000000000024C, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-b, queueId=3], queueOffset=0]
+第6条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB930005, offsetMsgId=0A02000300002A9F00000000000000C4, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-a, queueId=0], queueOffset=0]
+第7条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB940006, offsetMsgId=0A02000300002A9F0000000000000188, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-a, queueId=1], queueOffset=0]
+第8条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB950007, offsetMsgId=0A02000300002A9F000000000000024C, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-a, queueId=2], queueOffset=0]
+第9条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB960008, offsetMsgId=0A02000300002A9F0000000000000310, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-a, queueId=3], queueOffset=1]
+第10条send结果: SendResult [sendStatus=SEND_OK, msgId=0A0200013D3C18B4AAC259F9CB980009, offsetMsgId=0A02000200002A9F0000000000000310, messageQueue=MessageQueue [topic=test_topic, brokerName=broker-b, queueId=0], queueOffset=1]
+11:19:02.859 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+11:19:02.863 [qtp112619572-34] INFO  io.redit.execution.EventService - Event E2 received!
+11:19:02.864 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+11:19:02.864 [main] INFO  i.r.samples.rocketmq257.SampleTest - completed !!!
