@@ -1,0 +1,7 @@
+17:27:32.863 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Test1: set replication policy and check command output
+17:27:35.593 [main] INFO  i.redit.samples.hdfs13998.SampleTest - /hadoop/hadoop-3.1.2/bin/hdfs ec -setPolicy -policy RS-6-3-1024k -path /test1_ec : Set RS-6-3-1024k erasure coding policy on /test1_ec
+
+17:27:38.066 [main] INFO  i.redit.samples.hdfs13998.SampleTest - /hadoop/hadoop-3.1.2/bin/hdfs ec -setPolicy -replicate -path /test1_ec/replica : Set replication erasure coding policy on /test1_ec/replica
+
+17:27:38.130 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Get erasure coding policy in /test1_ec : ErasureCodingPolicy=[Name=RS-6-3-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=6, numParityUnits=3]], CellSize=1048576, Id=1]
+17:27:38.130 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Get erasure coding policy in /test1_ec/replica : null

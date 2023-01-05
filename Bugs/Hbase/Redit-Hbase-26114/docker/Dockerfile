@@ -22,4 +22,4 @@
 
 FROM openjdk:8-stretch
 
-RUN apt update && apt install -y iptables iproute2 python libjemalloc1 openssh-server
+RUN apt update && apt install -y iptables iproute2 python libjemalloc1

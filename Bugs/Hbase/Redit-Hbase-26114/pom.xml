@@ -106,6 +106,5 @@
             <version>2.4.12</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
 </project>

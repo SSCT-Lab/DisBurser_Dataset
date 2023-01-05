@@ -52,13 +52,4 @@ public class ReditHelper {
             Thread.sleep(1000);
         }
     }
-
-    public static ArrayList<Object> getKafkaFileRW() throws IOException {
-        ArrayList<Object> RWs = new ArrayList<>();
-        RWs.add(new FileReader("conf/server1/server.properties"));
-        for (int i = 1; i <= numOfServers; i++) {
-            RWs.add(new FileWriter("conf/server" + i + "/server.properties", true));
-        }
-        return RWs;
-    }
 }

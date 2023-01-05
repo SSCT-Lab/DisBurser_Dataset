@@ -16,7 +16,6 @@ public class ReditHelper {
     private static int numOfDNs = 3;
     private static int numOfJNs = 3;
     public static final String dir = "hadoop-3.3.1";
-
     public static String getHadoopHomeDir() { return "/hadoop/" + dir; }
 
     public static Deployment getDeployment(){

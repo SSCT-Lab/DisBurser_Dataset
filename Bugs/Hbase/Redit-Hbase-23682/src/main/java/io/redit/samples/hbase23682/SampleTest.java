@@ -22,18 +22,19 @@ public class SampleTest {
     @BeforeClass
     public static void before() throws RuntimeEngineException, IOException, InterruptedException {
         runner = ReditRunner.run(ReditHelper.getDeployment());
-        ReditHelper.startNodes(runner);
+        ReditHelper.startHdfsNodes(runner);
         hdfsHelper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfServers);
-        zookeeperHelper = new ZookeeperHelper(runner, ReditHelper.getZookeeperHomeDir(), logger, ReditHelper.getZookeeperFileRW(), ReditHelper.numOfServers);
-        hbaseHelper = new HbaseHelper(runner, ReditHelper.getHbaseHomeDir(), logger, ReditHelper.getHbaseFileRW(), ReditHelper.numOfServers);
-
-        zookeeperHelper.addConfFile();
-        hbaseHelper.addRegionConf();
 
         hdfsHelper.waitActive();
-        logger.info("The cluster is UP!");
+        logger.info("The Hdfs cluster is UP!");
         hdfsHelper.transitionToActive(1, runner);
         hdfsHelper.checkNNs(runner);
+
+        ReditHelper.startServerNodes(runner);
+        zookeeperHelper = new ZookeeperHelper(runner, ReditHelper.getZookeeperHomeDir(), logger, ReditHelper.getZookeeperFileRW(), ReditHelper.numOfServers);
+        hbaseHelper = new HbaseHelper(runner, ReditHelper.getHbaseHomeDir(), logger, ReditHelper.getHbaseFileRW(), ReditHelper.numOfServers);
+        zookeeperHelper.addConfFile();
+        hbaseHelper.addRegionConf();
 
         zookeeperHelper.startServers();
         Thread.sleep(5000);
@@ -51,7 +52,7 @@ public class SampleTest {
     public void testFixNPEWhenDisableDeadServerMetricRegionChore() throws RuntimeEngineException, InterruptedException {
         hbaseHelper.startSsh();
         hbaseHelper.startHbases();
-        Thread.sleep(20000);
+        Thread.sleep(30000);
         hbaseHelper.checkJps();
         logger.info("completed !!!");
     }

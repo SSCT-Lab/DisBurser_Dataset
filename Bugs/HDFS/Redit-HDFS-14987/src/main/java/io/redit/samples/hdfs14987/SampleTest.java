@@ -53,7 +53,7 @@ public class SampleTest {
 
     @Test
     public void testECFileBlockIdLocationInfoDisplayingAsNull() throws RuntimeEngineException, TimeoutException {
-        runner.runtime().enforceOrder("t1", () -> {
+        runner.runtime().enforceOrder("E1", () -> {
             try {
                 logger.info("set ErasureCoding Policy: " + policy + " on " + ecFilePath);
                 dfs.enableErasureCodingPolicy(policy);
@@ -65,14 +65,14 @@ public class SampleTest {
             }
         });
 
-        runner.runtime().enforceOrder("t2", () -> {
+        runner.runtime().enforceOrder("E2", () -> {
             logger.info("put " + testFile + " into HDFS ..." );
             runner.runtime().runCommandInNode("nn1", "touch " + testFile + " && echo \"" + data + "\" >> " + testFile);
             runner.runtime().runCommandInNode("nn1", ReditHelper.getHadoopHomeDir() + "/bin/hdfs dfs -put " + testFile + " " + ecFilePath);
             runner.runtime().runCommandInNode("nn1", ReditHelper.getHadoopHomeDir() + "/bin/hdfs dfs -put " + testFile + " " + replicaFilePath);
         });
 
-        runner.runtime().enforceOrder("t3", () -> {
+        runner.runtime().enforceOrder("E3", () -> {
             try {
                 ecBlockId = getBlockId(ecFilePath + "/" + testFile);
                 replicaBlockId = getBlockId(replicaFilePath + "/" + testFile);
@@ -81,7 +81,7 @@ public class SampleTest {
             }
         });
 
-        runner.runtime().enforceOrder("t4", () -> {
+        runner.runtime().enforceOrder("E4", () -> {
             String ViewBlocksCommand_ec = ReditHelper.getHadoopHomeDir() + "/bin/hdfs fsck " + ecFilePath + "/" + testFile + " -blockId blk_" + ecBlockId;
             CommandResults result1  = runner.runtime().runCommandInNode("nn1", ViewBlocksCommand_ec);
             helper.printResult(result1);

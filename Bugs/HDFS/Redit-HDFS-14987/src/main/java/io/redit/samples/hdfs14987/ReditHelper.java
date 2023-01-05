@@ -27,7 +27,7 @@ public class ReditHelper {
                 .applicationPath(compressedPath, "/hadoop",  PathAttr.COMPRESSED)
                 .applicationPath("conf/hdfs-site.xml", getHadoopHomeDir() + "/etc/hadoop/hdfs-site.xml")
                 .applicationPath("conf/core-site.xml", getHadoopHomeDir() + "/etc/hadoop/core-site.xml")
-                .dockerImageName("redit/hadoop").dockerFileAddress("docker/Dockerfile", true)
+                .dockerImageName("mengpo1106/hadoop").dockerFileAddress("docker/Dockerfile", true)
                 .environmentVariable("HADOOP_HOME", getHadoopHomeDir()).environmentVariable("HADOOP_HEAPSIZE_MAX", "1g")
                 .libraryPath(getHadoopHomeDir() + "/share/hadoop/**/*.jar")
                 .libraryPath(getHadoopHomeDir() + "/share/hadoop/**/*.java")
@@ -51,7 +51,7 @@ public class ReditHelper {
                 .nodeInstances(numOfJNs, "jn", "jn", false);
 
         builder.node("nn1").initCommand(getHadoopHomeDir() + "/bin/hdfs namenode -format").and()
-                .testCaseEvents("t1", "t2", "t3", "t4").runSequence("t1 * t2 * t3 * t4");
+                .testCaseEvents("E1", "E2", "E3", "E4").runSequence("E1 * E2 * E3 * E4");
 
         addInstrumentablePath(builder, "/share/hadoop/hdfs/hadoop-hdfs-3.1.2.jar");
 

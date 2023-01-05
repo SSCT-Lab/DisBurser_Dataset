@@ -5,34 +5,35 @@ import io.redit.dsl.entities.Deployment;
 import io.redit.dsl.entities.PathAttr;
 import io.redit.dsl.entities.ServiceType;
 import io.redit.exceptions.RuntimeEngineException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ReditHelper {
-    public static final Logger logger = LoggerFactory.getLogger(ReditHelper.class);
     public static int numOfServers = 3;
-
+    public static final String zookeeperDir = "apache-zookeeper-3.7.1-bin";
+    public static final String kafkaDir = "kafka_2.13-3.2.0";
     public static String getZookeeperHomeDir(){
-        return "/zookeeper/apache-zookeeper-3.7.1-bin";
+        return "/zookeeper/" + zookeeperDir;
     }
     public static String getKafkaHomeDir(){
-        return "/kafka/kafka_2.13-3.2.0";
+        return "/kafka/" + kafkaDir;
     }
 
     public static Deployment getDeployment() {
-
         String workDir = System.getProperty("user.dir");
-        String ZookeeperDir = "apache-zookeeper-3.7.1-bin";
-        String KafkaDir = "kafka_2.13-3.2.0";
+        String zookeeperCompressedPath = workDir + "/../../../Archive/Zookeeper/" + zookeeperDir + ".tar.gz";
+        String kafkaCompressedPath = workDir + "/../../../Archive/Kafka/" + kafkaDir + ".tar.gz";
+
         Deployment.Builder builder = Deployment.builder("sample-kafka")
                 .withService("kafka")
-                .applicationPath(workDir + "/../Benchmark/zookeeper-3.7.1/zookeeper-3.7.1-build/zookeeper-dist/target/" + ZookeeperDir + ".tar.gz", "/zookeeper",  PathAttr.COMPRESSED)
+                .applicationPath(zookeeperCompressedPath, "/zookeeper",  PathAttr.COMPRESSED)
                 .applicationPath("conf/zoo.cfg", getZookeeperHomeDir() + "/conf/zoo.cfg")
-                .applicationPath(workDir + "/../Benchmark/kafka-3.2.0/kafka-3.2.0-build/kafka-dist/target/" + KafkaDir + ".tar.gz", "/kafka",  PathAttr.COMPRESSED)
-                .dockerImageName("mengpo1106/kafka:3.2.0").dockerFileAddress("docker/Dockerfile", true)
-                .libraryPath(getZookeeperHomeDir() + "/bin/*.sh")
+                .applicationPath(kafkaCompressedPath, "/kafka",  PathAttr.COMPRESSED)
+                .dockerImageName("mengpo1106/kafka").dockerFileAddress("docker/Dockerfile", true)
                 .libraryPath(getZookeeperHomeDir() + "/lib/*.jar")
-                .libraryPath(getKafkaHomeDir() + "/bin/*.sh")
                 .libraryPath(getKafkaHomeDir() + "/libs/*.jar")
                 .logDirectory(getZookeeperHomeDir() + "/logs")
                 .logDirectory(getKafkaHomeDir() + "/logs")
@@ -50,22 +51,30 @@ public class ReditHelper {
                 .applicationPath("conf/server3/myid", getZookeeperHomeDir() + "/zkdata/myid")
                 .applicationPath("conf/server3/server.properties", getKafkaHomeDir() + "/config/server.properties").and();
 
+        builder.node("server1").and().testCaseEvents("E1", "E2", "E3", "E4", "E5").runSequence("E1 * E2 * E3 * E4 * E5");
         return builder.build();
     }
 
-    public static void startNodesInOrder(ReditRunner runner) throws RuntimeEngineException {
-        try {
-            runner.runtime().startNode("server1");
+    public static void startNodes(ReditRunner runner) throws RuntimeEngineException, InterruptedException {
+        for (int index = 1; index <= numOfServers; index++) {
+            runner.runtime().startNode("server" + index);
             Thread.sleep(1000);
-            if (numOfServers > 1) {
-                for (int Index = 2; Index <= numOfServers; Index++) {
-                    runner.runtime().startNode("server" + Index);
-                }
-            }
-            for (String node : runner.runtime().nodeNames())
-                if (node.startsWith("client")) runner.runtime().startNode(node);
-        } catch (InterruptedException e) {
-            logger.warn("startNodesInOrder sleep got interrupted");
         }
+    }
+
+    public static ArrayList<Object> getZookeeperFileRW() throws IOException {
+        ArrayList<Object> RWs = new ArrayList<>();
+        RWs.add(new FileReader("conf/zoo.cfg"));
+        RWs.add(new FileWriter("conf/zoo.cfg", true));
+        return RWs;
+    }
+
+    public static ArrayList<Object> getKafkaFileRW() throws IOException {
+        ArrayList<Object> RWs = new ArrayList<>();
+        RWs.add(new FileReader("conf/server1/server.properties"));
+        for (int i = 1; i <= numOfServers; i++) {
+            RWs.add(new FileWriter("conf/server" + i + "/server.properties", true));
+        }
+        return RWs;
     }
 }

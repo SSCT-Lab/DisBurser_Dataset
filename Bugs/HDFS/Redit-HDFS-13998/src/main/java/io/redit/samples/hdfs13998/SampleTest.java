@@ -3,6 +3,7 @@ package io.redit.samples.hdfs13998;
 import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
+import io.redit.helpers.HdfsHelper;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hdfs.DistributedFileSystem;
 import org.apache.hadoop.hdfs.protocol.ErasureCodingPolicy;
@@ -17,24 +18,25 @@ import java.io.IOException;
 public class SampleTest {
     private static final Logger logger = LoggerFactory.getLogger(SampleTest.class);
     protected static ReditRunner runner;
+    private static HdfsHelper helper;
+    private static DistributedFileSystem dfs;
     private static final String policy = "RS-6-3-1024k";
     private static final String test1_path = "/test1_ec";
     private static final String test1_replicaPath = "/test1_ec/replica";
     private static final String test2_path = "/test2_ec";
     private static final String test2_filePath = "/test2_ec/file";
-    private static DistributedFileSystem dfs = null;
 
     @BeforeClass
-    public static void before() throws RuntimeEngineException, IOException {
-
+    public static void before() throws RuntimeEngineException, IOException, InterruptedException {
         runner = ReditRunner.run(ReditHelper.getDeployment());
-        ReditHelper.startNodesInOrder(runner);
-        ReditHelper.waitActive();
-        logger.info("The cluster is UP!");
+        ReditHelper.startNodes(runner);
+        helper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfServers);
 
-        ReditHelper.transitionToActive(1, runner);
-        ReditHelper.checkNNs(runner);
-        dfs = ReditHelper.getDFS(runner);
+        helper.waitActive();
+        logger.info("The cluster is UP!");
+        helper.transitionToActive(1, runner);
+        helper.checkNNs(runner);
+        dfs = helper.getDFS(runner);
     }
 
     @AfterClass

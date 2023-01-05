@@ -36,6 +36,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>io.redit.helpers</groupId>
+            <artifactId>helper</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -85,8 +90,5 @@
             <version>1.9.6</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
-
 </project>

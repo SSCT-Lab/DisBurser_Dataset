@@ -1,0 +1,9 @@
+17:27:38.131 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Test2: set replication policy on non-empty directory and check command output
+17:27:40.526 [main] INFO  i.redit.samples.hdfs13998.SampleTest - /hadoop/hadoop-3.1.2/bin/hdfs ec -setPolicy -policy RS-6-3-1024k -path /test2_ec : Set RS-6-3-1024k erasure coding policy on /test2_ec
+
+17:27:40.528 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Before set replication policy, get erasure coding policy in /test2_ec : ErasureCodingPolicy=[Name=RS-6-3-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=6, numParityUnits=3]], CellSize=1048576, Id=1]
+17:27:42.907 [main] INFO  i.redit.samples.hdfs13998.SampleTest - /hadoop/hadoop-3.1.2/bin/hdfs ec -setPolicy -replicate -path /test2_ec : Set replication erasure coding policy on /test2_ec
+Warning: setting erasure coding policy on a non-empty directory will not automatically convert existing files to replication erasure coding policy
+
+17:27:42.909 [main] INFO  i.redit.samples.hdfs13998.SampleTest - After set replication policy, get erasure coding policy in /test2_ec : null
+17:27:42.910 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Get erasure coding policy in /test2_ec/file : ErasureCodingPolicy=[Name=RS-6-3-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=6, numParityUnits=3]], CellSize=1048576, Id=1]

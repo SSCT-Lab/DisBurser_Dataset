@@ -100,7 +100,7 @@ public class HdfsHelper {
 
     public void waitActive() throws RuntimeEngineException {
         for (int index=1; index<= 3; index++) {
-            for (int retry=5; retry>0; retry--){
+            for (int retry=6; retry>0; retry--){
                 logger.info("Checking if NN nn{} is UP (retries left {})", index, retry-1);
                 if (assertNNisUpAndReceivingReport(index, 3))
                     break;

@@ -52,7 +52,7 @@ public class SampleTest {
     }
 
     @Test
-    public void testKafkaRequiresZKRootAccess() throws InterruptedException, RuntimeEngineException, TimeoutException {
+    public void testKafkaRequiresZKRootAccess() throws RuntimeEngineException, TimeoutException {
         runner.runtime().enforceOrder("E1", () -> {
             try {
                 getConnect();

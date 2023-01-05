@@ -2,7 +2,6 @@ package io.redit.samples.hbase26742;
 
 import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
-import io.redit.execution.CommandResults;
 import io.redit.helpers.HbaseHelper;
 import io.redit.helpers.HdfsHelper;
 import io.redit.helpers.ZookeeperHelper;
@@ -17,19 +16,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.*;
-import javax.xml.transform.Result;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 
 import static org.junit.Assert.*;
@@ -49,18 +36,19 @@ public class SampleTest {
     @BeforeClass
     public static void before() throws RuntimeEngineException, IOException, InterruptedException {
         runner = ReditRunner.run(ReditHelper.getDeployment());
-        ReditHelper.startNodes(runner);
+        ReditHelper.startHdfsNodes(runner);
         hdfsHelper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfServers);
-        zookeeperHelper = new ZookeeperHelper(runner, ReditHelper.getZookeeperHomeDir(), logger, ReditHelper.getZookeeperFileRW(), ReditHelper.numOfServers);
-        hbaseHelper = new HbaseHelper(runner, ReditHelper.getHbaseHomeDir(), logger, ReditHelper.getHbaseFileRW(), ReditHelper.numOfServers);
-
-        zookeeperHelper.addConfFile();
-        hbaseHelper.addRegionConf();
 
         hdfsHelper.waitActive();
-        logger.info("The cluster is UP!");
+        logger.info("The Hdfs cluster is UP!");
         hdfsHelper.transitionToActive(1, runner);
         hdfsHelper.checkNNs(runner);
+
+        ReditHelper.startServerNodes(runner);
+        zookeeperHelper = new ZookeeperHelper(runner, ReditHelper.getZookeeperHomeDir(), logger, ReditHelper.getZookeeperFileRW(), ReditHelper.numOfServers);
+        hbaseHelper = new HbaseHelper(runner, ReditHelper.getHbaseHomeDir(), logger, ReditHelper.getHbaseFileRW(), ReditHelper.numOfServers);
+        zookeeperHelper.addConfFile();
+        hbaseHelper.addRegionConf();
 
         zookeeperHelper.startServers();
         Thread.sleep(5000);
@@ -81,12 +69,12 @@ public class SampleTest {
 
     @Test
     public void sampleTest() throws Exception {
-        runner.runtime().enforceOrder("e1", () -> {
+        runner.runtime().enforceOrder("E1", () -> {
             getConnection();
         });
         Thread.sleep(2000);
 
-        runner.runtime().enforceOrder("e2", () -> {
+        runner.runtime().enforceOrder("E2", () -> {
             try {
                 testCheckAndMutateForNull();
             } catch (IOException e) {

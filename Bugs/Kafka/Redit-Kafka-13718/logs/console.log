@@ -1,0 +1,13 @@
+16:38:13.679 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+16:38:17.237 [main] INFO  i.r.samples.kafka13718.SampleTest - server1: cd /kafka/kafka_2.13-3.2.0 && bin/kafka-topics.sh --bootstrap-server 10.2.0.4:9092 --create --topic test
+16:38:17.237 [main] INFO  i.r.samples.kafka13718.SampleTest - Created topic test.
+
+16:38:18.991 [main] INFO  i.r.samples.kafka13718.SampleTest - server1: cd /kafka/kafka_2.13-3.2.0 && bin/kafka-topics.sh --bootstrap-server 10.2.0.4:9092 --describe --topic test
+16:38:18.991 [main] INFO  i.r.samples.kafka13718.SampleTest - Topic: test	TopicId: R2YegOM_TDStx7L62II0Ng	PartitionCount: 1	ReplicationFactor: 1	Configs: segment.bytes=1073741824
+	Topic: test	Partition: 0	Leader: 2	Replicas: 2	Isr: 2
+
+16:38:18.991 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+16:38:19.281 [qtp1426329391-14] INFO  io.redit.execution.EventService - Event E1 received!
+16:38:19.282 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+16:38:19.282 [main] INFO  i.r.samples.kafka13718.SampleTest - completed !!!
+
