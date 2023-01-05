@@ -1,4 +1,4 @@
-package io.redit.samples.zookeeper4508;
+package io.redit.samples.zookeeper4473;
 
 import io.redit.ReditRunner;
 import io.redit.dsl.entities.Deployment;
@@ -39,7 +39,7 @@ public class ReditHelper {
                 .node("server2").applicationPath("conf/server2/myid", getZookeeperHomeDir() + "/zkdata/myid").and()
                 .node("server3").applicationPath("conf/server3/myid", getZookeeperHomeDir() + "/zkdata/myid").and();
 
-        builder.node("server1").and().testCaseEvents("E1").runSequence("E1");
+        builder.node("server1").and().testCaseEvents("E1", "E2").runSequence("E1 * E2");
         return builder.build();
     }
 

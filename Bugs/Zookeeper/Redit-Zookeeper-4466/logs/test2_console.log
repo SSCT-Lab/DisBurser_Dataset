@@ -1,5 +1,5 @@
 19:04:54.220 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
-19:04:54.222 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper2355.io.redit.samples.activemq7337.SampleTest$$Lambda$62/1296612741@58a120b0
+19:04:54.222 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4466.io.redit.samples.activemq7337.SampleTest$$Lambda$62/1296612741@58a120b0
 19:04:54.222 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
 19:04:54.222 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
 19:04:54.236 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3

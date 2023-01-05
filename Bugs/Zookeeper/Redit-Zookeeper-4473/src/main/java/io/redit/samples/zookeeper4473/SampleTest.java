@@ -1,20 +1,18 @@
-package io.redit.samples.zookeeper4508;
+package io.redit.samples.zookeeper4473;
 
 import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.ZookeeperHelper;
-import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.inspector.manager.ZooInspectorManagerImpl;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CountDownLatch;
+import java.util.Properties;
 
 public class SampleTest {
     private static final Logger logger = LoggerFactory.getLogger(SampleTest.class);
@@ -44,8 +42,16 @@ public class SampleTest {
     public void sampleTest() throws Exception {
         runner.runtime().enforceOrder("E1", () -> {
             try {
-                testWatcherExpiredAfterAllServerDown();
-            } catch (Exception e) {
+                testNodeCreateRoot();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        runner.runtime().enforceOrder("E2", () -> {
+            try {
+                testNodeCreateNormal();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });
@@ -54,20 +60,24 @@ public class SampleTest {
         logger.info("completed !!!");
     }
 
-    public void testWatcherExpiredAfterAllServerDown() throws Exception {
-        final CountDownLatch countDownLatch = new CountDownLatch(1);
-        ZooKeeper zk = new ZooKeeper(helper.connectionStr, 4000, watchedEvent -> countDownLatch.countDown());
-        countDownLatch.await();
-        CompletableFuture<Void> expired = new CompletableFuture<>();
-        zk.register(event -> {
-            if (event.getState() == Watcher.Event.KeeperState.Expired) {
-                expired.complete(null);
-            }
-        });
-
-        for (int i = 1; i < 4; i++) {
-            runner.runtime().killNode("server" + i);
-        }
-        expired.join();
+    public void testNodeCreateRoot() throws IOException {
+        Properties connectionProps = new Properties();
+        connectionProps.setProperty("hosts", helper.connectionStr);
+        connectionProps.setProperty("timeout", "5000");
+        ZooInspectorManagerImpl manager = new ZooInspectorManagerImpl();
+        manager.connect(connectionProps);
+        boolean createSuccess = manager.createNode("/", "test");
+        System.out.println("testNodeCreateRoot createSuccess: " + createSuccess);
     }
+
+    public void testNodeCreateNormal() throws IOException {
+        Properties connectionProps = new Properties();
+        connectionProps.setProperty("hosts", helper.connectionStr);
+        connectionProps.setProperty("timeout", "5000");
+        ZooInspectorManagerImpl manager = new ZooInspectorManagerImpl();
+        manager.connect(connectionProps);
+        boolean createSuccess = manager.createNode("/parent", "test");
+        System.out.println("testNodeCreateNormal createSuccess: " + createSuccess);
+    }
+
 }

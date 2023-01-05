@@ -100,7 +100,7 @@ public class ReditHelper {
     public static void startNodes(ReditRunner runner) throws RuntimeEngineException, InterruptedException {
         if (numOfNNs > 1) {
             // wait for journal nodes to come up
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         }
         runner.runtime().startNode("nn1");
         Thread.sleep(5000);

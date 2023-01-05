@@ -1,4 +1,4 @@
-# Redit-Benchmark
+# Redit Bugs Benchmark
 
 *Benchmarks of distributed systems*
 
@@ -16,7 +16,7 @@
 |       Activemq      |       2022_07_01        |          https://github.com/apache/activemq         |
 
 
-## Zookeeper
+### Zookeeper
 
 Apache ZooKeeper is an effort to develop and maintain an open-source server which enables highly reliable distributed coordination.
 
@@ -48,7 +48,7 @@ Apache ZooKeeper is an effort to develop and maintain an open-source server whic
 
 
 
-## Kafka
+### Kafka
 
 Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
@@ -71,7 +71,7 @@ Apache Kafka is an open-source distributed event streaming platform used by thou
 
 
 
-## Hbase
+### Hbase
 
 Apache HBase is an open-source, distributed, versioned, column-oriented store modeled after Google' Bigtable.
 
@@ -101,7 +101,7 @@ Apache HBase is an open-source, distributed, versioned, column-oriented store mo
 
 
 
-## Hadoop
+### Hadoop
 
 The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage. Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer, so delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
 
@@ -117,7 +117,7 @@ The Apache Hadoop software library is a framework that allows for the distribute
 
 
 
-## Elasticsearch
+### Elasticsearch
 
 Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack.
 
@@ -131,7 +131,7 @@ Elasticsearch is the distributed search and analytics engine at the heart of the
 
 
 
-## Cassandra
+### Cassandra
 
 Apache Cassandra is a highly-scalable partitioned row store. Rows are organized into tables with a required primary key.
 
@@ -149,7 +149,7 @@ Apache Cassandra is a highly-scalable partitioned row store. Rows are organized 
 
 
 
-## Rocketmq
+### Rocketmq
 
 Apache RocketMQ is a distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability.
 
@@ -165,7 +165,7 @@ Apache RocketMQ is a distributed messaging and streaming platform with low laten
 
 
 
-## Activemq
+### Activemq
 
 Apache ActiveMQ is a high performance Apache 2.0 licensed Message Broker and JMS 1.1 implementation.
 

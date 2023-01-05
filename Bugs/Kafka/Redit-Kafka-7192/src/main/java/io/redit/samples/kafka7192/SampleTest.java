@@ -176,5 +176,4 @@ public class SampleTest {
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
         streams.start();
     }
-
 }

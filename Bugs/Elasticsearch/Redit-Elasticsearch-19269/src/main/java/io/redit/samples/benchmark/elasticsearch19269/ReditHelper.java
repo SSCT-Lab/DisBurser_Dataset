@@ -20,6 +20,7 @@ public class ReditHelper {
     public static String getElasticsearchHomeDir(){
         return "/elasticsearch/" + dir;
     }
+
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
         String compressedPath = workDir + "/../../../Archive/Elasticsearch/" + dir + ".tar.gz";

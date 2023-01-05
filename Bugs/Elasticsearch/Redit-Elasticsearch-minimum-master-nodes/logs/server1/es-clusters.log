@@ -1,16 +1,14 @@
-[2022-12-14 12:10:58,652][INFO ][node                     ] [node-0] version[1.4.0], pid[27], build[bc94bd8/2014-11-05T14:26:12Z]
-[2022-12-14 12:10:58,653][INFO ][node                     ] [node-0] initializing ...
-[2022-12-14 12:10:58,654][INFO ][plugins                  ] [node-0] loaded [], sites []
-[2022-12-14 12:10:59,672][INFO ][node                     ] [node-0] initialized
-[2022-12-14 12:10:59,672][INFO ][node                     ] [node-0] starting ...
-[2022-12-14 12:10:59,816][INFO ][transport                ] [node-0] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.2.0.4:9300]}
-[2022-12-14 12:10:59,821][INFO ][discovery                ] [node-0] es-clusters/3Qd8wei6REOGVrI_kuS7lw
-[2022-12-14 12:11:16,339][INFO ][cluster.service          ] [node-0] new_master [node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]], reason: zen-disco-join (elected_as_master)
-[2022-12-14 12:11:16,348][INFO ][http                     ] [node-0] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.2.0.4:9200]}
-[2022-12-14 12:11:16,348][INFO ][node                     ] [node-0] started
-[2022-12-14 12:11:16,973][INFO ][cluster.service          ] [node-0] added {[node-2][9wCCp18vRLWtyuXfI7Kxtw][server3][inet[/10.2.0.2:9300]],}, reason: zen-disco-receive(join from node[[node-2][9wCCp18vRLWtyuXfI7Kxtw][server3][inet[/10.2.0.2:9300]]])
-[2022-12-14 12:11:19,202][INFO ][cluster.service          ] [node-0] added {[node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]],}, reason: zen-disco-receive(join from node[[node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]]])
-[2022-12-14 12:11:19,255][INFO ][gateway                  ] [node-0] recovered [0] indices into cluster_state
-[2022-12-14 12:11:20,364][INFO ][cluster.metadata         ] [node-0] [customer] creating index, cause [api], shards [5]/[1], mappings []
-[2022-12-14 12:11:20,908][WARN ][discovery.zen            ] [node-0] not enough master nodes, current nodes: {[node-2][9wCCp18vRLWtyuXfI7Kxtw][server3][inet[/10.2.0.2:9300]],[node-0][3Qd8wei6REOGVrI_kuS7lw][server1][inet[/10.2.0.4:9300]],}
-[2022-12-14 12:11:20,909][INFO ][cluster.service          ] [node-0] removed {[node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]],}, reason: zen-disco-node_failed([node-1][MNob5TgcSl6SDPUaerbi8Q][server2][inet[/10.2.0.3:9300]]), reason transport disconnected
+[2023-01-05 01:41:01,120][INFO ][node                     ] [node-0] version[1.4.0], pid[28], build[bc94bd8/2014-11-05T14:26:12Z]
+[2023-01-05 01:41:01,120][INFO ][node                     ] [node-0] initializing ...
+[2023-01-05 01:41:01,122][INFO ][plugins                  ] [node-0] loaded [], sites []
+[2023-01-05 01:41:02,417][INFO ][node                     ] [node-0] initialized
+[2023-01-05 01:41:02,417][INFO ][node                     ] [node-0] starting ...
+[2023-01-05 01:41:02,554][INFO ][transport                ] [node-0] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.2.0.4:9300]}
+[2023-01-05 01:41:02,586][INFO ][discovery                ] [node-0] es-clusters/Sf1PZOwNTi2ATL5gs5bKsg
+[2023-01-05 01:41:19,344][INFO ][discovery.zen            ] [node-0] failed to send join request to master [[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]]], reason [RemoteTransportException[[node-2][inet[/10.2.0.2:9300]][internal:discovery/zen/join]]; nested: ElasticsearchIllegalStateException[Node [[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]]] not master for join request from [[node-0][Sf1PZOwNTi2ATL5gs5bKsg][server1][inet[/10.2.0.4:9300]]]]; ], tried [3] times
+[2023-01-05 01:41:22,357][INFO ][cluster.service          ] [node-0] detected_master [node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]], added {[node-1][YBJB47-9SO2eRwRSXPssLQ][server2][inet[/10.2.0.3:9300]],[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]],}, reason: zen-disco-receive(from master [[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]]])
+[2023-01-05 01:41:22,398][INFO ][http                     ] [node-0] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.2.0.4:9200]}
+[2023-01-05 01:41:22,398][INFO ][node                     ] [node-0] started
+[2023-01-05 01:41:25,376][INFO ][discovery.zen            ] [node-0] master_left [[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]]], reason [no longer master]
+[2023-01-05 01:41:25,377][WARN ][discovery.zen            ] [node-0] master left (reason = no longer master), current nodes: {[node-1][YBJB47-9SO2eRwRSXPssLQ][server2][inet[/10.2.0.3:9300]],[node-0][Sf1PZOwNTi2ATL5gs5bKsg][server1][inet[/10.2.0.4:9300]],}
+[2023-01-05 01:41:25,377][INFO ][cluster.service          ] [node-0] removed {[node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]],}, reason: zen-disco-master_failed ([node-2][JGXDMpBvQfGPtuKP5Eudzw][server3][inet[/10.2.0.2:9300]])
