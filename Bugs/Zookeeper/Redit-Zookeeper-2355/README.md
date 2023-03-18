@@ -1,4 +1,4 @@
-# Redit-zookeeper-2355
+# Redit-Zookeeper-2355
 
 ### Details
 
@@ -6,10 +6,10 @@ Title: ***Ephemeral node is never deleted if follower fails while reading the pr
 
 JIRA link：[https://issues.apache.org/jira/browse/ZOOKEEPER-2355](https://issues.apache.org/jira/browse/ZOOKEEPER-2355)
 
-|         Label         |        Value        |      Label      |    Value    |
-|:---------------------:|:-------------------:|:---------------:|:-----------:|
-|       **Type**        |         Bug         |  **Priority**   |  Critical   |
-|      **Status**       |      RESOLVED       | **Resolution**  |   Fixed    |
+|         Label         |                   Value                   |       Label       |        Value         |
+|:---------------------:|:-----------------------------------------:|:-----------------:|:--------------------:|
+|       **Type**        |                    Bug                    |   **Priority**    |       Critical       |
+|      **Status**       |                    RESOLVED               |  **Resolution**   |         Fixed        |
 | **Affects Version/s** | 3.4.8, 3.4.9, 3.4.10, 3.5.1, 3.5.2, 3.5.3 | **Fix Version/s** | 3.4.11, 3.5.4, 3.6.0 |
 
 ### Description
@@ -34,13 +34,13 @@ Reproduced version：3.5.3
 Steps to reproduce：
 1. Start a three-node zookeeper cluster and elect a leader.
 2. Create client zk1 to connect to the zookeeper cluster.
-3. Use zk1 to create a temporary node "/e1".
+3. Use zk1 to create a ephemeral node "/e1".
 4. Implement a network partition between the leader and any follower.
 5. Use close() to delete the zk1 client.
 6. Remove the previously imposed network partition.
 7. Create client zk2 to connect to any zookeeper server.
 8. Call zk2.exists(nodePath, false), and find that nodePath has not been deleted.
-9. Create a temporary node of the path "/e1" on zk2, and an exception is thrown: KeeperErrorCode = NodeExists for /e1:
+9. Create a ephemeral node of the path "/e1" on zk2, and an exception is thrown: KeeperErrorCode = NodeExists for /e1:
 ```
 11:16:55.781 [main] INFO  i.r.samples.zookeeper4466.SampleTest - ******************** Node have not been deleted from leader: 4294967298,4294967298,1676603801103,1676603801103,0,0,0,216173051906490368,1,0,4294967298
 
@@ -49,7 +49,7 @@ Steps to reproduce：
 11:16:55.817 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x200003f184e0000, packet:: clientPath:null serverPath:null finished:false header:: 2,1  replyHeader:: 2,8589934595,-110  request:: '/e1,#32,v{s{31,s{'world,'anyone}}},1  response::
 
 java.lang.RuntimeException: org.apache.zookeeper.KeeperException$NodeExistsException: KeeperErrorCode = NodeExists for /e1
-	at io.redit.samples.zookeeper4466.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:119)
+	at io.redit.samples.zookeeper1576.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:119)
 	...
 ```
 

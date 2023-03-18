@@ -1,0 +1,278 @@
+17:24:38.683 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.5.6-c11b7e26bc554b8523dc929761dd28808913f091, built on 10/08/2019 20:18 GMT
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:host.name=master
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_352
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Private Build
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/home/zmb/ideaIC-2022.3/idea-IC-223.7571.182/lib/idea_rt.jar:/home/zmb/ideaIC-2022.3/idea-IC-223.7571.182/plugins/junit/lib/junit5-rt.jar:/home/zmb/ideaIC-2022.3/idea-IC-223.7571.182/plugins/junit/lib/junit-rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar:/home/zmb/project/Redit_Bugs_Benchmark/Bugs/Zookeeper/Redit-Zookeeper-1367/target/classes:/home/zmb/.m2/repository/io/github/martylinzy/redit/0.1.0/redit-0.1.0.jar:/home/zmb/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/zmb/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-server/9.4.12.v20180830/jetty-server-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-http/9.4.12.v20180830/jetty-http-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.12.v20180830/jetty-servlet-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-security/9.4.12.v20180830/jetty-security-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-server/2.22.2/jersey-server-2.22.2.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-client/2.22.2/jersey-client-2.22.2.jar:/home/zmb/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.22.2/jersey-media-jaxb-2.22.2.jar:/home/zmb/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar:/home/zmb/.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar:/home/zmb/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/zmb/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zmb/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.2/jersey-container-servlet-core-2.22.2.jar:/home/zmb/.m2/repository/com/spotify/docker-client/8.15.1/docker-client-8.15.1-shaded.jar:/home/zmb/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.8/jackson-jaxrs-json-provider-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.8/jackson-jaxrs-base-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.8/jackson-module-jaxb-annotations-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.8/jackson-datatype-guava-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/home/zmb/.m2/repository/org/glassfish/jersey/connectors/jersey-apache-connector/2.22.2/jersey-apache-connector-2.22.2.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.22.2/jersey-media-json-jackson-2.22.2.jar:/home/zmb/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/zmb/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/home/zmb/.m2/repository/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar:/home/zmb/.m2/repository/org/apache/httpcomponents/httpcore/4.4.5/httpcore-4.4.5.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-unixsocket/0.18/jnr-unixsocket-0.18.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-ffi/2.1.4/jnr-ffi-2.1.4.jar:/home/zmb/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15.jar:/home/zmb/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15-native.jar:/home/zmb/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar:/home/zmb/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-constants/0.9.8/jnr-constants-0.9.8.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-enxio/0.16/jnr-enxio-0.16.jar:/home/zmb/.m2/repository/com/github/jnr/jnr-posix/3.0.35/jnr-posix-3.0.35.jar:/home/zmb/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/zmb/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar:/home/zmb/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar:/home/zmb/.m2/repository/net/lingala/zip4j/zip4j/1.3.2/zip4j-1.3.2.jar:/home/zmb/.m2/repository/io/github/martylinzy/reditrt/0.1.0/reditrt-0.1.0.jar:/home/zmb/project/Redit_Bugs_Benchmark/helper/target/classes:/home/zmb/.m2/repository/org/apache/hadoop/hadoop-hdfs-client/3.3.1/hadoop-hdfs-client-3.3.1.jar:/home/zmb/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar:/home/zmb/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar:/home/zmb/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar:/home/zmb/.m2/repository/org/apache/hadoop/hadoop-common/3.3.1/hadoop-common-3.3.1.jar:/home/zmb/.m2/repository/org/apache/hadoop/thirdparty/hadoop-shaded-protobuf_3_7/1.1.1/hadoop-shaded-protobuf_3_7-1.1.1.jar:/home/zmb/.m2/repository/org/apache/hadoop/hadoop-annotations/3.3.1/hadoop-annotations-3.3.1.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/tools.jar:/home/zmb/.m2/repository/org/apache/hadoop/thirdparty/hadoop-shaded-guava/1.1.1/hadoop-shaded-guava-1.1.1.jar:/home/zmb/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/zmb/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar:/home/zmb/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/zmb/.m2/repository/commons-net/commons-net/3.6/commons-net-3.6.jar:/home/zmb/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/zmb/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.40.v20210413/jetty-webapp-9.4.40.v20210413.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.40.v20210413/jetty-xml-9.4.40.v20210413.jar:/home/zmb/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/home/zmb/.m2/repository/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.jar:/home/zmb/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/home/zmb/.m2/repository/com/sun/jersey/jersey-servlet/1.19/jersey-servlet-1.19.jar:/home/zmb/.m2/repository/com/sun/jersey/jersey-json/1.19/jersey-json-1.19.jar:/home/zmb/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/home/zmb/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/home/zmb/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/home/zmb/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/home/zmb/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/home/zmb/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/home/zmb/.m2/repository/com/sun/jersey/jersey-server/1.19/jersey-server-1.19.jar:/home/zmb/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/zmb/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/zmb/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/zmb/.m2/repository/org/apache/commons/commons-configuration2/2.1.1/commons-configuration2-2.1.1.jar:/home/zmb/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar:/home/zmb/.m2/repository/org/apache/commons/commons-text/1.4/commons-text-1.4.jar:/home/zmb/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/home/zmb/.m2/repository/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar:/home/zmb/.m2/repository/com/google/re2j/re2j/1.1/re2j-1.1.jar:/home/zmb/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/zmb/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/zmb/.m2/repository/org/apache/hadoop/hadoop-auth/3.3.1/hadoop-auth-3.3.1.jar:/home/zmb/.m2/repository/com/nimbusds/nimbus-jose-jwt/9.8.1/nimbus-jose-jwt-9.8.1.jar:/home/zmb/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/zmb/.m2/repository/net/minidev/json-smart/2.4.2/json-smart-2.4.2.jar:/home/zmb/.m2/repository/net/minidev/accessors-smart/2.4.2/accessors-smart-2.4.2.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.jar:/home/zmb/.m2/repository/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar:/home/zmb/.m2/repository/org/apache/curator/curator-recipes/4.2.0/curator-recipes-4.2.0.jar:/home/zmb/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zmb/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/home/zmb/.m2/repository/org/apache/zookeeper/zookeeper/3.5.6/zookeeper-3.5.6.jar:/home/zmb/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.5.6/zookeeper-jute-3.5.6.jar:/home/zmb/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/home/zmb/.m2/repository/io/netty/netty-handler/4.1.42.Final/netty-handler-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-common/4.1.42.Final/netty-common-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-buffer/4.1.42.Final/netty-buffer-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport/4.1.42.Final/netty-transport-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-resolver/4.1.42.Final/netty-resolver-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-codec/4.1.42.Final/netty-codec-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport-native-epoll/4.1.42.Final/netty-transport-native-epoll-4.1.42.Final.jar:/home/zmb/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.42.Final/netty-transport-native-unix-common-4.1.42.Final.jar:/home/zmb/.m2/repository/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.jar:/home/zmb/.m2/repository/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.jar:/home/zmb/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/zmb/.m2/repository/com/fasterxml/woodstox/woodstox-core/5.3.0/woodstox-core-5.3.0.jar:/home/zmb/.m2/repository/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.jar:/home/zmb/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.jar:/home/zmb/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zmb/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zmb/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zmb/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zmb/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/media/jersey-media-moxy/2.25.1/jersey-media-moxy-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zmb/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zmb/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.25.1/jersey-entity-filtering-2.25.1.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.moxy/2.6.0/org.eclipse.persistence.moxy-2.6.0.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/2.6.0/org.eclipse.persistence.core-2.6.0.jar:/home/zmb/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/2.6.0/org.eclipse.persistence.asm-2.6.0.jar:/home/zmb/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/home/zmb/.m2/repository/org/eclipse/persistence/javax.persistence/2.0.0/javax.persistence-2.0.0.jar:/home/zmb/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/zmb/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-util/9.4.12.v20180830/jetty-util-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/eclipse/jetty/jetty-io/9.4.12.v20180830/jetty-io-9.4.12.v20180830.jar:/home/zmb/.m2/repository/org/aspectj/aspectjrt/1.9.6/aspectjrt-1.9.6.jar:/home/zmb/.m2/repository/org/apache/curator/curator-framework/2.12.0/curator-framework-2.12.0.jar:/home/zmb/.m2/repository/org/apache/curator/curator-client/2.12.0/curator-client-2.12.0.jar:/home/zmb/ideaIC-2022.3/idea-IC-223.7571.182/lib/idea_rt.jar
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.15.0-60-generic
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.name=zmb
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.home=/home/zmb
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/home/zmb/project/Redit_Bugs_Benchmark/Bugs/Zookeeper/Redit-Zookeeper-1367
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=295MB
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=3493MB
+17:24:38.730 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=406MB
+17:24:38.732 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$51/1331946439@834831b
+17:24:38.735 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+17:24:38.738 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+17:24:38.743 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+17:24:38.775 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.4
+17:24:38.776 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.4/10.2.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:38.776 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:54890, server: 10.2.0.4/10.2.0.4:2181
+17:24:38.777 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.4/10.2.0.4:2181
+17:24:38.799 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.2.0.4/10.2.0.4:2181, sessionid = 0x100008469910000, negotiated timeout = 4000
+17:24:38.800 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+17:24:38.958 [qtp1282287470-21] INFO  io.redit.execution.EventService - Event E1 received!
+17:24:38.959 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+17:24:38.979 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 1,1  replyHeader:: 1,4294967298,0  request:: '/test,#6e6f6465506174685f66,v{s{31,s{'world,'anyone}}},0  response:: '/test
+17:24:38.984 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 2,1  replyHeader:: 2,4294967299,0  request:: '/test/e1,#6e6f646550617468312064617461,v{s{31,s{'world,'anyone}}},1  response:: '/test/e1
+17:24:38.989 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 3,1  replyHeader:: 3,4294967300,0  request:: '/test/e2,#6e6f646550617468322064617461,v{s{31,s{'world,'anyone}}},1  response:: '/test/e2
+17:24:38.993 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 4,1  replyHeader:: 4,4294967301,0  request:: '/test/e3,#6e6f646550617468332064617461,v{s{31,s{'world,'anyone}}},1  response:: '/test/e3
+17:24:38.993 [main] INFO  i.r.samples.zookeeper4466.SampleTest - create ephemeral node on /test/e1, /test/e2, /test/e3
+17:24:38.995 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 5,8  replyHeader:: 5,4294967301,0  request:: '/test,F  response:: v{'e1,'e2,'e3}
+17:24:38.995 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [e1, e2, e3]
+17:24:38.998 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 6,4  replyHeader:: 6,4294967301,0  request:: '/test/e1,F  response:: #6e6f646550617468312064617461,s{4294967299,4294967299,1678872278980,1678872278980,0,0,0,72058162744721408,14,0,4294967299}
+17:24:38.998 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 49, 32, 100, 97, 116, 97]
+17:24:38.998 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 7,4  replyHeader:: 7,4294967301,0  request:: '/test/e2,F  response:: #6e6f646550617468322064617461,s{4294967300,4294967300,1678872278985,1678872278985,0,0,0,72058162744721408,14,0,4294967300}
+17:24:38.998 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 50, 32, 100, 97, 116, 97]
+17:24:38.999 [main-SendThread(10.2.0.4:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 8,4  replyHeader:: 8,4294967301,0  request:: '/test/e3,F  response:: #6e6f646550617468332064617461,s{4294967301,4294967301,1678872278989,1678872278989,0,0,0,72058162744721408,14,0,4294967301}
+17:24:38.999 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 51, 32, 100, 97, 116, 97]
+17:24:38.999 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+17:24:39.004 [qtp1282287470-35] INFO  io.redit.execution.EventService - Event E2 received!
+17:24:39.005 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+17:24:39.005 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server1 ...
+17:24:39.024 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:39.280 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server1 is killed!
+17:24:39.280 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server2 ...
+17:24:39.507 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 is killed!
+17:24:39.507 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Killing node server3 ...
+17:24:39.750 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server3 is killed!
+17:24:39.750 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X1 ...
+17:24:39.754 [qtp1282287470-60] INFO  io.redit.execution.EventService - Event X1 received!
+17:24:39.755 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X2 ...
+17:24:39.756 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Starting node server2 ...
+17:24:39.756 [main] INFO  c.s.d.client.DefaultDockerClient - Starting container with Id: 5d0b88e5fb206f808630cb7e6eaf517ffdb639dd5441a9e16347d3560b5d1195
+17:24:39.846 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+17:24:39.846 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:40.127 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server2 is started!
+17:24:40.127 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Starting node server3 ...
+17:24:40.127 [main] INFO  c.s.d.client.DefaultDockerClient - Starting container with Id: 34eed6c1b619ce68a134813895738cb57c1a8f90b27464c3f7226df473609e6c
+17:24:40.450 [main] INFO  i.r.e.s.SingleNodeRuntimeEngine - Node server3 is started!
+17:24:40.451 [Thread-27] INFO  i.r.samples.zookeeper4466.SampleTest - server2 startServer...
+17:24:40.451 [Thread-28] INFO  i.r.samples.zookeeper4466.SampleTest - server3 startServer...
+17:24:40.839 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:40610, server: 10.2.0.3/10.2.0.3:2181
+17:24:40.839 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+17:24:40.843 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:41.297 [main-SendThread(10.2.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.2
+17:24:41.297 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.2/10.2.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:41.297 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:59194, server: 10.2.0.2/10.2.0.2:2181
+17:24:41.297 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.2/10.2.0.2:2181
+17:24:41.301 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:42.829 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.4
+17:24:42.829 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.4/10.2.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:44.164 [main-SendThread(10.2.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2762ms for sessionid 0x100008469910000
+17:24:44.165 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2762ms for sessionid 0x100008469910000, closing socket connection and attempting reconnect
+17:24:44.169 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:24:44.169 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:205)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:24:44.994 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+17:24:44.995 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:44.995 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:40616, server: 10.2.0.3/10.2.0.3:2181
+17:24:44.995 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+17:24:44.999 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:45.920 [main-SendThread(10.2.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.2
+17:24:45.920 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.2/10.2.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:45.920 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:59200, server: 10.2.0.2/10.2.0.2:2181
+17:24:45.920 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.2/10.2.0.2:2181
+17:24:45.922 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:47.358 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.4
+17:24:47.358 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.4/10.2.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:48.693 [main-SendThread(10.2.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2671ms for sessionid 0x100008469910000
+17:24:48.693 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2671ms for sessionid 0x100008469910000, closing socket connection and attempting reconnect
+17:24:48.693 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:24:48.693 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:205)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:24:48.856 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+17:24:48.857 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:48.857 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:60032, server: 10.2.0.3/10.2.0.3:2181
+17:24:48.857 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+17:24:48.861 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:49.837 [main-SendThread(10.2.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.2
+17:24:49.837 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.2/10.2.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:49.837 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:60486, server: 10.2.0.2/10.2.0.2:2181
+17:24:49.837 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.2/10.2.0.2:2181
+17:24:49.843 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Unable to read additional data from server sessionid 0x100008469910000, likely server has closed socket, closing socket connection and attempting reconnect
+17:24:51.602 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.4
+17:24:51.602 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.4/10.2.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:52.937 [main-SendThread(10.2.0.4:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2994ms for sessionid 0x100008469910000
+17:24:52.937 [main-SendThread(10.2.0.4:2181)] INFO  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 2994ms for sessionid 0x100008469910000, closing socket connection and attempting reconnect
+17:24:52.937 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:417)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:198)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:781)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:415)
+	... 4 common frames omitted
+17:24:52.938 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.ClientCnxnSocketNIO - Ignoring exception during shutdown output
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.Net.translateToSocketException(Net.java:126)
+	at sun.nio.ch.Net.translateException(Net.java:160)
+	at sun.nio.ch.Net.translateException(Net.java:166)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:425)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.cleanup(ClientCnxnSocketNIO.java:205)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:1338)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanAndNotifyState(ClientCnxn.java:1276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1254)
+Caused by: java.nio.channels.NotYetConnectedException: null
+	at sun.nio.ch.SocketChannelImpl.shutdownOutput(SocketChannelImpl.java:798)
+	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
+	... 4 common frames omitted
+17:24:53.937 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+17:24:53.937 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:53.937 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:60034, server: 10.2.0.3/10.2.0.3:2181
+17:24:53.937 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+17:24:53.952 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.2.0.3/10.2.0.3:2181, sessionid = 0x100008469910000, negotiated timeout = 4000
+17:24:55.280 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x100008469910000 after 7ms
+17:24:55.451 [main] INFO  i.r.samples.zookeeper4466.SampleTest - server2 checkStatus...
+17:24:55.631 [main] INFO  i.r.samples.zookeeper4466.SampleTest - server2: cd /zookeeper/apache-zookeeper-3.6.0-bin && bin/zkServer.sh status
+17:24:55.631 [main] INFO  i.r.samples.zookeeper4466.SampleTest - Client port found: 2181. Client address: localhost.
+Mode: follower
+
+17:24:55.631 [main] INFO  i.r.samples.zookeeper4466.SampleTest - server3 checkStatus...
+17:24:55.772 [main] INFO  i.r.samples.zookeeper4466.SampleTest - server3: cd /zookeeper/apache-zookeeper-3.6.0-bin && bin/zkServer.sh status
+17:24:55.772 [main] INFO  i.r.samples.zookeeper4466.SampleTest - Client port found: 2181. Client address: localhost.
+Mode: leader
+
+17:24:55.772 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X2 ...
+17:24:55.775 [qtp1282287470-24] INFO  io.redit.execution.EventService - Event X2 received!
+17:24:55.776 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+17:24:55.777 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.3:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$59/231498257@48535004
+17:24:55.777 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+17:24:55.777 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+17:24:55.798 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
+17:24:55.798 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.3/10.2.0.3:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:55.798 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:60042, server: 10.2.0.3/10.2.0.3:2181
+17:24:55.798 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.3/10.2.0.3:2181
+17:24:55.812 [main-SendThread(10.2.0.3:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.2.0.3/10.2.0.3:2181, sessionid = 0x2000084a9910000, negotiated timeout = 4000
+17:24:55.814 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x2000084a9910000, packet:: clientPath:null serverPath:null finished:false header:: 1,8  replyHeader:: 1,8589934593,0  request:: '/test,F  response:: v{'e1,'e2,'e3}
+17:24:55.814 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [e1, e2, e3]
+17:24:55.815 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x2000084a9910000, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,8589934593,0  request:: '/test/e1,F  response:: #6e6f646550617468312064617461,s{4294967299,4294967299,1678872278980,1678872278980,0,0,0,72058162744721408,14,0,4294967299}
+17:24:55.815 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 49, 32, 100, 97, 116, 97]
+17:24:55.816 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x2000084a9910000, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,8589934593,0  request:: '/test/e2,F  response:: #6e6f646550617468322064617461,s{4294967300,4294967300,1678872278985,1678872278985,0,0,0,72058162744721408,14,0,4294967300}
+17:24:55.816 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 50, 32, 100, 97, 116, 97]
+17:24:55.816 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x2000084a9910000, packet:: clientPath:null serverPath:null finished:false header:: 4,4  replyHeader:: 4,8589934593,0  request:: '/test/e3,F  response:: #6e6f646550617468332064617461,s{4294967301,4294967301,1678872278989,1678872278989,0,0,0,72058162744721408,14,0,4294967301}
+17:24:55.816 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 51, 32, 100, 97, 116, 97]
+17:24:55.816 [main] DEBUG org.apache.zookeeper.ZooKeeper - Closing session: 0x2000084a9910000
+17:24:55.816 [main] DEBUG org.apache.zookeeper.ClientCnxn - Closing client for session: 0x2000084a9910000
+17:24:55.819 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x2000084a9910000, packet:: clientPath:null serverPath:null finished:false header:: 5,-11  replyHeader:: 5,8589934594,0  request:: null response:: null
+17:24:55.820 [main] DEBUG org.apache.zookeeper.ClientCnxn - Disconnecting client for session: 0x2000084a9910000
+17:24:55.920 [main] INFO  org.apache.zookeeper.ZooKeeper - Session: 0x2000084a9910000 closed
+17:24:55.920 [main-EventThread] INFO  org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x2000084a9910000
+17:24:55.920 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+17:24:55.924 [qtp1282287470-25] INFO  io.redit.execution.EventService - Event E3 received!
+17:24:55.925 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E4 ...
+17:24:55.926 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$61/255839577@79d743e6
+17:24:55.926 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+17:24:55.926 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+17:24:55.958 [main-SendThread(10.2.0.2:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.2
+17:24:55.958 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 10.2.0.2/10.2.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+17:24:55.958 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.2.0.1:60502, server: 10.2.0.2/10.2.0.2:2181
+17:24:55.958 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 10.2.0.2/10.2.0.2:2181
+17:24:55.973 [main-SendThread(10.2.0.2:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 10.2.0.2/10.2.0.2:2181, sessionid = 0x3000084a9a00000, negotiated timeout = 4000
+17:24:55.976 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x3000084a9a00000, packet:: clientPath:null serverPath:null finished:false header:: 1,8  replyHeader:: 1,8589934595,0  request:: '/test,F  response:: v{'e1,'e2,'e3}
+17:24:55.976 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [e1, e2, e3]
+17:24:55.977 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x3000084a9a00000, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,8589934595,0  request:: '/test/e1,F  response:: #6e6f646550617468312064617461,s{4294967299,4294967299,1678872278980,1678872278980,0,0,0,72058162744721408,14,0,4294967299}
+17:24:55.977 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 49, 32, 100, 97, 116, 97]
+17:24:55.977 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x3000084a9a00000, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,8589934595,0  request:: '/test/e2,F  response:: #6e6f646550617468322064617461,s{4294967300,4294967300,1678872278985,1678872278985,0,0,0,72058162744721408,14,0,4294967300}
+17:24:55.977 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 50, 32, 100, 97, 116, 97]
+17:24:55.978 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x3000084a9a00000, packet:: clientPath:null serverPath:null finished:false header:: 4,4  replyHeader:: 4,8589934595,0  request:: '/test/e3,F  response:: #6e6f646550617468332064617461,s{4294967301,4294967301,1678872278989,1678872278989,0,0,0,72058162744721408,14,0,4294967301}
+17:24:55.978 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 51, 32, 100, 97, 116, 97]
+17:24:55.978 [main] DEBUG org.apache.zookeeper.ZooKeeper - Closing session: 0x3000084a9a00000
+17:24:55.978 [main] DEBUG org.apache.zookeeper.ClientCnxn - Closing client for session: 0x3000084a9a00000
+17:24:55.981 [main-SendThread(10.2.0.2:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x3000084a9a00000, packet:: clientPath:null serverPath:null finished:false header:: 5,-11  replyHeader:: 5,8589934596,0  request:: null response:: null
+17:24:55.982 [main] DEBUG org.apache.zookeeper.ClientCnxn - Disconnecting client for session: 0x3000084a9a00000
+17:24:56.082 [main-EventThread] INFO  org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x3000084a9a00000
+17:24:56.082 [main] INFO  org.apache.zookeeper.ZooKeeper - Session: 0x3000084a9a00000 closed
+17:24:56.083 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E4 ...
+17:24:56.095 [qtp1282287470-26] INFO  io.redit.execution.EventService - Event E4 received!
+17:24:56.096 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E5 ...
+17:24:56.102 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 9,8  replyHeader:: 9,8589934596,0  request:: '/test,F  response:: v{'e1,'e2,'e3}
+17:24:56.103 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [e1, e2, e3]
+17:24:56.104 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 10,4  replyHeader:: 10,8589934596,0  request:: '/test/e1,F  response:: #6e6f646550617468312064617461,s{4294967299,4294967299,1678872278980,1678872278980,0,0,0,72058162744721408,14,0,4294967299}
+17:24:56.104 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 49, 32, 100, 97, 116, 97]
+17:24:56.105 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 11,4  replyHeader:: 11,8589934596,0  request:: '/test/e2,F  response:: #6e6f646550617468322064617461,s{4294967300,4294967300,1678872278985,1678872278985,0,0,0,72058162744721408,14,0,4294967300}
+17:24:56.105 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 50, 32, 100, 97, 116, 97]
+17:24:56.106 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 12,4  replyHeader:: 12,8589934596,0  request:: '/test/e3,F  response:: #6e6f646550617468332064617461,s{4294967301,4294967301,1678872278989,1678872278989,0,0,0,72058162744721408,14,0,4294967301}
+17:24:56.106 [main] INFO  i.r.samples.zookeeper4466.SampleTest - [110, 111, 100, 101, 80, 97, 116, 104, 51, 32, 100, 97, 116, 97]
+17:24:56.106 [main] DEBUG org.apache.zookeeper.ZooKeeper - Closing session: 0x100008469910000
+17:24:56.106 [main] DEBUG org.apache.zookeeper.ClientCnxn - Closing client for session: 0x100008469910000
+17:24:56.110 [main-SendThread(10.2.0.3:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x100008469910000, packet:: clientPath:null serverPath:null finished:false header:: 13,-11  replyHeader:: 13,8589934597,0  request:: null response:: null
+17:24:56.110 [main] DEBUG org.apache.zookeeper.ClientCnxn - Disconnecting client for session: 0x100008469910000
+17:24:56.211 [main] INFO  org.apache.zookeeper.ZooKeeper - Session: 0x100008469910000 closed
+17:24:56.211 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E5 ...
+17:24:56.211 [main-EventThread] INFO  org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x100008469910000
+17:24:56.216 [qtp1282287470-27] INFO  io.redit.execution.EventService - Event E5 received!
+17:24:56.217 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+17:24:56.217 [main] INFO  i.r.samples.zookeeper4466.SampleTest - completed !!!

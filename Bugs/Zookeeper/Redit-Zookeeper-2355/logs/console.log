@@ -17,7 +17,7 @@
 11:16:40.882 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=288MB
 11:16:40.882 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=3493MB
 11:16:40.882 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=386MB
-11:16:40.884 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4466.SampleTest$$Lambda$52/889753223@33cbfa57
+11:16:40.884 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$52/889753223@33cbfa57
 11:16:40.887 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
 11:16:40.889 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
 11:16:40.892 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
@@ -60,7 +60,7 @@ leader: server3
 11:16:55.740 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X2 ...
 11:16:55.744 [qtp211968962-25] INFO  io.redit.execution.EventService - Event X2 received!
 11:16:55.744 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E4 ...
-11:16:55.745 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4466.SampleTest$$Lambda$63/2092066079@3e1624c7
+11:16:55.745 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$63/2092066079@3e1624c7
 11:16:55.745 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
 11:16:55.746 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
 11:16:55.759 [main-SendThread(10.2.0.4:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.4
@@ -74,7 +74,7 @@ leader: server3
 11:16:55.781 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E4 ...
 11:16:55.785 [qtp211968962-26] INFO  io.redit.execution.EventService - Event E4 received!
 11:16:55.786 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E5 ...
-11:16:55.787 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.3:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4466.SampleTest$$Lambda$65/255839577@79d743e6
+11:16:55.787 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.3:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.SampleTest$$Lambda$65/255839577@79d743e6
 11:16:55.787 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
 11:16:55.787 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
 11:16:55.798 [main-SendThread(10.2.0.3:2181)] DEBUG o.a.zookeeper.SaslServerPrincipal - Canonicalized address to 10.2.0.3
@@ -89,10 +89,10 @@ leader: server3
 
 java.lang.RuntimeException: org.apache.zookeeper.KeeperException$NodeExistsException: KeeperErrorCode = NodeExists for /e1
 
-	at io.redit.samples.zookeeper4466.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:119)
+	at io.redit.samples.zookeeper1576.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:119)
 	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:317)
 	at io.redit.execution.RuntimeEngine.enforceOrder(RuntimeEngine.java:300)
-	at io.redit.samples.zookeeper4466.SampleTest.testWatcherExpiredAfterAllServerDown(SampleTest.java:111)
+	at io.redit.samples.zookeeper1576.SampleTest.testWatcherExpiredAfterAllServerDown(SampleTest.java:111)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -123,6 +123,6 @@ Caused by: org.apache.zookeeper.KeeperException$NodeExistsException: KeeperError
 	at org.apache.zookeeper.KeeperException.create(KeeperException.java:126)
 	at org.apache.zookeeper.KeeperException.create(KeeperException.java:54)
 	at org.apache.zookeeper.ZooKeeper.create(ZooKeeper.java:1538)
-	at io.redit.samples.zookeeper4466.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:117)
+	at io.redit.samples.zookeeper1576.SampleTest.lambda$testWatcherExpiredAfterAllServerDown$9(SampleTest.java:117)
 	... 29 more
 

@@ -1,4 +1,4 @@
-# Redit-zookeeper-3479
+# Redit-Zookeeper-3479
 
 ### Details
 

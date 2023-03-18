@@ -1,4 +1,4 @@
-package io.redit.samples.zookeeper4466;
+package io.redit.samples.zookeeper1576;
 
 import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
@@ -99,7 +99,7 @@ public class SampleTest {
 
         runner.runtime().enforceOrder("E4", () -> {
             CountDownLatch countDownLatch2 = new CountDownLatch(1);
-           try {
+            try {
                zooKeeper[1] = new ZooKeeper(runner.runtime().ip("server1") + ":2181",4000, watchedEvent -> countDownLatch2.countDown());
                Stat exists = zooKeeper[1].exists(nodePath, false);
                logger.info("******************** Node have not been deleted from leader: " + exists.toString());

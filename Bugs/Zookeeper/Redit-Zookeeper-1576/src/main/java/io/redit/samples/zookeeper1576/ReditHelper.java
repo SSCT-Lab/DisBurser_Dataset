@@ -1,4 +1,4 @@
-package io.redit.samples.zookeeper4466;
+package io.redit.samples.zookeeper1576;
 
 import io.redit.ReditRunner;
 import io.redit.dsl.entities.Deployment;
@@ -14,14 +14,14 @@ import java.util.ArrayList;
 public class ReditHelper {
     public static int numOfServers = 3;
     public static final int HTTP_PORT = 2181;
-    public static final String dir = "apache-zookeeper-3.6.0-bin";
+    public static final String dir = "zookeeper-3.4.3";
     public static String getZookeeperHomeDir(){
         return "/zookeeper/" + dir;
     }
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String compressedPath = workDir + "/../../../Archive/Zookeeper/Zookeeper-2355/" + dir + ".tar.gz";
+        String compressedPath = workDir + "/../../../Archive/Zookeeper/Zookeeper-1576/" + dir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-zookeeper")
                 .withService("zookeeper")
@@ -39,7 +39,7 @@ public class ReditHelper {
                 .node("server2").applicationPath("conf/server2/myid", getZookeeperHomeDir() + "/zkdata/myid").and()
                 .node("server3").applicationPath("conf/server3/myid", getZookeeperHomeDir() + "/zkdata/myid").and();
 
-        builder.node("server1").and().testCaseEvents("E1", "E2", "E3", "E4", "E5", "X1", "X2").runSequence("E1 * E2 * X1 * E3 * X2 * E4 * E5");
+        builder.node("server1").and().testCaseEvents("E1", "E2", "X1", "X2").runSequence("X1 * E1 * E2 * X2");
         return builder.build();
     }
 

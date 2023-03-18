@@ -48,6 +48,13 @@ public class ZookeeperHelper {
         }
     }
 
+    public void checkServerStatus(int serverId) throws RuntimeEngineException {
+        String command = "cd " + homeDir + " && bin/zkServer.sh status";
+        logger.info("server" + serverId + " checkStatus...");
+        CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
+        printResult(commandResults);
+    }
+
     public void startServer(int serverId) {
         new Thread(() -> {
             String command = "cd " + homeDir + " && bin/zkServer.sh start";
@@ -83,7 +90,7 @@ public class ZookeeperHelper {
 
     public void printResult(CommandResults commandResults){
         logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
+        if (commandResults.stdOut() != null && commandResults.stdOut() != ""){
             logger.info(commandResults.stdOut());
         }else {
             logger.warn(commandResults.stdErr());

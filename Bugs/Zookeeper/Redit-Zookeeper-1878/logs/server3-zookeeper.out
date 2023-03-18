@@ -1,0 +1,34 @@
+2023-03-16 09:08:31,917 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /zookeeper/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2023-03-16 09:08:31,919 [myid:] - INFO  [main:QuorumPeerConfig@334] - Defaulting to majority quorums
+2023-03-16 09:08:31,921 [myid:3] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2023-03-16 09:08:31,921 [myid:3] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2023-03-16 09:08:31,921 [myid:3] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2023-03-16 09:08:31,927 [myid:3] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2023-03-16 09:08:31,933 [myid:3] - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2023-03-16 09:08:31,939 [myid:3] - INFO  [main:QuorumPeer@913] - tickTime set to 2000
+2023-03-16 09:08:31,940 [myid:3] - INFO  [main:QuorumPeer@933] - minSessionTimeout set to -1
+2023-03-16 09:08:31,940 [myid:3] - INFO  [main:QuorumPeer@944] - maxSessionTimeout set to -1
+2023-03-16 09:08:31,940 [myid:3] - INFO  [main:QuorumPeer@959] - initLimit set to 10
+2023-03-16 09:08:31,945 [myid:3] - INFO  [main:QuorumPeer@429] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2023-03-16 09:08:31,962 [myid:3] - INFO  [main:QuorumPeer@444] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2023-03-16 09:08:31,972 [myid:3] - ERROR [main:QuorumPeer@453] - Unable to load database on disk
+java.io.IOException: Could not rename temporary file /zookeeper/zookeeper-3.4.5/zkdata/version-2/currentEpoch.tmp to /zookeeper/zookeeper-3.4.5/zkdata/version-2/currentEpoch
+	at org.apache.zookeeper.common.AtomicFileOutputStream.close(AtomicFileOutputStream.java:82)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.writeLongToFile(QuorumPeer.java:1117)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.loadDataBase(QuorumPeer.java:447)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:409)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:151)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:111)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
+2023-03-16 09:08:31,973 [myid:3] - ERROR [main:QuorumPeerMain@89] - Unexpected exception, exiting abnormally
+java.lang.RuntimeException: Unable to run quorum server
+	at org.apache.zookeeper.server.quorum.QuorumPeer.loadDataBase(QuorumPeer.java:454)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:409)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:151)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:111)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
+Caused by: java.io.IOException: Could not rename temporary file /zookeeper/zookeeper-3.4.5/zkdata/version-2/currentEpoch.tmp to /zookeeper/zookeeper-3.4.5/zkdata/version-2/currentEpoch
+	at org.apache.zookeeper.common.AtomicFileOutputStream.close(AtomicFileOutputStream.java:82)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.writeLongToFile(QuorumPeer.java:1117)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.loadDataBase(QuorumPeer.java:447)
+	... 4 more

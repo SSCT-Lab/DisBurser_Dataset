@@ -17,7 +17,7 @@
 19:04:53.964 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=272MB
 19:04:53.964 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=3493MB
 19:04:53.964 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=371MB
-19:04:53.965 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper4466.io.redit.samples.activemq7337.SampleTest$$Lambda$52/362432678@7ec25216
+19:04:53.965 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=10.2.0.4:2181,10.2.0.3:2181,10.2.0.2:2181 sessionTimeout=4000 watcher=io.redit.samples.zookeeper1576.io.redit.samples.activemq7337.SampleTest$$Lambda$52/362432678@7ec25216
 19:04:53.967 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
 19:04:53.969 [main] INFO  o.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
 19:04:53.972 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
