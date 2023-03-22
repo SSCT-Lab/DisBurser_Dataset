@@ -16,7 +16,7 @@ public class ReditHelper {
     private static final int NN_HTTP_PORT = 50070;
     private static final int NN_RPC_PORT = 8020;
     public static int numOfServers = 3;
-    private static int numOfNNs = 3;
+    public static int numOfNNs = 3;
     private static int numOfDNs = 3;
     private static int numOfJNs = 3;
     public static final String hadoopDir = "hadoop-3.1.2";

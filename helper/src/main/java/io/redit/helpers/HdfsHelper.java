@@ -18,16 +18,16 @@ public class HdfsHelper {
     private final ReditRunner runner;
     private final String homeDir;
     private final Logger logger;
-    private final int numOfServers;
+    private final int numOfNNs;
     private final String CLUSTER_NAME = "mycluster";
     private static final int NN_HTTP_PORT = 50070;
     private static final int NN_RPC_PORT = 8020;
 
-    public HdfsHelper(ReditRunner runner, String homeDir, Logger logger, int numOfServers) {
+    public HdfsHelper(ReditRunner runner, String homeDir, Logger logger, int numOfNNs) {
         this.runner = runner;
         this.homeDir = homeDir;
         this.logger = logger;
-        this.numOfServers = numOfServers;
+        this.numOfNNs = numOfNNs;
     }
 
     public DistributedFileSystem getDFS(ReditRunner runner) throws IOException {
@@ -47,7 +47,7 @@ public class HdfsHelper {
         conf.set("dfs.nameservices", CLUSTER_NAME);
         conf.set("dfs.ha.namenodes."+ CLUSTER_NAME, getNNString());
 
-        for (int i = 1; i <= numOfServers; i++) {
+        for (int i = 1; i <= numOfNNs; i++) {
             String nnIp = runner.runtime().ip("nn" + i);
             conf.set("dfs.namenode.rpc-address."+ CLUSTER_NAME +".nn" + i, nnIp + ":" +
                     runner.runtime().portMapping("nn" + i, NN_RPC_PORT, PortType.TCP));
@@ -59,7 +59,7 @@ public class HdfsHelper {
 
     private String getNNString() {
         StringJoiner stringJoiner = new StringJoiner(",");
-        for (int i = 1; i <= numOfServers; i++) {
+        for (int i = 1; i <= numOfNNs; i++) {
             stringJoiner.add("nn" + i);
         }
         return stringJoiner.toString();
@@ -73,33 +73,34 @@ public class HdfsHelper {
         }
     }
 
+    public void transitionToStandby(int nnNum, ReditRunner runner) throws RuntimeEngineException {
+        logger.info("Transitioning nn{} to Standby", nnNum);
+        CommandResults res = runner.runtime().runCommandInNode("nn" + nnNum, homeDir + "/bin/hdfs haadmin -transitionToStandby nn" + nnNum);
+        if (res.exitCode() != 0) {
+            throw new RuntimeException("Error while transitioning nn" + nnNum + " to Standby.\n" + res.stdErr());
+        }
+    }
+
     public void checkNNs(ReditRunner runner) throws RuntimeEngineException {
         logger.info("start check NNs !!!");
-        for(int nnNum = 1; nnNum <= numOfServers; nnNum++){
+        for(int nnNum = 1; nnNum <= numOfNNs; nnNum++){
             CommandResults res = runner.runtime().runCommandInNode("nn" + nnNum, homeDir + "/bin/hdfs haadmin -getServiceState nn" + nnNum);
             logger.info("nn" + nnNum + " status: " + res.stdOut());
         }
     }
 
-    public void checkJps() throws RuntimeEngineException {
-        for (int i = 1; i <= numOfServers; i++) {
-            CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, "jps");
-            printResult(commandResults);
-        }
+    public void checkNN(ReditRunner runner, int nnNum) throws RuntimeEngineException {
+        logger.info("start check NN{} status ...", nnNum);
+        CommandResults res = runner.runtime().runCommandInNode("nn" + nnNum, homeDir + "/bin/hdfs haadmin -getServiceState nn" + nnNum);
+        logger.info("nn" + nnNum + " status: " + res.stdOut());
+
     }
 
-    public void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
-            logger.info(commandResults.stdOut());
-        }else {
-            logger.warn(commandResults.stdErr());
-        }
-    }
-
-
+    /**
+     Valid for hadoop v3.0.0 and above
+     **/
     public void waitActive() throws RuntimeEngineException {
-        for (int index=1; index<= 3; index++) {
+        for (int index=1; index<= numOfNNs; index++) {
             for (int retry=6; retry>0; retry--){
                 logger.info("Checking if NN nn{} is UP (retries left {})", index, retry-1);
                 if (assertNNisUpAndReceivingReport(index, 3))
@@ -118,6 +119,26 @@ public class HdfsHelper {
         logger.info("The cluster is ACTIVE");
     }
 
+    public void waitActiveForNNs() {
+        for (int index=1; index<= numOfNNs; index++) {
+            for (int retry=6; retry>0; retry--){
+                logger.info("Checking if NN nn{} is UP (retries left {})", index, retry-1);
+                if (isNNUp(index))
+                    break;
+                if (retry > 1) {
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        logger.warn("waitActive sleep got interrupted");
+                    }
+                } else {
+                    throw new RuntimeException("NN nn" + index + " is not active");
+                }
+            }
+        }
+        logger.info("The NNs is ACTIVE");
+    }
+
     private boolean assertNNisUpAndReceivingReport(int index, int numOfDNs) throws RuntimeEngineException {
         if (!isNNUp(index))
             return false;
@@ -129,10 +150,11 @@ public class HdfsHelper {
         }
 
         logger.info("NN {} is up. Checking datanode connections", "nn" + index);
+        System.out.println(res);
         return res.contains("\"NumLiveDataNodes\" : " + numOfDNs);
     }
 
-    private boolean isNNUp(int index) throws RuntimeEngineException {
+    public boolean isNNUp(int index) {
         String res = getNNJmxHaInfo(index);
         if (res == null) {
             logger.warn("Error while trying to get the status of name node");
@@ -151,6 +173,16 @@ public class HdfsHelper {
         } catch (IOException e) {
             logger.warn("Error while trying to get the status of name node");
             return null;
+        }
+    }
+
+    public void failoverNNtoNN(int nnNum1, int nnNum2, ReditRunner runner) throws RuntimeEngineException {
+        logger.info("Failover nn" + nnNum1 + " to nn" + nnNum2);
+        CommandResults res = runner.runtime().runCommandInNode("nn" + nnNum1, homeDir + "/bin/hdfs haadmin -failover nn" + nnNum1 + " nn" + nnNum2);
+        if (res.exitCode() != 0) {
+            throw new RuntimeException("Error while Failover nn" + nnNum1 + " to nn" + nnNum2 + "\n" + res.stdErr());
+        }else {
+            Utils.printResult(res, logger);
         }
     }
 }

@@ -3,6 +3,7 @@ package io.redit.samples.benchmark.elasticsearch2488;
 import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.helpers.ElasticsearchHelper;
+import io.redit.helpers.Utils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -88,8 +89,8 @@ public class SampleTest {
                 throw new RuntimeException(e);
             }
             if (successful_trigger){
-                helper.printResult(runner.runtime().runCommandInNode(this.masterServer, "curl localhost:9200/_cat/master?v"));
-                helper.printResult(runner.runtime().runCommandInNode(followerName, "curl localhost:9200/_cat/master?v"));
+                Utils.printResult(runner.runtime().runCommandInNode(this.masterServer, "curl localhost:9200/_cat/master?v"), logger);
+                Utils.printResult(runner.runtime().runCommandInNode(followerName, "curl localhost:9200/_cat/master?v"), logger);
             }
         });
 

@@ -4,6 +4,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.KafkaHelper;
+import io.redit.helpers.Utils;
 import io.redit.helpers.ZookeeperHelper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -86,7 +87,7 @@ public class SampleTest {
                 " && ../bin/kafka-acls.sh --authorizer-properties zookeeper.connect=" + zookeeperHelper.connectionStr + " --add --allow-principal User:Peter --allow-host 198.51.200.1 --producer --topic '*'";
         logger.info("server" + serverId + " add an Acl in " + dirName);
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        kafkaHelper.printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 
     private void checkAcl(int serverId, String dirName) throws RuntimeEngineException {
@@ -94,6 +95,6 @@ public class SampleTest {
                 " && ../bin/kafka-acls.sh --authorizer-properties zookeeper.connect=" + zookeeperHelper.connectionStr + " --list --topic '*'";
         logger.info("server" + serverId + " check file Acl in "  + dirName);
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        kafkaHelper.printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 }

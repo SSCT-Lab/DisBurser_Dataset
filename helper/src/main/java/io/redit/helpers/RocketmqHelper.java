@@ -44,7 +44,7 @@ public class RocketmqHelper {
         String command = "cd " + homeDir + " && bin/mqadmin  clusterList -n " + runner.runtime().ip("server" + serverId) + ":9876";
         logger.info("server" + serverId + " checkStatus ...");
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 
 
@@ -92,15 +92,6 @@ public class RocketmqHelper {
                 out.close();
             }
             logger.info("add config to broker-x.properties !!!");
-        }
-    }
-
-    private void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
-            logger.info(commandResults.stdOut());
-        }else {
-            logger.warn(commandResults.stdErr());
         }
     }
 }

@@ -4,6 +4,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.HdfsHelper;
+import io.redit.helpers.Utils;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hdfs.DistributedFileSystem;
 import org.apache.hadoop.hdfs.client.HdfsDataInputStream;
@@ -35,7 +36,7 @@ public class SampleTest {
     public static void before() throws RuntimeEngineException, IOException, InterruptedException {
         runner = ReditRunner.run(ReditHelper.getDeployment());
         ReditHelper.startNodes(runner);
-        helper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfServers);
+        helper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfNNs);
 
         helper.waitActive();
         logger.info("The cluster is UP!");
@@ -84,11 +85,11 @@ public class SampleTest {
         runner.runtime().enforceOrder("E4", () -> {
             String ViewBlocksCommand_ec = ReditHelper.getHadoopHomeDir() + "/bin/hdfs fsck " + ecFilePath + "/" + testFile + " -blockId blk_" + ecBlockId;
             CommandResults result1  = runner.runtime().runCommandInNode("nn1", ViewBlocksCommand_ec);
-            helper.printResult(result1);
+            Utils.printResult(result1, logger);
 
             String ViewBlocksCommand_replica = ReditHelper.getHadoopHomeDir() + "/bin/hdfs fsck " + replicaFilePath + "/" + testFile + " -blockId blk_" + replicaBlockId;
             CommandResults result2  = runner.runtime().runCommandInNode("nn1", ViewBlocksCommand_replica);
-            helper.printResult(result2);
+            Utils.printResult(result2, logger);
         });
 
         runner.runtime().waitForRunSequenceCompletion(20);

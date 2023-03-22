@@ -1,0 +1,52 @@
+17:58:51.348 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X1 ...
+17:58:56.513 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X1 ...
+17:58:56.713 [qtp632587706-35] INFO  io.redit.execution.EventService - Event X1 received!
+17:59:01.715 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+17:59:01.722 [main] INFO  i.redit.samples.hdfs13998.SampleTest - start check NN1 status ...
+17:59:02.228 [main] INFO  i.redit.samples.hdfs13998.SampleTest - nn1 status: active
+
+17:59:02.932 [main] INFO  i.redit.samples.hdfs13998.SampleTest - nn1: /hadoop/hadoop-3.0.0/bin/hdfs dfsadmin -setBalancerBandwidth 12345
+17:59:02.932 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Result output:
+Balancer bandwidth is set to 12345 for nn1/10.2.0.2:8020
+
+17:59:02.932 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Result error:
+OpenJDK 64-Bit Server VM warning: You have loaded library /hadoop/hadoop-3.0.0/lib/native/libhadoop.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2023-03-21 09:59:02,573 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+setBalancerBandwidth: Call From nn1/10.2.0.2 to nn2:8020 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+
+17:59:02.932 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+17:59:02.936 [qtp632587706-23] INFO  io.redit.execution.EventService - Event E1 received!
+17:59:02.936 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X2 ...
+17:59:05.068 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Checking if NN nn1 is UP (retries left 5)
+17:59:05.073 [main] INFO  i.redit.samples.hdfs13998.SampleTest - NN nn1 is up. Checking datanode connections
+17:59:05.073 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Checking if NN nn2 is UP (retries left 5)
+17:59:05.129 [main] INFO  i.redit.samples.hdfs13998.SampleTest - NN nn2 is up. Checking datanode connections
+17:59:10.129 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Checking if NN nn2 is UP (retries left 4)
+17:59:10.136 [main] INFO  i.redit.samples.hdfs13998.SampleTest - NN nn2 is up. Checking datanode connections
+17:59:15.137 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Checking if NN nn2 is UP (retries left 3)
+17:59:15.154 [main] INFO  i.redit.samples.hdfs13998.SampleTest - NN nn2 is up. Checking datanode connections
+17:59:15.154 [main] INFO  i.redit.samples.hdfs13998.SampleTest - The cluster is ACTIVE
+17:59:15.154 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Transitioning nn1 to Standby
+17:59:15.877 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Transitioning nn2 to ACTIVE
+17:59:16.746 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X2 ...
+17:59:16.752 [qtp632587706-25] INFO  io.redit.execution.EventService - Event X2 received!
+17:59:16.754 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event X3 ...
+17:59:21.876 [main] INFO  i.redit.samples.hdfs13998.SampleTest - nn1: /hadoop/hadoop-3.0.0/bin/hdfs --daemon stop namenode
+17:59:21.876 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event X3 ...
+17:59:21.892 [qtp632587706-27] INFO  io.redit.execution.EventService - Event X3 received!
+17:59:26.894 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+17:59:26.908 [main] INFO  i.redit.samples.hdfs13998.SampleTest - start check NN2 status ...
+17:59:27.419 [main] INFO  i.redit.samples.hdfs13998.SampleTest - nn2 status: active
+
+17:59:28.132 [main] INFO  i.redit.samples.hdfs13998.SampleTest - nn2: /hadoop/hadoop-3.0.0/bin/hdfs dfsadmin -setBalancerBandwidth 1234
+17:59:28.132 [main] INFO  i.redit.samples.hdfs13998.SampleTest - Result error:
+OpenJDK 64-Bit Server VM warning: You have loaded library /hadoop/hadoop-3.0.0/lib/native/libhadoop.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2023-03-21 09:59:27,803 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+setBalancerBandwidth: Call From nn2/10.2.0.3 to nn1:8020 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+
+17:59:28.132 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+17:59:28.135 [qtp632587706-52] INFO  io.redit.execution.EventService - Event E2 received!
+17:59:28.136 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+17:59:28.136 [main] INFO  i.redit.samples.hdfs13998.SampleTest - completed !!!

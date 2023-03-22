@@ -4,6 +4,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.KafkaHelper;
+import io.redit.helpers.Utils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -69,6 +70,6 @@ public class SampleTest {
     private static void formatStorageLog(int serverId, String uuid) throws RuntimeEngineException {
         String command = "cd " + ReditHelper.getKafkaHomeDir() + " && bin/kafka-storage.sh format -t " + uuid + " -c  ./config/server.properties";
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        kafkaHelper.printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 }

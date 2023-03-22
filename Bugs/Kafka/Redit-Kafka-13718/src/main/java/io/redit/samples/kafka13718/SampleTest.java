@@ -4,6 +4,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.KafkaHelper;
+import io.redit.helpers.Utils;
 import io.redit.helpers.ZookeeperHelper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -58,9 +59,9 @@ public class SampleTest {
     private void createTopic(int serverId) throws RuntimeEngineException {
         String command = "cd " + ReditHelper.getKafkaHomeDir() + " && bin/kafka-topics.sh --bootstrap-server " + runner.runtime().ip("server" + serverId) + ":9092 --create --topic " + topicName;
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        kafkaHelper.printResult(commandResults);
+        Utils.printResult(commandResults, logger);
         String command2 = "cd " + ReditHelper.getKafkaHomeDir() + " && bin/kafka-topics.sh --bootstrap-server " + runner.runtime().ip("server" + serverId) + ":9092 --describe --topic " + topicName;
         CommandResults commandResults2 = runner.runtime().runCommandInNode("server" + serverId, command2);
-        kafkaHelper.printResult(commandResults2);
+        Utils.printResult(commandResults2, logger);
     }
 }

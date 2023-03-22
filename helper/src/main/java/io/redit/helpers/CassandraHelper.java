@@ -38,13 +38,13 @@ public class CassandraHelper {
     public void checkNetStatus(int serverId) throws RuntimeEngineException {
         String command = "cd " + homeDir + " && bin/nodetool netstats ";
         CommandResults commandResult = runner.runtime().runCommandInNode("server" + serverId, command);
-        printResult(commandResult);
+        Utils.printResult(commandResult, logger);
     }
 
     public void checkStatus(int serverId) throws RuntimeEngineException {
         String command = "cd " + homeDir + " && bin/nodetool status ";
         CommandResults commandResult = runner.runtime().runCommandInNode("server" + serverId, command);
-        printResult(commandResult);
+        Utils.printResult(commandResult, logger);
     }
 
     public void makeCassandraDirs() throws RuntimeEngineException {
@@ -80,13 +80,5 @@ public class CassandraHelper {
                 logger.info("add config to cassandra.yaml !!!");
             }
         }
-    }
-
-    public void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
-            logger.info(commandResults.stdOut());
-        }
-        logger.warn(commandResults.stdErr());
     }
 }

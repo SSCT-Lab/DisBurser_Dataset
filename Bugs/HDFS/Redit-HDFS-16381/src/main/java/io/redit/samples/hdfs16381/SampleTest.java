@@ -29,7 +29,7 @@ public class SampleTest {
     public static void before() throws RuntimeEngineException, IOException, InterruptedException {
         runner = ReditRunner.run(ReditHelper.getDeployment());
         ReditHelper.startNodes(runner);
-        helper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfServers);
+        helper = new HdfsHelper(runner, ReditHelper.getHadoopHomeDir(), logger, ReditHelper.numOfNNs);
 
         helper.waitActive();
         logger.info("The cluster is UP!");

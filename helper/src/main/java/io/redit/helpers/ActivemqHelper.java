@@ -46,17 +46,8 @@ public class ActivemqHelper{
         logger.info("server" + serverId + " checkServer...");
         for(int i = 0; i <= numOfServers; i++){
             String command = "cd " + homeDir[i] + " && bin/activemq status";
-            CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-            printResult(commandResults);
-        }
-    }
-
-    public void printResult(CommandResults commandResults) {
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null) {
-            logger.info(commandResults.stdOut());
-        } else {
-            logger.warn(commandResults.stdErr());
+            CommandResults commandResult = runner.runtime().runCommandInNode("server" + serverId, command);
+            Utils.printResult(commandResult, logger);
         }
     }
 }

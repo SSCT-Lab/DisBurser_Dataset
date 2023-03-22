@@ -41,7 +41,7 @@ public class ZookeeperHelper {
             String command = "cd " + homeDir + " && bin/zkServer.sh status";
             logger.info("server" + i + " checkStatus...");
             CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, command);
-            printResult(commandResults);
+            Utils.printResult(commandResults, logger);
             if (commandResults.stdOut().indexOf("leader") != -1){
                 leaderId = i;
             }
@@ -52,7 +52,7 @@ public class ZookeeperHelper {
         String command = "cd " + homeDir + " && bin/zkServer.sh status";
         logger.info("server" + serverId + " checkStatus...");
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 
     public void startServer(int serverId) {
@@ -85,15 +85,6 @@ public class ZookeeperHelper {
             out.write(serverConf);
             out.close();
             logger.info("add config to zoo.cfg !!!");
-        }
-    }
-
-    public void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null && commandResults.stdOut() != ""){
-            logger.info(commandResults.stdOut());
-        }else {
-            logger.warn(commandResults.stdErr());
         }
     }
 }

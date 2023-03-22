@@ -38,7 +38,7 @@ public class ElasticsearchHelper {
         // 要求该版本可在root帐户下运行
         logger.info("server" + serverId + " startServer...");
         String command = homeDir + "/bin/elasticsearch -d";
-        printResult(runner.runtime().runCommandInNode("server" + serverId, command));
+        Utils.printResult(runner.runtime().runCommandInNode("server" + serverId, command), logger);
     }
 
     public void startServers_230() throws InterruptedException, RuntimeEngineException {
@@ -49,10 +49,10 @@ public class ElasticsearchHelper {
 
     public void startServer_230(int serverId) throws RuntimeEngineException, InterruptedException {
         logger.info("server" + serverId + " startServer...");
-        printResult(runner.runtime().runCommandInNode("server" + serverId, "useradd test && chown -R test /elasticsearch && chown -R test /var"));
+        Utils.printResult(runner.runtime().runCommandInNode("server" + serverId, "useradd test && chown -R test /elasticsearch && chown -R test /var"), logger);
         Thread.sleep(500);
         String command = "runuser -m test -c '" + homeDir + "/bin/elasticsearch -d'";
-        printResult(runner.runtime().runCommandInNode("server" + serverId, command));
+        Utils.printResult(runner.runtime().runCommandInNode("server" + serverId, command), logger);
         Thread.sleep(4000);
     }
 
@@ -117,31 +117,22 @@ public class ElasticsearchHelper {
     public void checkJps() throws RuntimeEngineException {
         for (int i = 1; i <= numOfServers; i++) {
             CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, "jps");
-            printResult(commandResults);
+            Utils.printResult(commandResults, logger);
         }
     }
 
     public void checkElasticsearchStatus() throws RuntimeEngineException {
         String cmd = "curl -X GET http://localhost:9200/?pretty";
         for (int i = 1; i <= numOfServers; i++) {
-            printResult(runner.runtime().runCommandInNode("server" + i, cmd));
+            Utils.printResult(runner.runtime().runCommandInNode("server" + i, cmd), logger);
         }
     }
 
     public void checkOneServerStatusManyTimes(int serverId) throws RuntimeEngineException, InterruptedException {
         String cmd = "curl -X GET http://localhost:9200/?pretty";
         for(int i = 0; i < 10; i++){
-            printResult(runner.runtime().runCommandInNode("server" + serverId, cmd));
+            Utils.printResult(runner.runtime().runCommandInNode("server" + serverId, cmd), logger);
             Thread.sleep(3000);
-        }
-    }
-
-    public void printResult(CommandResults commandResults) {
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null && commandResults.stdOut().length() != 0) {
-            logger.info(commandResults.stdOut());
-        } else {
-            logger.warn(commandResults.stdErr());
         }
     }
 }

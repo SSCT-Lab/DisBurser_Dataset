@@ -5,6 +5,7 @@ import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.execution.NetPart;
 import io.redit.helpers.ElasticsearchHelper;
+import io.redit.helpers.Utils;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -59,9 +60,9 @@ public class SampleTest {
         });
 
         runner.runtime().enforceOrder("E3", () -> {
-            helper.printResult(runner.runtime().runCommandInNode("server1", createIndexCmd));
-            helper.printResult(runner.runtime().runCommandInNode("server1", queryIndexCmd));
-            helper.printResult(runner.runtime().runCommandInNode("server1", createDocCmd));
+            Utils.printResult(runner.runtime().runCommandInNode("server1", createIndexCmd), logger);
+            Utils.printResult(runner.runtime().runCommandInNode("server1", queryIndexCmd), logger);
+            Utils.printResult(runner.runtime().runCommandInNode("server1", createDocCmd), logger);
         });
         Thread.sleep(5000);
 
@@ -102,7 +103,7 @@ public class SampleTest {
 
         // 在primaryShardServer上创建值并尝试脏读,期望读取到“dirty value”
         runner.runtime().enforceOrder("E6", () -> {
-            helper.printResult(runner.runtime().runCommandInNode(primaryShardServer, updateDocCmd1));
+            Utils.printResult(runner.runtime().runCommandInNode(primaryShardServer, updateDocCmd1), logger);
             boolean dirtyReadSuccess;
             try {
                 dirtyReadSuccess = attemptToGetQueryResponse(primaryShardServer);
@@ -117,7 +118,7 @@ public class SampleTest {
 
         // 网络分区未结束时，在master重新写入
         runner.runtime().enforceOrder("E7", () -> {
-            helper.printResult(runner.runtime().runCommandInNode(this.masterServer, updateDocCmd2));
+            Utils.printResult(runner.runtime().runCommandInNode(this.masterServer, updateDocCmd2), logger);
         });
 
         // 撤销网络分区

@@ -1,5 +1,8 @@
 package io.redit.helpers;
 
+import io.redit.execution.CommandResults;
+import org.slf4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -25,6 +28,16 @@ public class Utils {
             System.out.println("result: " + b);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void printResult(CommandResults commandResults, Logger logger){
+        logger.info(commandResults.nodeName() + ": " + commandResults.command());
+        if (commandResults.stdOut() != null && !commandResults.stdOut().equals("")){
+            logger.info("Result output:\n" + commandResults.stdOut());
+        }
+        if (commandResults.stdErr() != null && !commandResults.stdErr().equals("")){
+            logger.info("Result error:\n" + commandResults.stdErr());
         }
     }
 }

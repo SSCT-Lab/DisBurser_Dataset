@@ -4,6 +4,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.CassandraHelper;
+import io.redit.helpers.Utils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -63,7 +64,7 @@ public class SampleTest {
         logger.info("create snapshot \"p/s\" ...");
         String command1 = "cd " + ReditHelper.getCassandraHomeDir() + " && bin/nodetool snapshot -t \"p/s\"";
         CommandResults commandResult1 = runner.runtime().runCommandInNode("server" + serverId, command1);
-        helper.printResult(commandResult1);
+        Utils.printResult(commandResult1, logger);
     }
 
     private static void checkSnapshot(int serverId) throws RuntimeEngineException {
@@ -71,7 +72,7 @@ public class SampleTest {
         String command3 = "cd " + test_data_file + "/snapshots/p/s" + " && ls -l";
         CommandResults commandResult2 = runner.runtime().runCommandInNode("server" + serverId, command2);
         CommandResults commandResult3 = runner.runtime().runCommandInNode("server" + serverId, command3);
-        helper.printResult(commandResult2);
-        helper.printResult(commandResult3);
+        Utils.printResult(commandResult2, logger);
+        Utils.printResult(commandResult3, logger);
     }
 }

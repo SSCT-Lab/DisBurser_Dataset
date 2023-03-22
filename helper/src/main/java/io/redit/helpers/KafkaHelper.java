@@ -78,13 +78,13 @@ public class KafkaHelper {
         String dockerName = "server" + serverId;
         String command = "cd " + homeDir + " && bin/kafka-topics.sh --bootstrap-server " + BOOTSTRAP_SERVERS + " --create --replication-factor 3 --partitions 2 --topic " + topicName;
         CommandResults commandResults = runner.runtime().runCommandInNode(dockerName, command);
-        printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 
     public void formatStorageLog(int serverId, String uuid) throws RuntimeEngineException {
         String command = "cd " + homeDir + " && bin/kafka-storage.sh format -t " + uuid + " -c  ./config/server.properties";
         CommandResults commandResults = runner.runtime().runCommandInNode("server" + serverId, command);
-        printResult(commandResults);
+        Utils.printResult(commandResults, logger);
     }
 
     public void findController(){
@@ -156,16 +156,7 @@ public class KafkaHelper {
     public void checkJps() throws RuntimeEngineException {
         for(int i = 1; i <= numOfServers; i++){
             CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, "jps");
-            printResult(commandResults);
-        }
-    }
-
-    public void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
-            logger.info(commandResults.stdOut());
-        }else {
-            logger.warn(commandResults.stdErr());
+            Utils.printResult(commandResults, logger);
         }
     }
 }

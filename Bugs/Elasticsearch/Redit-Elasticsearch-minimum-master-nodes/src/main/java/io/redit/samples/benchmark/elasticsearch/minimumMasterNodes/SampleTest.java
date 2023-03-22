@@ -3,6 +3,7 @@ import io.redit.ReditRunner;
 import io.redit.exceptions.RuntimeEngineException;
 import io.redit.execution.CommandResults;
 import io.redit.helpers.ElasticsearchHelper;
+import io.redit.helpers.Utils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -65,8 +66,8 @@ public class SampleTest {
         String createCommand = String.format("curl --connect-timeout %d -m %d -XPUT 'localhost:9200/customer?pretty'", connectTimeout, dataTransferTimeout);
         String catCommand = String.format("curl --connect-timeout %d -m %d 'localhost:9200/_cat/indices?v'", connectTimeout, dataTransferTimeout);
         CommandResults r1 = runner.runtime().runCommandInNode("server" + serverId, createCommand);
-        helper.printResult(r1);
+        Utils.printResult(r1, logger);
         CommandResults r2 = runner.runtime().runCommandInNode("server" + serverId, catCommand);
-        helper.printResult(r2);
+        Utils.printResult(r2, logger);
     }
 }

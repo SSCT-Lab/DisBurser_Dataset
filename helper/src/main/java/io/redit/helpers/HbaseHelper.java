@@ -56,7 +56,7 @@ public class HbaseHelper {
     public void startSsh() throws RuntimeEngineException {
         for(int i = 1; i <= numOfServers; i++){
             CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, "service ssh start");
-            printResult(commandResults);
+            Utils.printResult(commandResults, logger);
         }
     }
 
@@ -82,18 +82,9 @@ public class HbaseHelper {
     }
 
     public void checkJps() throws RuntimeEngineException {
-        for(int i = 1; i <= numOfServers; i++){
+        for (int i = 1; i <= numOfServers; i++) {
             CommandResults commandResults = runner.runtime().runCommandInNode("server" + i, "jps");
-            printResult(commandResults);
-        }
-    }
-
-    private void printResult(CommandResults commandResults){
-        logger.info(commandResults.nodeName() + ": " + commandResults.command());
-        if (commandResults.stdOut() != null){
-            logger.info(commandResults.stdOut());
-        }else {
-            logger.warn(commandResults.stdErr());
+            Utils.printResult(commandResults, logger);
         }
     }
 }
