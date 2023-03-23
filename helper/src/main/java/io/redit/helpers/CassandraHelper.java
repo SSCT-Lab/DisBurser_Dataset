@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class CassandraHelper {
     private final ReditRunner runner;
-    private final String homeDir;
+    public final String homeDir;
     private final Logger logger;
     private final ArrayList<Object> RWs;
     private final int numOfServers;

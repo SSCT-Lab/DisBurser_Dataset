@@ -1,0 +1,30 @@
+16:12:00.263 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E1 ...
+16:12:00.523 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: useradd cassandra
+16:12:00.591 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: mkdir -p /tmp/dir/
+16:12:00.637 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: chown cassandra:cassandra /tmp/dir
+16:12:00.637 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E1 ...
+16:12:00.826 [qtp211968962-21] INFO  io.redit.execution.EventService - Event E1 received!
+16:12:00.826 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E2 ...
+16:12:00.928 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: mkdir /tmp/dir/sub && touch /tmp/dir/sub/file
+16:12:00.953 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: ls -la /tmp/dir
+16:12:00.953 [main] INFO  i.r.s.cassandra17628.SampleTest - Result output:
+total 16
+drwxr-xr-x 3 cassandra cassandra 4096 Mar 23 08:12 .
+drwxrwxrwt 1 root      root      4096 Mar 23 08:12 ..
+drwxr-xr-x 2 root      root      4096 Mar 23 08:12 sub
+
+16:12:00.998 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: ls -la /tmp/dir/sub
+16:12:00.998 [main] INFO  i.r.s.cassandra17628.SampleTest - Result output:
+total 8
+drwxr-xr-x 2 root      root      4096 Mar 23 08:12 .
+drwxr-xr-x 3 cassandra cassandra 4096 Mar 23 08:12 ..
+-rw-r--r-- 1 root      root         0 Mar 23 08:12 file
+
+16:12:00.998 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E2 ...
+16:12:01.002 [qtp211968962-35] INFO  io.redit.execution.EventService - Event E2 received!
+16:12:01.003 [main] INFO  io.redit.execution.RuntimeEngine - Waiting for event E3 ...
+16:12:01.840 [main] INFO  i.r.s.cassandra17628.SampleTest - server1: /cassandra/apache-cassandra-4.0.1/bin/nodetool enablefullquerylog --path /tmp/dir
+16:12:01.840 [main] INFO  io.redit.execution.RuntimeEngine - Sending test case event E3 ...
+16:12:01.844 [qtp211968962-61] INFO  io.redit.execution.EventService - Event E3 received!
+16:12:01.845 [main] INFO  io.redit.execution.RuntimeEngine - The run sequence is completed!
+16:12:01.845 [main] INFO  i.r.s.cassandra17628.SampleTest - completed !!!
