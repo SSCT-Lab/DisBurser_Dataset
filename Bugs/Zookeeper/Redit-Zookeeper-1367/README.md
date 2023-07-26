@@ -84,7 +84,7 @@ numChildren = 0
 
 These never went away for the lifetime of the server, for any clients connected directly to that server. Note that this cluster is configured to have all three servers still, the third one being down (90.0.0.223, zkid 162).
 
-I captured the data/snapshot directories for the the two live servers. When I start single-node servers using each directory, I can briefly see that the inconsistent data is present in those logs, though the ephemeral nodes seem to get (correctly) cleaned up pretty soon after I start the server.
+I captured the data/snapshot directories for the two live servers. When I start single-node servers using each directory, I can briefly see that the inconsistent data is present in those logs, though the ephemeral nodes seem to get (correctly) cleaned up pretty soon after I start the server.
 
 I will upload a tar containing the debug logs and data directories from the failure. I think we can reproduce it regularly if you need more info.
 
