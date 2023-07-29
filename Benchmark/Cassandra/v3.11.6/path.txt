@@ -1,0 +1,6 @@
+src/java/org/apache/cassandra/cql3/WhereClause.java
+src/java/org/apache/cassandra/cql3/statements/CreateViewStatement.java
+src/java/org/apache/cassandra/tools/nodetool/Snapshot.java
+src/java/org/apache/cassandra/cql3/functions/FunctionCall.java
+src/java/org/apache/cassandra/cql3/functions/FunctionName.java
+src/java/org/apache/cassandra/cql3/selection/Selectable.java

@@ -1,3 +1,0 @@
-src/java/org/apache/cassandra/cql3/functions/FunctionCall.java
-src/java/org/apache/cassandra/cql3/functions/FunctionName.java
-
