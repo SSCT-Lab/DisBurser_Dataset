@@ -17,12 +17,12 @@ int main()
                          	"            }\n"};
 
 #ifdef CAS_14365
-    system("cp ./origin/MapSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
-    system("cp ./origin/SetSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
+    system("cp ./buggy/MapSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
+    system("cp ./buggy/SetSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
     printf("inject CAS_14365 ...\n");
 #else
     // File 1: MapSerializer.java
-    fp1 = fopen("./origin/MapSerializer.java", "r");
+    fp1 = fopen("./buggy/MapSerializer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -60,7 +60,7 @@ int main()
     system("cp ./fixed/MapSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
 
     // File 2: SetSerializer.java
-    fp1 = fopen("./origin/SetSerializer.java", "r");
+    fp1 = fopen("./buggy/SetSerializer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");

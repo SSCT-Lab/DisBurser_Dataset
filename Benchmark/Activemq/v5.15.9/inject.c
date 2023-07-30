@@ -10,12 +10,12 @@ int main()
     char str2[200]    = 	"            LOG.warn(\"Failed to add Connection id={}, clientId={}, clientIP={} due to {}\", info.getConnectionId(), clientId, info.getClientIp(), e.getLocalizedMessage());\n";
 
 #ifdef AMQ_8252
-    system("cp ./origin/JaasAuthenticationBroker.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/security/");
-    system("cp ./origin/TransportConnection.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/broker/");
+    system("cp ./buggy/JaasAuthenticationBroker.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/security/");
+    system("cp ./buggy/TransportConnection.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/broker/");
     printf("inject AMQ_8252 ...\n");
 #else
     // File 1: JaasAuthenticationBroker.java
-    fp1 = fopen("./origin/JaasAuthenticationBroker.java", "r");
+    fp1 = fopen("./buggy/JaasAuthenticationBroker.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -45,7 +45,7 @@ int main()
     system("cp ./fixed/JaasAuthenticationBroker.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/security/");
 
     // File 2: TransportConnection.java
-    fp1 = fopen("./origin/TransportConnection.java", "r");
+    fp1 = fopen("./buggy/TransportConnection.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");

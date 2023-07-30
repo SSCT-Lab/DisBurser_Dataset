@@ -59,17 +59,17 @@ int main()
                          	
                          	          
 #ifdef CAS_13669
-    system("cp ./origin/SASIIndex.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/");
-    system("cp ./origin/AbstractAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
-    system("cp ./origin/DelimiterAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
-    system("cp ./origin/NoOpAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
-    system("cp ./origin/NonTokenizingAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
-    system("cp ./origin/StandardAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
-    system("cp ./origin/IndexMode.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/conf/");
+    system("cp ./buggy/SASIIndex.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/");
+    system("cp ./buggy/AbstractAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
+    system("cp ./buggy/DelimiterAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
+    system("cp ./buggy/NoOpAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
+    system("cp ./buggy/NonTokenizingAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
+    system("cp ./buggy/StandardAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
+    system("cp ./buggy/IndexMode.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/conf/");
     printf("inject CAS_13669 ...\n");
 #else
     // File 1: SASIIndex.java
-    fp1 = fopen("./origin/SASIIndex.java", "r");
+    fp1 = fopen("./buggy/SASIIndex.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -99,7 +99,7 @@ int main()
     system("cp ./fixed/SASIIndex.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/");
 
     // File 2: AbstractAnalyzer.java
-    fp1 = fopen("./origin/AbstractAnalyzer.java", "r");
+    fp1 = fopen("./buggy/AbstractAnalyzer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -130,7 +130,7 @@ int main()
     system("cp ./fixed/AbstractAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
 
     // File 3: DelimiterAnalyzer.java
-    fp1 = fopen("./origin/DelimiterAnalyzer.java", "r");
+    fp1 = fopen("./buggy/DelimiterAnalyzer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -165,7 +165,7 @@ int main()
     system("cp ./fixed/DelimiterAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
 
     // File 4: NoOpAnalyzer.java
-    fp1 = fopen("./origin/NoOpAnalyzer.java", "r");
+    fp1 = fopen("./buggy/NoOpAnalyzer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -200,7 +200,7 @@ int main()
     system("cp ./fixed/NoOpAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
 
     // File 5: NonTokenizingAnalyzer.java
-    fp1 = fopen("./origin/NonTokenizingAnalyzer.java", "r");
+    fp1 = fopen("./buggy/NonTokenizingAnalyzer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -235,7 +235,7 @@ int main()
     system("cp ./fixed/NonTokenizingAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
 
     // File 6: StandardAnalyzer.java
-    fp1 = fopen("./origin/StandardAnalyzer.java", "r");
+    fp1 = fopen("./buggy/StandardAnalyzer.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -293,7 +293,7 @@ int main()
     system("cp ./fixed/StandardAnalyzer.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/analyzer/");
 
     // File 7: IndexMode.java
-    fp1 = fopen("./origin/IndexMode.java", "r");
+    fp1 = fopen("./buggy/IndexMode.java", "r");
     if (fp1 == NULL)
     {
      perror("open file error");

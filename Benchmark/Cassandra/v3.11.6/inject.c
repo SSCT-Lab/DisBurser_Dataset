@@ -52,12 +52,12 @@ int main()
 
 
 #ifdef CAS_13464
-    system("cp ./origin/WhereClause.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/");
-    system("cp ./origin/CreateViewStatement.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/statements/");
+    system("cp ./buggy/WhereClause.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./buggy/CreateViewStatement.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/statements/");
     printf("inject CAS_13464 ...\n");
 #else
     // File 1: WhereClause.java
-    fp1 = fopen("./origin/WhereClause.java", "r");
+    fp1 = fopen("./buggy/WhereClause.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -96,7 +96,7 @@ int main()
     system("cp ./fixed/WhereClause.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/");
 
     // File 2: CreateViewStatement.java
-    fp1 = fopen("./origin/CreateViewStatement.java", "r");
+    fp1 = fopen("./buggy/CreateViewStatement.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -134,10 +134,10 @@ int main()
 
 
 #ifdef CAS_15297
-    system("cp ./origin/Snapshot.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/tools/nodetool/");
+    system("cp ./buggy/Snapshot.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/tools/nodetool/");
     printf("inject CAS_15297 ...\n");
 #else
-    fp1 = fopen("./origin/Snapshot.java", "r");
+    fp1 = fopen("./buggy/Snapshot.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -179,12 +179,12 @@ int main()
 
 
 #ifdef CAS_16836
-    system("cp ./origin/FunctionCall.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/functions/");
-    system("cp ./origin/FunctionName.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/functions/");
+    system("cp ./buggy/FunctionCall.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/functions/");
+    system("cp ./buggy/FunctionName.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/functions/");
     printf("inject CAS_16836 ...\n");
 #else
     // File 1: FunctionCall.java
-    fp1 = fopen("./origin/FunctionCall.java", "r");
+    fp1 = fopen("./buggy/FunctionCall.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -214,7 +214,7 @@ int main()
     system("cp ./fixed/FunctionCall.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/functions/");
 
     // File 2: FunctionName.java
-    fp1 = fopen("./origin/FunctionName.java", "r");
+    fp1 = fopen("./buggy/FunctionName.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
@@ -265,10 +265,10 @@ int main()
 
 
 #ifdef CAS_17628
-    system("cp ./origin/Selectable.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/selection/");
+    system("cp ./buggy/Selectable.java ./apache-cassandra-3.11.6-src/src/java/org/apache/cassandra/cql3/selection/");
     printf("inject CAS_17628 ...\n");
 #else
-    fp1 = fopen("./origin/Selectable.java", "r");
+    fp1 = fopen("./buggy/Selectable.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");

@@ -23,7 +23,7 @@ public class ReditHelper {
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String compressedPath = workDir + "/../../../Archive/Elasticsearch/Elasticsearch-19269/" + dir + ".tar.gz";
+        String compressedPath = workDir + "/../../../Benchmark/Elasticsearch/v2.3.0/" + dir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-elasticsearch")
                 .withService("elasticsearch")

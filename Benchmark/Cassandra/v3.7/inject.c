@@ -10,10 +10,10 @@ int main()
     char str2[200] = 		"        assert isLive(cell) : \"We shouldn't have got there if the base row had no associated entry\";\n";
 
 #ifdef CAS_12424
-    system("cp ./origin/ViewUpdateGenerator.java ./apache-cassandra-3.7-src/src/java/org/apache/cassandra/db/view/");
+    system("cp ./buggy/ViewUpdateGenerator.java ./apache-cassandra-3.7-src/src/java/org/apache/cassandra/db/view/");
     printf("inject CAS_12424 ...\n");
 #else
-    fp1 = fopen("./origin/ViewUpdateGenerator.java", "r");
+    fp1 = fopen("./buggy/ViewUpdateGenerator.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");

@@ -19,10 +19,10 @@ int main()
     				"        }\n"};
 
 #ifdef AMQ_6430
-    system("cp ./origin/TopicRegion.java ./activemq-parent-5.14.0-src/activemq-broker/src/main/java/org/apache/activemq/broker/region/");
+    system("cp ./buggy/TopicRegion.java ./activemq-parent-5.14.0-src/activemq-broker/src/main/java/org/apache/activemq/broker/region/");
     printf("inject AMQ_6430 ...\n");
 #else
-    fp1 = fopen("./origin/TopicRegion.java", "r");
+    fp1 = fopen("./buggy/TopicRegion.java", "r");
     if (fp1 == NULL)
     {
         perror("open file error");
