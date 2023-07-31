@@ -58,11 +58,3 @@ java.lang.SecurityException: User name [null] or password is invalid.
 	at org.apache.activemq.security.SimpleAuthenticationBroker.authenticate(SimpleAuthenticationBroker.java:103)[activemq-broker-5.15.9.jar:5.15.9]
 	...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/activemq/pull/413/commits/d95bb02f4704e9e51acc63ecd186e90b2b4a833c](https://github.com/apache/activemq/pull/413/commits/d95bb02f4704e9e51acc63ecd186e90b2b4a833c) [https://github.com/apache/activemq/pull/500/commits/945cd6b7de20cbc0a092eaa2e6dff5dfacc9acc3](https://github.com/apache/activemq/pull/500/commits/945cd6b7de20cbc0a092eaa2e6dff5dfacc9acc3)
-
-Fix version：5.15.9

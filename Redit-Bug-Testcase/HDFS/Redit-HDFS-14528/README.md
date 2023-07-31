@@ -54,7 +54,3 @@ Steps to reproduce：
 	    at io.redit.samples.hdfs16381.SampleTest.failoverNNtoNN(SampleTest.java:64)
         ...
     ```
-
-### Patch 
-
-Issue Status：PATCH AVAILABLE

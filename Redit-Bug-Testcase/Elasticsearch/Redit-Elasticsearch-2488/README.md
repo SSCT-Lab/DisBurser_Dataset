@@ -59,10 +59,3 @@ Steps to reproduce：
 6. This result also reveled by the log files of the 3 nodes, in which 2 nodes declared themselves as a master.
 
 **Noted that due to the election mechanism of elasticsearch, not every single test can trigger this bug.**
-
-### Patch 
-
-Status：Not provided
-
-After verification, this bug has been fixed in v1.4.0.Beta1.
-

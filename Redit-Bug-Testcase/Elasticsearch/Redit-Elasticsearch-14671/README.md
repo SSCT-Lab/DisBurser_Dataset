@@ -53,7 +53,3 @@ Steps to reproduce：
 9. Query shard information using `/_cat/shards` and the result shows that status of primary shard is "STARTED",
    meaning that old primary shard get promoted to primary again.
 10. Query document information via master server, and it returns with the old value (`"value": "origin"`).
-
-### Patch 
-
-Status：Not provided

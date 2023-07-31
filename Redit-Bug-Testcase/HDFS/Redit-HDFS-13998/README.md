@@ -28,10 +28,3 @@ Two testcases：
 1. Start an hdfs cluster, create two test folders in hdfs, and set their erasure coding policies to RS-6-3-1024k and replicate respectively. Obtain its erasure code through DistributedFileSystem.getErasureCodingPolicy. It turns out that the file set to the RS-6-3-1024k policy returns correct information, and the file set to the replicate policy returns null.
 
 2. Start a hdfs cluster, create a test folder in hdfs, and set the erasure code policy to RS-6-3-1024k. Create subfolders in the folder, set the erasure coding policy of the parent folder to replicate. Checking the erasure code policy at this time, it is found that the parent folder is null and the subfolder is RS-6-3-1024k.
-
-### Patch 
-
-Status：Someone submitted but not resolved
-
-Link：[https://issues.apache.org/jira/secure/attachment/12947706/HDFS-13998.03.patch](https://issues.apache.org/jira/secure/attachment/12947706/HDFS-13998.03.patch)
-

@@ -27,7 +27,3 @@ Steps to reproduce：
 4. Verify that reading bytes outside the initial pre-fetch do not send the client into an infinite loop querying locations.
 
 The strange thing is that the test cases are executed in v2.7.0 and v2.8.0(fix version), and the results are the same.
-
-### Patch 
-
-TODO

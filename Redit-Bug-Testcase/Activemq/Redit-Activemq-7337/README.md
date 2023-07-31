@@ -57,7 +57,3 @@ Steps to reproduce：
 ```
 java.lang.IllegalArgumentException: The subscription does not exist: ID:zmb-virtual-machine-39687-1664182626894-1:1:655:1
 ```
-
-### Patch 
-
-Status：Not submitted

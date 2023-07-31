@@ -63,11 +63,3 @@ org.apache.cassandra.db.commitlog.CommitLogReplayer$CommitLogReplayException: Un
 	at org.apache.cassandra.db.commitlog.CommitLogReplayer.handleReplayError(CommitLogReplayer.java:638) [apache-cassandra-2.2.16.jar:2.2.16]
     ...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/commit/ae326eed2aa8f9c761fc7a0a872ce8172fde2f0f](https://github.com/apache/cassandra/commit/ae326eed2aa8f9c761fc7a0a872ce8172fde2f0f)
-
-Fix version：2.2.16

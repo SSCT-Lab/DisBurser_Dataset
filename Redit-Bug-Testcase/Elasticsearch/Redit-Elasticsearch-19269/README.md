@@ -55,10 +55,3 @@ For node-1, set `node.master:true` and `node.data:false`, and do the opposite fo
 9. Try to update the document via master server, change the "value" field to "something else" in the request.
 10. Remove the network partition, and wait a few seconds for primaryShardServer to rejoin the cluster.
 11. Try to query the document via master server, it will return `something else` with `_version:2`.
-
-### Patch 
-
-Status：Not provided
-
-
-

@@ -93,11 +93,3 @@ java.lang.ClassCastException: org.apache.cassandra.cql3.TokenRelation cannot be 
 	at org.apache.cassandra.db.view.View.relationsToWhereClause(View.java:262) ~[apache-cassandra-3.11.6.jar:3.11.6]
 	...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/commit/44604b7316fcbfd7d0d7425e75cd7ebe267e3247](https://github.com/apache/cassandra/commit/44604b7316fcbfd7d0d7425e75cd7ebe267e3247)
-
-Fix version：3.11.6

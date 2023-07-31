@@ -1,0 +1,4 @@
+https://issues.apache.org/jira/secure/attachment/12852611/HDFS-11379.branch-2.7.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/DFSInputStream.java
+
+

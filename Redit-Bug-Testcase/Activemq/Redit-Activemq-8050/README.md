@@ -53,6 +53,3 @@ Caused by: javax.transaction.xa.XAException: Transaction 'XID:[86,globalId=001ff
     ...
 ```
 
-### Patch 
-
-Status：Not submitted

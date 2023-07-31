@@ -42,11 +42,3 @@ Reproduced version：3.11.6
 Steps to reproduce：
 1. Create a client connection cluster, create a keyspace, customize the data type UDT and create a column family containing that type.
 2. Tests whether the writetime and ttl functions of aggregates and UDTs are currently disabled.
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/pull/1690/commits/aaabc0991f24652e534e4dde7440fac94ee9e419](https://github.com/apache/cassandra/pull/1690/commits/aaabc0991f24652e534e4dde7440fac94ee9e419)
-
-Fix version：3.11.6

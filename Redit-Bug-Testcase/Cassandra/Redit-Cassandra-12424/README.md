@@ -71,11 +71,3 @@ Steps to reproduce：
         at org.apache.cassandra.db.view.ViewUpdateGenerator.computeLivenessInfoForEntry(ViewUpdateGenerator.java:455) ~[apache-cassandra-3.7.jar:3.7]
         ...
     ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/pcmanus/cassandra/commit/76ca513076da7be7bb16e51228b03f2b7a437aa8](https://github.com/pcmanus/cassandra/commit/76ca513076da7be7bb16e51228b03f2b7a437aa8)
-
-Fix version：3.7

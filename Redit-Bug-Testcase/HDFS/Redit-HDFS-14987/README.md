@@ -69,14 +69,3 @@ Block replica on datanode/rack: dn3/default-rack is HEALTHY
 Block replica on datanode/rack: dn2/default-rack is HEALTHY
 Block replica on datanode/rack: dn1/default-rack is HEALTHY
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://issues.apache.org/jira/secure/attachment/12958270/HDFS-14266-02.patch](https://issues.apache.org/jira/secure/attachment/12958270/HDFS-14266-02.patch)
-
-Fix version：3.1.2
-
-Regression testing path：Archive/Hadoop/HDFS-14987/hadoop-3.1.2-src/fix/
-

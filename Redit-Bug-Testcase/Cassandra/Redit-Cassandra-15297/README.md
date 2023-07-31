@@ -34,11 +34,3 @@ Steps to reproduce：
 
 1. Create and set snapshots for all keyspaces through nodetool, the address is "p/s".
 2. Check the snapshot through "bin/nodetool listsnapshots", and find that the snapshot name is p, and its actual snapshot address is "data_file + /snapshots/p/s".
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/pull/352/commits/56f6d9851ad3f491316f901e6a24d85506dd7544](https://github.com/apache/cassandra/pull/352/commits/56f6d9851ad3f491316f901e6a24d85506dd7544)
-
-Fix version：3.11.6

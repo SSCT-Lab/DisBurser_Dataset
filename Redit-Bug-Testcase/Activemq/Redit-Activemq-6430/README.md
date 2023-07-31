@@ -27,11 +27,3 @@ Steps to reproduce：
 2. Establish a connection with the cluster and create two sessions for the first time.
 3. Establish a connection with the cluster and create two sessions for the secend time.
 4. From the log, it is found that only the message is sent in the first time, and the message is sent and accepted in the second time.
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/activemq/commit/e0c70b8](https://github.com/apache/activemq/commit/e0c70b8)
-
-Fix version：5.14.0

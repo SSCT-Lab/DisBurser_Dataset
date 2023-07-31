@@ -47,7 +47,3 @@ org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.hdfs.protocol.AlreadyBei
 	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.recoverLeaseInternal(FSNamesystem.java:2789)
     ...
 ```
-
-### Patch 
-
-Status：Not submitted

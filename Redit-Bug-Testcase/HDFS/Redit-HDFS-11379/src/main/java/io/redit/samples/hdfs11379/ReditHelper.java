@@ -14,12 +14,12 @@ public class ReditHelper {
     public static int numOfNNs = 2;
     private static int numOfDNs = 3;
     private static int numOfJNs = 3;
-    public static final String dir = "hadoop-2.8.0";
+    public static final String dir = "hadoop-2.7.0";
     public static String getHadoopHomeDir() { return "/hadoop/" + dir; }
 
     public static Deployment getDeployment(){
         String workDir = System.getProperty("user.dir");
-        String compressedPath = workDir + "/../../../Archive/Hadoop/HDFS-11379/" + dir + ".tar.gz";
+        String compressedPath = workDir + "/../../../Benchmark/Hadoop/v2.7.0/" + dir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-hdfs")
                 .withService("hadoop-base")

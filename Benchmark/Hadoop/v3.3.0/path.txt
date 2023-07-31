@@ -1,0 +1,2 @@
+https://github.com/apache/hadoop/commit/b735a777178a3be7924b0ea7c0f61003dc60f16e:
+hadoop-hdfs-project/hadoop-hdfs-client/src/main/java/org/apache/hadoop/hdfs/DFSStripedOutputStream.java

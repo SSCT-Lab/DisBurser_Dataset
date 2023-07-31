@@ -72,11 +72,3 @@ com.datastax.driver.core.exceptions.WriteFailureException: Cassandra failure dur
 	at com.datastax.driver.core.exceptions.WriteFailureException.copy(WriteFailureException.java:174)
 	...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/pull/1132/commits/bfc87c103d0ad8df4f464381b34556887067fc76](https://github.com/apache/cassandra/pull/1132/commits/bfc87c103d0ad8df4f464381b34556887067fc76)
-
-Fix version：3.11.6

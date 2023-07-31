@@ -74,11 +74,3 @@ org.apache.cassandra.serializers.MarshalException: Unable to make UUID from 'aa'
 	at org.apache.cassandra.db.marshal.UUIDType.fromString(UUIDType.java:118) ~[apache-cassandra-3.11.3.jar:3.11.3-SNAPSHOT]
 	...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/cassandra/commit/ea62d8862c311e3d9b64d622bea0a68d3825aa7d](https://github.com/apache/cassandra/commit/ea62d8862c311e3d9b64d622bea0a68d3825aa7d)
-
-Fix version：3.11.3
