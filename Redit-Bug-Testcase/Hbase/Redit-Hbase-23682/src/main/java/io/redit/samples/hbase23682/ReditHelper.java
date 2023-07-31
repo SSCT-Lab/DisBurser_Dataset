@@ -34,9 +34,9 @@ public class ReditHelper {
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String hadoopCompressedPath = workDir + "/../../../Archive/Hadoop/Original/" + hadoopDir + ".tar.gz";
-        String zookeeperCompressedPath = workDir + "/../../../Archive/Zookeeper/Original/" + zookeeperDir + ".tar.gz";
-        String hbaseCompressedPath = workDir + "/../../../Archive/Hbase/Hbase-23682/" + hbaseDir + ".tar.gz";
+        String hadoopCompressedPath = workDir + "/../../../Benchmark/Hadoop/v3.1.2/" + hadoopDir + ".tar.gz";
+        String zookeeperCompressedPath = workDir + "/../../../Benchmark/Zookeeper/v3.7.1/" + zookeeperDir + ".tar.gz";
+        String hbaseCompressedPath = workDir + "/../../../Benchmark/Hbase/v2.2.2/" + hbaseDir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-hbase")
                 .withService("hadoop-base")

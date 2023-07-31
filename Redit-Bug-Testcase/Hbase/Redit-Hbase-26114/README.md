@@ -135,13 +135,3 @@ java.lang.IllegalArgumentException
 2022-12-23 05:51:51,592 INFO  [master/server2:16000:becomeActiveMaster] regionserver.HRegionServer: STOPPED: Stopped by master/server2:16000:becomeActiveMaster
 2022-12-23 05:51:51,593 INFO  [master/server2:16000] regionserver.HRegionServer: Stopping infoServer
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/hbase/pull/3541/commits/5d0b1accbe3007c8f6bffff8c654e8f2f44f1689](https://github.com/apache/hbase/pull/3541/commits/5d0b1accbe3007c8f6bffff8c654e8f2f44f1689)
-
-Fix version：2.2.2
-
-Regression testing path：Archive/Hbase/Hbase-26114/hbase-2.2.2-src/fix/

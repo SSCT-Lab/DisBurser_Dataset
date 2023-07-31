@@ -1,0 +1,2 @@
+https://github.com/apache/hbase/pull/4105/commits/787f4c958372d137d85feadaa7a9e5f847d0ab8f#diff-a754d10861bd8d44a6fac8dd2257b1154a03415851613d8b3cd3e99964713d7f:
+hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegion.java

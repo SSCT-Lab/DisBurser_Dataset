@@ -1,0 +1,2 @@
+https://github.com/apache/hbase/pull/4295/files:
+hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/querymatcher/NewVersionBehaviorTracker.java

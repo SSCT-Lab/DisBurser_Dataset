@@ -4,6 +4,8 @@
 
 Title: ***delete with null columnQualifier occurs NullPointerException when NewVersionBehavior is on***
 
+JIRA link：[https://issues.apache.org/jira/browse/HBASE-26901](https://issues.apache.org/jira/browse/HBASE-26901)
+
 |         Label         |        Value        |      Label      |         Value          |
 |:---------------------:|:-------------------:|:---------------:|:----------------------:|
 |       **Type**        |         Bug         |  **Priority**   |         Major          |
@@ -61,9 +63,3 @@ Caused by: java.lang.NullPointerException
 	at org.apache.hadoop.hbase.ipc.RpcServer.call(RpcServer.java:392)
 	... 3 more
 ```
-
-### Patch 
-
-Status：To be tested
-
-Due to local environment problems, the service domain name cannot be found when the HBASE client accesses the cluster.

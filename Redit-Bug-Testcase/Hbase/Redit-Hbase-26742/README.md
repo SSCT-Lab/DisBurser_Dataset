@@ -60,9 +60,3 @@ Actual   :v0
 	at io.redit.samples.hbase26742.SampleTest.sampleTest(SampleTest.java:94)
 	......
 ```
-
-### Patch 
-
-Status：To be tested
-
-Due to local environment problems, the service domain name cannot be found when the HBASE client accesses the cluster.
