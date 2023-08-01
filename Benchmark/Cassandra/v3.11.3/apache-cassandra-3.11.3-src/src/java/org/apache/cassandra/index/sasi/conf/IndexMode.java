@@ -93,34 +93,19 @@ public class IndexMode
         return analyzer;
     }
 
-    public static void validateAnalyzer(Map<String, String> indexOptions, ColumnDefinition cd) throws ConfigurationException
+    public static void validateAnalyzer(Map<String, String> indexOptions) throws ConfigurationException
     {
         // validate that a valid analyzer class was provided if specified
         if (indexOptions.containsKey(INDEX_ANALYZER_CLASS_OPTION))
         {
-            Class<?> analyzerClass;
             try
             {
-                analyzerClass = Class.forName(indexOptions.get(INDEX_ANALYZER_CLASS_OPTION));
+                Class.forName(indexOptions.get(INDEX_ANALYZER_CLASS_OPTION));
             }
             catch (ClassNotFoundException e)
             {
                 throw new ConfigurationException(String.format("Invalid analyzer class option specified [%s]",
                                                                indexOptions.get(INDEX_ANALYZER_CLASS_OPTION)));
-            }
-            AbstractAnalyzer analyzer;
-            try
-            {
-                analyzer = (AbstractAnalyzer) analyzerClass.newInstance();
-                if (!analyzer.isCompatibleWith(cd.type))
-                    throw new ConfigurationException(String.format("%s does not support type %s",
-                                                                   analyzerClass.getSimpleName(),
-                                                                   cd.type.asCQL3Type()));
-            }
-            catch (InstantiationException | IllegalAccessException e)
-            {
-                throw new ConfigurationException(String.format("Unable to initialize analyzer class option specified [%s]",
-                                                               analyzerClass.getSimpleName()));
             }
 
         }

@@ -95,4 +95,27 @@ int main()
     system("cp ./fixed/SetSerializer.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/serializers/");
     printf("don't inject CAS_14365 ...\n");
 #endif
+
+
+#ifdef CAS_13528
+    system("cp ./buggy/NodeProbe.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/tools/");
+    system("cp ./buggy/DescribeCluster.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/tools/nodetool/");
+    printf("inject CAS_13528 ...\n");
+#else
+    system("cp ./fixed/NodeProbe.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/tools/");
+    system("cp ./fixed/DescribeCluster.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/tools/nodetool/");
+    printf("don't inject CAS_13528 ...\n");
+#endif
+
+#ifdef CAS_15814
+    system("cp ./buggy/Lists.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./buggy/Maps.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./buggy/Sets.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    printf("inject CAS_15814 ...\n");
+#else
+    system("cp ./fixed/Lists.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./fixed/Maps.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./fixed/Sets.java ./apache-cassandra-2.2.16-src/src/java/org/apache/cassandra/cql3/");
+    printf("don't inject CAS_15814 ...\n");
+#endif
 }

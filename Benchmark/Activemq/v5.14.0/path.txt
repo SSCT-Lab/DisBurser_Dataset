@@ -1,2 +1,7 @@
 activemq-broker/src/main/java/org/apache/activemq/broker/region/TopicRegion.java
 
+https://github.com/apache/activemq/commit/0be8b63：
+activemq-stomp/src/main/java/org/apache/activemq/transport/stomp/StompSubscription.java
+
+https://github.com/apache/activemq/commit/eccbd75：
+activemq-client/src/main/java/org/apache/activemq/command/MessagePull.java

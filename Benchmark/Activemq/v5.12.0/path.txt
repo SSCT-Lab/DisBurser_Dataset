@@ -1,0 +1,8 @@
+https://github.com/apache/activemq/commit/95a9a80:
+activemq-amqp/src/main/java/org/apache/activemq/transport/amqp/AmqpProtocolDiscriminator.java
+
+https://github.com/apache/activemq/commit/b04cfeb:
+activemq-broker/src/main/java/org/apache/activemq/util/BrokerSupport.java
+
+https://github.com/apache/activemq/commit/58359a8:
+activemq-broker/src/main/java/org/apache/activemq/broker/region/QueueBrowserSubscription.java

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-def=-D'AMQ_8252'
+def1=-D'AMQ_8252'
+def2=-D'AMQ_8104'
 cFile=inject.c
 exeFile=inject
 srcName=activemq-parent-5.15.9-src
@@ -11,7 +12,7 @@ tar=activemq-5.15.9.tar.gz
 
 if [ -f $injectFile ]
 then
-    gcc $def $cFile -o $exeFile
+    gcc $def1 $def2 $cFile -o $exeFile
     echo "gcc compile success"
     ./$exeFile
 else

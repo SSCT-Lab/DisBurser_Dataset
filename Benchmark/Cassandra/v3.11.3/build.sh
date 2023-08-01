@@ -1,6 +1,8 @@
 #!/bin/bash
 
-def=-D'CAS_13669'
+def1=-D'CAS_13669'
+def2=-D'CAS_15663'
+def3=-D'CAS_16307'
 cFile=inject.c
 exeFile=inject
 srcName=apache-cassandra-3.11.3-src
@@ -11,7 +13,7 @@ tar=apache-cassandra-3.11.3.tar.gz
 
 if [ -f $injectFile ]
 then
-    gcc $def $cFile -o $exeFile
+    gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"
     ./$exeFile
 else

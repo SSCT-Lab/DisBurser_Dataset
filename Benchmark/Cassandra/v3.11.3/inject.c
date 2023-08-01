@@ -341,4 +341,30 @@ int main()
     system("cp ./fixed/IndexMode.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/index/sasi/conf/");
     printf("don't inject CAS_13669 ...\n");
 #endif
+
+
+#ifdef CAS_15663
+    system("cp ./buggy/cqlhandling.py ./apache-cassandra-3.11.3-src/pylib/cqlshlib/");
+    system("cp ./buggy/Lexer.g ./apache-cassandra-3.11.3-src/src/antlr/");
+    system("cp ./buggy/ReservedKeywords.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./buggy/reserved_keywords.txt ./apache-cassandra-3.11.3-src/src/resources/org/apache/cassandra/cql3/");
+    printf("inject CAS_15663 ...\n");
+#else
+    system("cp ./fixed/cqlhandling.py ./apache-cassandra-3.11.3-src/pylib/cqlshlib/");
+    system("cp ./fixed/Lexer.g ./apache-cassandra-3.11.3-src/src/antlr/");
+    system("cp ./fixed/ReservedKeywords.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/cql3/");
+    system("cp ./fixed/reserved_keywords.txt ./apache-cassandra-3.11.3-src/src/resources/org/apache/cassandra/cql3/");
+    printf("don't inject CAS_15663 ...\n");
+#endif
+
+
+#ifdef CAS_16307
+    system("cp ./buggy/DataLimits.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/db/filter/");
+    system("cp ./buggy/DataResolver.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/service/");
+    printf("inject CAS_16307 ...\n");
+#else
+    system("cp ./fixed/DataLimits.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/db/filter/");
+    system("cp ./fixed/DataResolver.java ./apache-cassandra-3.11.3-src/src/java/org/apache/cassandra/service/");
+    printf("don't inject CAS_16307 ...\n");
+#endif
 }

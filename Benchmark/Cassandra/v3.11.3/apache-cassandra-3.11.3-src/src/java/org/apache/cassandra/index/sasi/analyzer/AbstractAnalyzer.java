@@ -48,7 +48,7 @@ public abstract class AbstractAnalyzer implements Iterator<ByteBuffer>
      * @param validator
      * @return
      */
-    public abstract boolean isCompatibleWith(AbstractType<?> validator);
+     
 
     /**
      * @return true if current analyzer provides text tokenization, false otherwise.

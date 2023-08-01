@@ -74,4 +74,22 @@ int main()
     system("cp ./fixed/TopicRegion.java ./activemq-parent-5.14.0-src/activemq-broker/src/main/java/org/apache/activemq/broker/region/");
     printf("don't inject AMQ_6430 ...\n");
 #endif
+
+
+#ifdef AMQ_6697
+    system("cp ./buggy/StompSubscription.java ./activemq-parent-5.14.0-src/activemq-stomp/src/main/java/org/apache/activemq/transport/stomp/");
+    printf("inject AMQ_6697 ...\n");
+#else
+    system("cp ./fixed/StompSubscription.java ./activemq-parent-5.14.0-src/activemq-stomp/src/main/java/org/apache/activemq/transport/stomp/");
+    printf("don't inject AMQ_6697 ...\n");
+#endif
+
+
+#ifdef AMQ_6823
+    system("cp ./buggy/MessagePull.java ./activemq-parent-5.14.0-src/activemq-client/src/main/java/org/apache/activemq/command/");
+    printf("inject AMQ_6823 ...\n");
+#else
+    system("cp ./fixed/MessagePull.java ./activemq-parent-5.14.0-src/activemq-client/src/main/java/org/apache/activemq/command/");
+    printf("don't inject AMQ_6823 ...\n");
+#endif
 }

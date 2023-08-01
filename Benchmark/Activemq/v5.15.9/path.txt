@@ -1,3 +1,5 @@
 activemq-broker/src/main/java/org/apache/activemq/security/JaasAuthenticationBroker.java
 activemq-broker/src/main/java/org/apache/activemq/broker/TransportConnection.java
 
+https://github.com/apache/activemq/commit/748ade7:
+activemq-broker/src/main/java/org/apache/activemq/broker/jmx/AnnotatedMBean.java

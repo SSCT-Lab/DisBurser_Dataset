@@ -1,3 +1,11 @@
 src/java/org/apache/cassandra/serializers/MapSerializer.java
 src/java/org/apache/cassandra/serializers/SetSerializer.java
 
+https://github.com/apache/cassandra/commit/fc3357a00e2b6e56d399f07c5b81a82780c1e143:
+src/java/org/apache/cassandra/tools/NodeProbe.java
+src/java/org/apache/cassandra/tools/nodetool/DescribeCluster.java
+
+https://github.com/apache/cassandra/commit/9f8d5b8d069a1db88e70deafff6c0edc23c896d0:
+src/java/org/apache/cassandra/cql3/Lists.java
+src/java/org/apache/cassandra/cql3/Maps.java
+src/java/org/apache/cassandra/cql3/Sets.java

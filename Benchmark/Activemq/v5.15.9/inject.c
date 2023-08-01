@@ -75,4 +75,13 @@ int main()
     system("cp ./fixed/TransportConnection.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/broker/");
     printf("don't inject AMQ_8252 ...\n");
 #endif
+
+
+#ifdef AMQ_8104
+    system("cp ./buggy/AnnotatedMBean.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/broker/jmx/");
+    printf("inject AMQ_8104 ...\n");
+#else
+    system("cp ./fixed/AnnotatedMBean.java ./activemq-parent-5.15.9-src/activemq-broker/src/main/java/org/apache/activemq/broker/jmx/");
+    printf("don't inject AMQ_8104 ...\n");
+#endif
 }

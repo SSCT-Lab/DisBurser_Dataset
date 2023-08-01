@@ -5,3 +5,13 @@ src/java/org/apache/cassandra/index/sasi/analyzer/NoOpAnalyzer.java
 src/java/org/apache/cassandra/index/sasi/analyzer/NonTokenizingAnalyzer.java
 src/java/org/apache/cassandra/index/sasi/analyzer/StandardAnalyzer.java
 src/java/org/apache/cassandra/index/sasi/conf/IndexMode.java
+
+https://github.com/apache/cassandra/commit/2a8e01858f3aa18e72806acfed5f9cfa9d6c6d03:
+pylib/cqlshlib/cqlhandling.py
+src/antlr/Lexer.g
+src/java/org/apache/cassandra/cql3/ReservedKeywords.java
+src/resources/org/apache/cassandra/cql3/reserved_keywords.txt
+
+https://github.com/apache/cassandra/commit/f258ae67516d53752c8d1f0a2576d72471ed427f:
+src/java/org/apache/cassandra/db/filter/DataLimits.java
+src/java/org/apache/cassandra/service/DataResolver.java

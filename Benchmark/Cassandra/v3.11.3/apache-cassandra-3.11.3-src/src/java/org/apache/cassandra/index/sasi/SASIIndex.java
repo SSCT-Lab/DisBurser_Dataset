@@ -143,7 +143,7 @@ public class SASIIndex implements Index, INotificationConsumer
         if (target.left.isPartitionKey())
             throw new ConfigurationException("partition key columns are not yet supported by SASI");
 
-        IndexMode.validateAnalyzer(options, target.left);
+        IndexMode.validateAnalyzer(options);
 
         IndexMode mode = IndexMode.getMode(target.left, options);
         if (mode.mode == Mode.SPARSE)
