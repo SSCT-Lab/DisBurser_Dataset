@@ -1,2 +1,10 @@
 https://github.com/apache/hbase/pull/4295/files:
 hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/querymatcher/NewVersionBehaviorTracker.java
+
+https://github.com/apache/hbase/pull/3925/files:
+hbase-client/src/main/java/org/apache/hadoop/hbase/client/AsyncRequestFutureImpl.java
+
+https://github.com/apache/hbase/pull/4425/files:
+hbase-http/src/main/java/org/apache/hadoop/hbase/http/HttpServer.java
+hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/RESTServer.java
+hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java

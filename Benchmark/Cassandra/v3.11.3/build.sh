@@ -11,7 +11,7 @@ buildJar=apache-cassandra-3.11.3-SNAPSHOT.jar
 libJar=apache-cassandra-3.11.3.jar
 tar=apache-cassandra-3.11.3.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"

@@ -8,7 +8,7 @@ system=hadoop-3.3.0
 jar=hadoop-hdfs-client-3.3.0.jar
 tar=hadoop-3.3.0.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

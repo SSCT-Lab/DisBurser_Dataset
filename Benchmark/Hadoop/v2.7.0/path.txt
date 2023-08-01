@@ -1,4 +1,9 @@
 https://issues.apache.org/jira/secure/attachment/12852611/HDFS-11379.branch-2.7.patch:
 hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/DFSInputStream.java
 
+https://issues.apache.org/jira/secure/attachment/12867043/HDFS-10987-branch-2.7.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/DecommissionManager.java
 
+https://issues.apache.org/jira/secure/attachment/12865581/HDFS-11609_v3.branch-2.7.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/BlockManager.java
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/UnderReplicatedBlocks.java

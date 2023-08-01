@@ -1,0 +1,10 @@
+https://issues.apache.org/jira/secure/attachment/12970914/HBASE-21920.branch-1.002.patch:
+hbase-server/src/main/java/org/apache/hadoop/hbase/util/HBaseFsck.java
+
+https://github.com/apache/hbase/pull/899/files:
+hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/CompactSplitThread.java
+
+https://github.com/apache/hbase/pull/1071.patch:
+hbase-client/src/main/java/org/apache/hadoop/hbase/MetaTableAccessor.java
+hbase-server/src/main/java/org/apache/hadoop/hbase/master/RegionStates.java
+

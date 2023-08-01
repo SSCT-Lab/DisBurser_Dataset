@@ -12,7 +12,7 @@ libJar2=activemq-broker-5.12.0.jar
 libJar3=activemq-amqp-5.12.0.jar
 tar=activemq-5.12.0.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"

@@ -1,0 +1,152 @@
+<%doc>
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</%doc>
+<%import>
+org.apache.hadoop.hbase.HRegionInfo;
+org.apache.hadoop.hbase.master.AssignmentManager;
+org.apache.hadoop.hbase.master.RegionState;
+org.apache.hadoop.conf.Configuration;
+org.apache.hadoop.hbase.HBaseConfiguration;
+org.apache.hadoop.hbase.HConstants;
+java.util.SortedSet;
+java.util.Iterator;
+java.util.List;
+java.util.ArrayList;
+java.util.Set;
+java.util.HashSet;
+java.lang.Integer;
+java.util.Map;
+java.util.concurrent.atomic.AtomicInteger;
+</%import>
+<%args>
+AssignmentManager assignmentManager;
+int limit = Integer.MAX_VALUE;
+</%args>
+
+<%java SortedSet<RegionState> rit = assignmentManager
+  .getRegionStates().getRegionsInTransitionOrderedByTimestamp();
+  Map<String, AtomicInteger> failedRegionTracker = assignmentManager.getFailedOpenTracker();
+   %>
+
+<%if !rit.isEmpty() %>
+<%java>
+Set<String> ritsOverThreshold = new HashSet<>();
+Set<String> ritsTwiceThreshold = new HashSet<>();
+// process the map to find region in transition details
+Configuration conf = HBaseConfiguration.create();
+int ritThreshold = conf.getInt(HConstants.METRICS_RIT_STUCK_WARNING_THRESHOLD, 60000);
+int numOfRITOverThreshold = 0;
+long currentTime = System.currentTimeMillis();
+List<RegionState> ritToDisplay = new ArrayList<>();
+int count = 0;
+for (RegionState rs : rit) {
+  long ritTime = currentTime - rs.getStamp();
+  if(ritTime > (ritThreshold * 2)) {
+     numOfRITOverThreshold++;
+     ritsTwiceThreshold.add(rs.getRegion().getEncodedName());
+  } else if (ritTime > ritThreshold) {
+     numOfRITOverThreshold++;
+     ritsOverThreshold.add(rs.getRegion().getEncodedName());
+  }
+  if (count++ < limit) {
+    ritToDisplay.add(rs);
+  }
+}
+int numOfRITs = rit.size();
+int ritsPerPage = Math.min(5, numOfRITs);
+int numOfPages = (int) Math.ceil(numOfRITs * 1.0 / ritsPerPage);
+</%java>
+    <section>
+    <h2>Regions in Transition</h2>
+     <p><% numOfRITs %> region(s) in transition.
+     <%if !ritsTwiceThreshold.isEmpty()  %>
+         <span class="label label-danger" style="font-size:100%;font-weight:normal">
+     <%elseif !ritsOverThreshold.isEmpty() %>
+         <span class="label label-warning" style="font-size:100%;font-weight:normal">
+     <%else>
+         <span>
+     </%if>
+         <% numOfRITOverThreshold %> region(s) in transition for
+             more than <% ritThreshold %> milliseconds.
+         </span>
+     </p>
+     <div class="tabbable">
+         <div class="tab-content">
+         <%java int recordItr = 0; %>
+            <%for RegionState rs : ritToDisplay %>
+              <%if (recordItr % ritsPerPage) == 0 %>
+                  <%if recordItr == 0 %>
+              <div class="tab-pane active" id="tab_rits<% (recordItr / ritsPerPage) + 1 %>">
+                  <%else>
+              <div class="tab-pane" id="tab_rits<% (recordItr / ritsPerPage) + 1 %>">
+                  </%if>
+                  <table class="table table-striped" style="margin-bottom:0px;"><tr><th>Region</th>
+                      <th>State</th><th>RIT time (ms)</th><th>Retries </th></tr>
+              </%if>
+
+              <%if ritsOverThreshold.contains(rs.getRegion().getEncodedName()) %>
+                      <tr class="alert alert-warning" role="alert">
+              <%elseif ritsTwiceThreshold.contains(rs.getRegion().getEncodedName()) %>
+                      <tr class="alert alert-danger" role="alert">
+              <%else>
+                      <tr>
+              </%if>
+               <%java>
+                  String retryStatus = "0";
+                  AtomicInteger numOpenRetries = failedRegionTracker.get(
+                      rs.getRegion().getEncodedName());
+                  if (numOpenRetries != null ) {
+                    retryStatus = Integer.toString(numOpenRetries.get());
+                  } else if (rs.getState() ==  RegionState.State.FAILED_OPEN) {
+                     retryStatus = "Failed";
+                  }
+                </%java>
+              <td><% rs.getRegion().getEncodedName() %></td><td>
+              <% rs.toDescriptiveString() %></td>
+              <td><% (currentTime - rs.getStamp()) %> </td>
+              <td><% retryStatus %> </td>
+              <%java recordItr++; %>
+              <%if (recordItr % ritsPerPage) == 0 %>
+                 </table>
+              </div>
+              </%if>
+            </%for>
+         <%if (recordItr % ritsPerPage) != 0 %>
+             <%for ; (recordItr % ritsPerPage) != 0 ; recordItr++ %>
+             <tr><td colspan="3" style="height:61px"></td></tr>
+             </%for>
+                   </table>
+             </div>
+         </%if>
+         </div>
+         <nav>
+             <ul class="nav nav-pills pagination">
+             <%for int i = 1 ; i <= numOfPages; i++ %>
+                 <%if i == 1 %>
+                 <li class="active">
+                 <%else>
+                 <li>
+                 </%if>
+                 <a href="#tab_rits<% i %>"><% i %></a></li>
+             </%for>
+             </ul>
+         </nav>
+     </div>
+   </section>
+ </%if>
+

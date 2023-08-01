@@ -9,7 +9,7 @@ buildJar1=rocketmq-client-4.0.0-incubating.jar
 buildJar2=rocketmq-common-4.0.0-incubating.jar
 tar=rocketmq-4.0.0-incubating.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

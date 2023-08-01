@@ -13,7 +13,7 @@ libJar3=activemq-stomp-5.14.0.jar
 libJar4=activemq-client-5.14.0.jar
 tar=activemq-5.14.0.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"

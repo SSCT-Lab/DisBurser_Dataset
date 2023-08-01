@@ -7,7 +7,7 @@ srcName=elasticsearch-1.4.5-src
 tar=elasticsearch-1.4.5.tar.gz
 system=elasticsearch-1.4.5
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

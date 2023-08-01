@@ -8,7 +8,7 @@ system=kafka_2.13-3.0.0
 tgz=kafka_2.13-3.0.0.tgz
 tar=kafka_2.13-3.0.0.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

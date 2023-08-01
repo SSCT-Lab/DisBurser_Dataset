@@ -3,5 +3,7 @@ hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/name
 https://issues.apache.org/jira/secure/attachment/13008381/HDFS-15443.003.patch:
 hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataXceiverServer.java
 
-
+https://github.com/apache/hadoop/pull/1530/files:
+hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/DistCp.java
+hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/DistCpSync.java
 

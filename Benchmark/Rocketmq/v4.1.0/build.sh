@@ -13,7 +13,7 @@ libJar1=rocketmq-client-4.2.0-incubating-SNAPSHOT.jar
 libJar2=rocketmq-common-4.2.0-incubating-SNAPSHOT.jar
 tar=rocketmq-4.1.0-incubating.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"

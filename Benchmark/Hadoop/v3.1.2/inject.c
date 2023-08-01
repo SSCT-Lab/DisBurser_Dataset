@@ -101,4 +101,15 @@ int main()
     system("cp ./fixed/DataXceiverServer.java ./hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/");
     printf("don't inject HDFS_15443 ...\n");
 #endif
+
+
+#ifdef HDFS_14869
+    system("cp ./buggy/DistCp.java ./hadoop-3.1.2-src/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/");
+    system("cp ./buggy/DistCpSync.java ./hadoop-3.1.2-src/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/");
+    printf("inject HDFS_14869 ...\n");
+#else
+    system("cp ./fixed/DistCp.java ./hadoop-3.1.2-src/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/");
+    system("cp ./fixed/DistCpSync.java ./hadoop-3.1.2-src/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/");
+    printf("don't inject HDFS_14869 ...\n");
+#endif
 }

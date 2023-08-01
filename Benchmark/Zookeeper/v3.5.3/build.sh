@@ -6,7 +6,7 @@ exeFile=inject
 srcName=zookeeper-3.5.3-src
 tar=zookeeper-3.5.3-beta.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

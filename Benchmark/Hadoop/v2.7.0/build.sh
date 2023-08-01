@@ -1,6 +1,8 @@
 #!/bin/bash
 
-def=-D'HDFS_11379'
+def1=-D'HDFS_11379'
+def2=-D'HDFS_10987'
+def3=-D'HDFS_11609'
 cFile=inject.c
 exeFile=inject
 srcName=hadoop-2.7.0-src
@@ -8,9 +10,9 @@ system=hadoop-2.7.0
 jar=hadoop-hdfs-2.7.0.jar
 tar=hadoop-2.7.0.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
-    gcc $def $cFile -o $exeFile
+    gcc $def1 $def2 $def3 $cFile -o $exeFile
     echo "gcc compile success"
     ./$exeFile
 else

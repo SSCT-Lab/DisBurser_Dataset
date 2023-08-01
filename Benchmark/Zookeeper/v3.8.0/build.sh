@@ -7,7 +7,7 @@ srcName=apache-zookeeper-3.8.0
 system=apache-zookeeper-3.8.0-bin
 tar=apache-zookeeper-3.8.0-bin.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

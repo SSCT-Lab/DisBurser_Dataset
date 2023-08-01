@@ -109,4 +109,15 @@ int main()
     system("cp ./fixed/MobUtils.java ./hbase-2.2.2-src/hbase-server/src/main/java/org/apache/hadoop/hbase/mob/");
     printf("don't inject HB_26114 ...\n");
 #endif
+
+
+#ifdef HB_24189
+    system("cp ./buggy/CommonFSUtils.java ./hbase-2.2.2-src/hbase-common/src/main/java/org/apache/hadoop/hbase/util/");
+    system("cp ./buggy/WALSplitter.java ./hbase-2.2.2-src/hbase-server/src/main/java/org/apache/hadoop/hbase/wal/");
+    printf("inject HB_24189 ...\n");
+#else
+    system("cp ./fixed/CommonFSUtils.java ./hbase-2.2.2-src/hbase-common/src/main/java/org/apache/hadoop/hbase/util/");
+    system("cp ./fixed/WALSplitter.java ./hbase-2.2.2-src/hbase-server/src/main/java/org/apache/hadoop/hbase/wal/");
+    printf("don't inject HB_24189 ...\n");
+#endif
 }

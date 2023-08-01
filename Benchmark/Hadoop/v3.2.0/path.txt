@@ -1,0 +1,10 @@
+https://issues.apache.org/jira/secure/attachment/12970906/HDFS-14527.005.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/BlockPlacementPolicyDefault.java
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/BlockPlacementPolicyRackFaultTolerant.java
+
+https://issues.apache.org/jira/secure/attachment/12976830/HDFS-14557.branch-3.1.001.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/EditLogFileInputStream.java
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/FSEditLogLoader.java
+
+https://issues.apache.org/jira/secure/attachment/12984847/HDFS-14946-branch-3.2.001.patch:
+hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/BlockManager.java

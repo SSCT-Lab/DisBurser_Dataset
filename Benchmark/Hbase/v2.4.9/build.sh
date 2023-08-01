@@ -9,7 +9,7 @@ jar=hbase-server-2.4.9.jar
 tar=hbase-2.4.9.tar.gz
 
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"

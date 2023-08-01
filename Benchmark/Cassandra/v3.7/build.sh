@@ -9,7 +9,7 @@ buildJar=apache-cassandra-3.7-SNAPSHOT.jar
 libJar=apache-cassandra-3.7.jar
 tar=apache-cassandra-3.7.tar.gz
 
-if [ -f $injectFile ]
+if [ -f $cFile ]
 then
     gcc $def $cFile -o $exeFile
     echo "gcc compile success"
