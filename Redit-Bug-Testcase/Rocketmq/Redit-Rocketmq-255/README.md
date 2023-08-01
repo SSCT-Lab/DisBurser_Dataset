@@ -25,12 +25,3 @@ Steps to reproduce：
 2. The consumer registers the message listener event and starts.
 3. After starting the Consumer, it is found that consumer.getOffsetStore() is null.
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/rocketmq/pull/142/commits](https://github.com/apache/rocketmq/pull/142/commits)
-
-Fix version：4.1.0-incubating
-
-Regression testing path：Archive/Rocketmq/Rocketmq-255/rocketmq-all-4.1.0-incubating-src/fix/

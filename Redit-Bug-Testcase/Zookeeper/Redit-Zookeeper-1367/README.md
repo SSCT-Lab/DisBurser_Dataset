@@ -101,7 +101,3 @@ Steps to reproduce：
 6. Query the PERSISTENT node status and child EPHEMERAL node data.
 7. I found that the EPHEMERAL nodes was not deleted, and its data was intact and consistent.
 8. The reason should be that the session created between the client and the zk cluster was not deleted due to the cluster crash. Even if the session times out, the client will continue to request the cluster, which is consistent with the bug [ZOOKEEPER-4508](https://issues.apache.org/jira/browse/ZOOKEEPER-4508).
-
-### Patch 
-
-TODO

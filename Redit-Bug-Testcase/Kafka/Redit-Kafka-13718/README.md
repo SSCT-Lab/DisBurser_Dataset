@@ -39,12 +39,4 @@ Steps to reproduce：
 1. Start zookeeper and kafka in a three-node cluster, then create topic 'test' in server no.1 with default config.
 2. Describe the topic using '--describe --topic' command, the console displays additional information about segment bytes, but it should not be shown because of the default configuration.
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/kafka/pull/12246/commits](https://github.com/apache/kafka/pull/12246/commits)
-
-Fix version：3.2.0
-
 The patch is a modification of a configuration file, not a system source package.

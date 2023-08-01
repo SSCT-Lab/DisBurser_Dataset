@@ -46,9 +46,3 @@ java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.Unsuppor
 	at kafka.admin.ConfigCommand.main(ConfigCommand.scala)
 Caused by: org.apache.kafka.common.errors.UnsupportedVersionException: The broker does not support DESCRIBE_USER_SCRAM_CREDENTIALS
 ```
-
-### Patch 
-
-Status：Someone submitted but not resolved
-
-Link：[https://github.com/apache/kafka/pull/12196/commits/b74c68dc970e1a6edb4f11a7ce33c1538183d03e](https://github.com/apache/kafka/pull/12196/commits/b74c68dc970e1a6edb4f11a7ce33c1538183d03e)

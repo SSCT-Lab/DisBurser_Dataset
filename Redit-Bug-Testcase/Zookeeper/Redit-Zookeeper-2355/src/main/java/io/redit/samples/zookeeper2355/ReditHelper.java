@@ -14,14 +14,14 @@ import java.util.ArrayList;
 public class ReditHelper {
     public static int numOfServers = 3;
     public static final int HTTP_PORT = 2181;
-    public static final String dir = "apache-zookeeper-3.6.0-bin";
+    public static final String dir = "zookeeper-3.5.3-beta";
     public static String getZookeeperHomeDir(){
         return "/zookeeper/" + dir;
     }
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String compressedPath = workDir + "/../../../Archive/Zookeeper/Zookeeper-2355/" + dir + ".tar.gz";
+        String compressedPath = workDir + "/../../../Benchmark/Zookeeper/v3.5.3/" + dir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-zookeeper")
                 .withService("zookeeper")

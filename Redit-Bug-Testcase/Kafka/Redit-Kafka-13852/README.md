@@ -143,13 +143,3 @@ Current ACLs for resource `ResourcePattern(resourceType=TOPIC, name=*, patternTy
 	(principal=User:Peter, host=198.51.200.1, operation=WRITE, permissionType=ALLOW)
 	(principal=User:Peter, host=198.51.200.1, operation=DESCRIBE, permissionType=ALLOW)
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/kafka/pull/12090/commits/51db1aa5a03e0bf0ffd992a9146c08800eef0ac3](https://github.com/apache/kafka/pull/12090/commits/51db1aa5a03e0bf0ffd992a9146c08800eef0ac3)
-
-Fix version：3.2.0
-
-Regression testing path：Archive/Kafka/Kafka-13852/kafka-3.2.0-src/fix/

@@ -15,7 +15,7 @@ public class ReditHelper {
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String kafkaCompressedPath = workDir + "/../../../Archive/Kafka/Original/" + kafkaDir + ".tar.gz";
+        String kafkaCompressedPath = workDir + "/../../../Benchmark/Kafka/v3.2.0/" + kafkaDir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-kafka")
                 .withService("kafka")

@@ -24,8 +24,8 @@ public class ReditHelper {
 
     public static Deployment getDeployment() {
         String workDir = System.getProperty("user.dir");
-        String zookeeperCompressedPath = workDir + "/../../../Archive/Zookeeper/Original/" + zookeeperDir + ".tar.gz";
-        String kafkaCompressedPath = workDir + "/../../../Archive/Kafka/Kafka-12866/" + kafkaDir + ".tar.gz";
+        String zookeeperCompressedPath = workDir + "/../../../Benchmark/Zookeeper/v3.7.1/" + zookeeperDir + ".tar.gz";
+        String kafkaCompressedPath = workDir + "/../../../Benchmark/Kafka/v3.0.0/" + kafkaDir + ".tar.gz";
 
         Deployment.Builder builder = Deployment.builder("sample-kafka")
                 .withService("kafka")

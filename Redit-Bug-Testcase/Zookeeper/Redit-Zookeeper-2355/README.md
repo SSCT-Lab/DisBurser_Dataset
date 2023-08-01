@@ -53,12 +53,6 @@ java.lang.RuntimeException: org.apache.zookeeper.KeeperException$NodeExistsExcep
 	...
 ```
 
-### Patch 
-
-Status：Unavailable
-
-Link：[https://github.com/apache/zookeeper/pull/304/commits/007e2b37f24907c03e4e28547756b91aea4f78d4](https://github.com/apache/zookeeper/pull/304/commits/007e2b37f24907c03e4e28547756b91aea4f78d4)
-
 I read ZOOKEEPER-2355 and tried to reproduce it, but I found that this bug is not fixed in the fixed version. Ephemeral nodes are never deleted if the cluster has a network partition while the zookeeper client is closed. I don't understand how this problem was fixed before. I tried two fixed versions 3.5.4 and 3.6.0, and the above reproduction path can still be triggered stably. The bug no longer appeared after I commented out the network partition related content.
 
 I resubmitted this bug on JIRA: [https://issues.apache.org/jira/browse/ZOOKEEPER-4678](https://issues.apache.org/jira/browse/ZOOKEEPER-4678)

@@ -61,12 +61,3 @@ Steps to reproduce：
 2022-12-06 09:43:26,145 [myid:1] - INFO  [QuorumPeer[myid=1](plain=/0.0.0.0:2181)(secure=disabled):Follower@69] - FOLLOWING - LEADER ELECTION TOOK - 1 MS
 ```
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/zookeeper/pull/1031/commits/1523385108d2ac14cece23a7f4ed97bb9a6a4416](https://github.com/apache/zookeeper/pull/1031/commits/1523385108d2ac14cece23a7f4ed97bb9a6a4416)
-
-Fix version：3.5.5
-
-Regression testing path：Archive/Zookeeper/Zookeeper-3479/zookeeper-3.5.5-src/fix/

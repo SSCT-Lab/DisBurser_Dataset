@@ -31,12 +31,3 @@ See http://rocketmq.apache.org/docs/faq/ for further details.
 	...
 ```
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/rocketmq/pull/147/commits](https://github.com/apache/rocketmq/pull/147/commits)
-
-Fix version：4.1.0-incubating
-
-Regression testing path：Archive/Rocketmq/Rocketmq-266/rocketmq-all-4.1.0-incubating-src/fix/

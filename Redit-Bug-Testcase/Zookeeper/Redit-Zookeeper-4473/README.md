@@ -35,12 +35,3 @@ java.lang.IllegalArgumentException: Invalid path string "//test" caused by empty
   ...
 ```
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/zookeeper/pull/1818/commits/f75cba2b46ecae39c059cec5cd04d993bdf7d567](https://github.com/apache/zookeeper/pull/1818/commits/f75cba2b46ecae39c059cec5cd04d993bdf7d567)
-
-Fix version：3.8.0
-
-Patches fix client program code rather than system deployment packages.

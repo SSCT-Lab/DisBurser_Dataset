@@ -56,7 +56,7 @@ Kafka fails to start with a fatal exception:
 
 ### Testcase
 
-Reproduced version：2.8.0
+Reproduced version：3.0.0 (patch rollback)
 
 Steps to reproduce：
 1. After starting the zk cluster, create a permanent node "/chroot" and set acl access permissions.
@@ -67,14 +67,3 @@ org.apache.zookeeper.KeeperException$NoAuthException: KeeperErrorCode = NoAuth f
 	at org.apache.zookeeper.KeeperException.create(KeeperException.java:120)
     ...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/kafka/pull/10795/commits/c5e13feea88a84052b177243767baae269ee84f4](https://github.com/apache/kafka/pull/10795/commits/c5e13feea88a84052b177243767baae269ee84f4)
-
-Fix version：3.0.0
-
-Regression testing path：Archive/Kafka/Kafka-12866/kafka-3.0.0-src/fix/
-

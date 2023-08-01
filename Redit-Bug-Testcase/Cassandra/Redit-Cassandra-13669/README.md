@@ -60,7 +60,7 @@ org.apache.cassandra.serializers.MarshalException: Unable to make UUID from 'aa'
 
 ### Testcase
 
-Reproduced version：3.9
+Reproduced version：3.11.3 (patch rollback)
 
 Steps to reproduce：
 1. Create a client connection cluster, create a key space, column cluster, index and insert test data.

@@ -35,12 +35,3 @@ Steps to reproduce：
 3. However, the exception No name server address is thrown when sending the message.
 4. We want to verify when the producer starts: name server address and web server address should be specified at least one.
 
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/rocketmq/pull/144/commits](https://github.com/apache/rocketmq/pull/144/commits)
-
-Fix version：4.1.0-incubating
-
-Regression testing path：Archive/Rocketmq/Rocketmq-257/rocketmq-all-4.1.0-incubating-src/fix/

@@ -2,7 +2,7 @@
 
 ### Details
 
-Title: ***Offset store is null after consumer clients start()***
+Title: ***Misleading tip on consumeTimestamp and wrong consumeTimestamp exception message***
 
 JIRA link：[https://issues.apache.org/jira/browse/ROCKETMQ-189](https://issues.apache.org/jira/browse/ROCKETMQ-189)
 
@@ -40,13 +40,3 @@ See http://rocketmq.apache.org/docs/faq/ for further details.
 	at org.apache.rocketmq.client.impl.consumer.DefaultMQPushConsumerImpl.checkConfig(DefaultMQPushConsumerImpl.java:659)
 	...
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/rocketmq/pull/97/commits](https://github.com/apache/rocketmq/pull/97/commits)
-
-Fix version：4.0.0-incubating
-
-Regression testing path：Archive/Rocketmq/Rocketmq-189/rocketmq-all-4.0.0-incubating-src/fix/

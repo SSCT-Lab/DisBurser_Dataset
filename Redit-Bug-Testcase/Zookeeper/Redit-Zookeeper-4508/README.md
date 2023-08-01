@@ -20,7 +20,7 @@ The observable behavior is that client will not get expired event from watcher. 
 
 ### Testcase
 
-Reproduced version：4.0.0-incubating
+Reproduced version：3.7.1
 
 Steps to reproduce：
 1. Start zookeeper in a three-node cluster. 
@@ -45,11 +45,3 @@ Caused by: java.nio.channels.NotYetConnectedException: null
 	at sun.nio.ch.SocketAdaptor.shutdownOutput(SocketAdaptor.java:423)
 	... 4 common frames omitted
 ```
-
-### Patch 
-
-Status：Someone submitted but not resolved
-
-Link：[https://github.com/apache/zookeeper/pull/1847/commits/905d56a53fc8b900ba0c3bc2baf395390a4db328](https://github.com/apache/zookeeper/pull/1847/commits/905d56a53fc8b900ba0c3bc2baf395390a4db328)
-
-

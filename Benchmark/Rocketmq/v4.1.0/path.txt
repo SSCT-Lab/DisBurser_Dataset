@@ -1,0 +1,6 @@
+client/src/main/java/org/apache/rocketmq/client/impl/consumer/DefaultMQPullConsumerImpl.java
+client/src/main/java/org/apache/rocketmq/client/impl/factory/MQClientInstance.java
+common/src/main/java/org/apache/rocketmq/common/MixAll.java
+client/src/main/java/org/apache/rocketmq/client/impl/consumer/DefaultMQPushConsumerImpl.java
+
+

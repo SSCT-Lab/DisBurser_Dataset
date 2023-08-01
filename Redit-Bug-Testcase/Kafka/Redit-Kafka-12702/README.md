@@ -64,13 +64,3 @@ advertised.listeners=PLAINTEXT://:9092
 java.lang.NullPointerException
 	at org.apache.kafka.common.message.BrokerRegistrationRequestData$Listener.addSize(BrokerRegistrationRequestData.java:515)
 ```
-
-### Patch 
-
-Status：Available
-
-Link：[https://github.com/apache/kafka/pull/10586/commits](https://github.com/apache/kafka/pull/10586/commits)
-
-Fix version：2.8.0
-
-Regression testing path：Archive/Kafka/Kafka-12702/kafka-2.8.0-src/fix/
