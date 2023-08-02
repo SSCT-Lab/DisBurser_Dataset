@@ -1,0 +1,8 @@
+https://github.com/elastic/elasticsearch/pull/6686/files:
+src/main/java/org/elasticsearch/discovery/zen/fd/MasterFaultDetection.java
+src/main/java/org/elasticsearch/discovery/zen/fd/NodesFaultDetection.java
+
+https://github.com/elastic/elasticsearch/pull/7210/files:
+pom.xml
+src/main/java/org/elasticsearch/common/compress/lzf/LZFCompressedStreamOutput.java
+src/main/java/org/elasticsearch/common/compress/lzf/LZFCompressor.java

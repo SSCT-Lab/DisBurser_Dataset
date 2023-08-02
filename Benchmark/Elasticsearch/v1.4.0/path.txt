@@ -1,0 +1,6 @@
+https://github.com/elastic/elasticsearch/pull/7580/files:
+src/main/java/org/elasticsearch/bootstrap/Bootstrap.java
+src/main/java/org/elasticsearch/bootstrap/JVMCheck.java
+
+https://github.com/elastic/elasticsearch/pull/9541/files:
+src/main/java/org/elasticsearch/discovery/zen/ZenDiscovery.java
