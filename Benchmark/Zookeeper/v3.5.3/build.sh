@@ -1,6 +1,7 @@
 #!/bin/bash
 
-def=-D'ZK_2355'
+def1=-D'ZK_2355'
+def2=-D'ZK_3531'
 cFile=inject.c
 exeFile=inject
 srcName=zookeeper-3.5.3-src
@@ -8,7 +9,7 @@ tar=zookeeper-3.5.3-beta.tar.gz
 
 if [ -f $cFile ]
 then
-    gcc $def $cFile -o $exeFile
+    gcc $def1 $def2 $cFile -o $exeFile
     echo "gcc compile success"
     ./$exeFile
 else

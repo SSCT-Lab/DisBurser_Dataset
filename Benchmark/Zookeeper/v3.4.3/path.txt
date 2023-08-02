@@ -1,0 +1,9 @@
+https://issues.apache.org/jira/secure/attachment/12518759/ZOOKEEPER-1419.patch:
+src/java/main/org/apache/zookeeper/server/quorum/FastLeaderElection.java
+
+https://issues.apache.org/jira/secure/attachment/12536180/ZOOKEEPER-1489_br34.patch:
+src/java/main/org/apache/zookeeper/server/ZKDatabase.java
+src/java/main/org/apache/zookeeper/server/persistence/FileTxnSnapLog.java
+
+https://issues.apache.org/jira/secure/attachment/12837140/ZOOKEEPER-1621.2.patch:
+src/java/main/org/apache/zookeeper/server/persistence/FileTxnLog.java

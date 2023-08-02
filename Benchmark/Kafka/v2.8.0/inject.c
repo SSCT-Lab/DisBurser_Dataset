@@ -57,4 +57,17 @@ int main()
     system("cp ./fixed/ZooKeeperClient.scala ./kafka-2.8.0-src/core/src/main/scala/kafka/zookeeper/");
     printf("don't inject KA_13407 ...\n");
 #endif
+
+
+#ifdef KA_13310
+    system("cp ./buggy/AbstractCoordinator.java ./kafka-2.8.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./buggy/ConsumerCoordinator.java ./kafka-2.8.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./buggy/WorkerCoordinator.java ./kafka-2.8.0-src/connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/");
+    printf("inject KA_13310 ...\n");
+#else
+    system("cp ./fixed/AbstractCoordinator.java ./kafka-2.8.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./fixed/ConsumerCoordinator.java ./kafka-2.8.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./fixed/WorkerCoordinator.java ./kafka-2.8.0-src/connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/");
+    printf("don't inject KA_13310 ...\n");
+#endif
 }

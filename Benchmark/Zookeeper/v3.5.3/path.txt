@@ -1,1 +1,4 @@
 src/java/main/org/apache/zookeeper/server/quorum/Learner.java
+
+https://issues.apache.org/jira/secure/attachment/12979174/fix.patch:
+src/java/main/org/apache/zookeeper/server/ReferenceCountedACLCache.java

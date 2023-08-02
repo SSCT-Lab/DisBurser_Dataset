@@ -3,3 +3,7 @@ core/src/main/scala/kafka/server/BrokerServer.scala
 https://github.com/apache/kafka/pull/11563/files:
 core/src/main/scala/kafka/zookeeper/ZooKeeperClient.scala
 
+https://github.com/apache/kafka/pull/11340/files:
+clients/src/main/java/org/apache/kafka/clients/consumer/internals/AbstractCoordinator.java
+clients/src/main/java/org/apache/kafka/clients/consumer/internals/ConsumerCoordinator.java
+connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.java

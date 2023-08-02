@@ -1,2 +1,9 @@
 core/src/main/scala/kafka/admin/AclCommand.scala
 
+https://github.com/apache/kafka/pull/12349/files:
+clients/src/main/java/org/apache/kafka/clients/consumer/internals/AbstractCoordinator.java
+clients/src/main/java/org/apache/kafka/clients/consumer/internals/ConsumerCoordinator.java
+connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.java
+
+https://github.com/apache/kafka/pull/13367/files:
+connect/mirror/src/main/java/org/apache/kafka/connect/mirror/MirrorSourceTask.java

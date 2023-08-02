@@ -1,0 +1,8 @@
+https://issues.apache.org/jira/secure/attachment/12675054/ZOOKEEPER-2052-v5.patch:
+src/java/main/org/apache/zookeeper/server/PrepRequestProcessor.java
+
+https://issues.apache.org/jira/secure/attachment/12739562/ZOOKEEPER-2212-v3.patch:
+src/java/main/org/apache/zookeeper/server/quorum/FastLeaderElection.java
+
+https://issues.apache.org/jira/secure/attachment/12773091/ZOOKEEPER-2323-01.patch:
+src/java/main/org/apache/zookeeper/client/ZooKeeperSaslClient.java

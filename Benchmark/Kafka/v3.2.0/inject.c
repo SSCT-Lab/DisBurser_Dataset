@@ -77,4 +77,26 @@ int main()
     system("cp ./fixed/AclCommand.scala ./kafka-3.2.0-src/core/src/main/scala/kafka/admin/");
     printf("don't inject KA_13852 ...\n");
 #endif
+
+
+#ifdef KA_14024
+    system("cp ./buggy/AbstractCoordinator.java ./kafka-3.2.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./buggy/ConsumerCoordinator.java ./kafka-3.2.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./buggy/WorkerCoordinator.java ./kafka-3.2.0-src/connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/");
+    printf("inject KA_14024 ...\n");
+#else
+    system("cp ./fixed/AbstractCoordinator.java ./kafka-3.2.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./fixed/ConsumerCoordinator.java ./kafka-3.2.0-src/clients/src/main/java/org/apache/kafka/clients/consumer/internals/");
+    system("cp ./fixed/WorkerCoordinator.java ./kafka-3.2.0-src/connect/runtime/src/main/java/org/apache/kafka/connect/runtime/distributed/");
+    printf("don't inject KA_14024 ...\n");
+#endif
+
+
+#ifdef KA_14797
+    system("cp ./buggy/MirrorSourceTask.java ./kafka-3.2.0-src/connect/mirror/src/main/java/org/apache/kafka/connect/mirror/");
+    printf("inject KA_14797 ...\n");
+#else
+    system("cp ./fixed/MirrorSourceTask.java ./kafka-3.2.0-src/connect/mirror/src/main/java/org/apache/kafka/connect/mirror/");
+    printf("don't inject KA_14797 ...\n");
+#endif
 }
