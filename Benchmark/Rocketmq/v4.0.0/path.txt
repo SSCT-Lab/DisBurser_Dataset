@@ -2,3 +2,8 @@ client/src/main/java/org/apache/rocketmq/client/impl/consumer/DefaultMQPushConsu
 client/src/main/java/org/apache/rocketmq/client/impl/consumer/RebalancePushImpl.java
 common/src/main/java/org/apache/rocketmq/common/UtilAll.java
 
+https://github.com/apache/rocketmq/commit/15af63e:
+client/src/main/java/org/apache/rocketmq/client/impl/factory/MQClientInstance.java
+
+https://github.com/apache/rocketmq/pull/189/files:
+store/src/main/java/org/apache/rocketmq/store/MappedFileQueue.java

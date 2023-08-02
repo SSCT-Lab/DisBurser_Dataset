@@ -1,0 +1,11 @@
+https://github.com/apache/kafka/pull/6066/files:
+clients/src/main/java/org/apache/kafka/clients/producer/KafkaProducer.java
+clients/src/main/java/org/apache/kafka/clients/producer/internals/TransactionManager.java
+clients/src/main/java/org/apache/kafka/clients/producer/internals/TransactionalRequestResult.java
+
+https://github.com/apache/kafka/pull/6283:
+clients/src/main/java/org/apache/kafka/clients/consumer/MockConsumer.java
+connect/runtime/src/main/java/org/apache/kafka/connect/util/KafkaBasedLog.java
+
+https://github.com/apache/kafka/pull/7870/files:
+core/src/main/scala/kafka/server/DynamicBrokerConfig.scala

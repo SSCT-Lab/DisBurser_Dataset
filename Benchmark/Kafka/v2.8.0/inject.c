@@ -48,4 +48,13 @@ int main()
     system("cp ./fixed/BrokerServer.scala ./kafka-2.8.0-src/core/src/main/scala/kafka/server/");
     printf("don't inject KA_12702 ...\n");
 #endif
+
+
+#ifdef KA_13407
+    system("cp ./buggy/ZooKeeperClient.scala ./kafka-2.8.0-src/core/src/main/scala/kafka/zookeeper/");
+    printf("inject KA_13407 ...\n");
+#else
+    system("cp ./fixed/ZooKeeperClient.scala ./kafka-2.8.0-src/core/src/main/scala/kafka/zookeeper/");
+    printf("don't inject KA_13407 ...\n");
+#endif
 }

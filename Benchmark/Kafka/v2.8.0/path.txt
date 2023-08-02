@@ -1,2 +1,5 @@
 core/src/main/scala/kafka/server/BrokerServer.scala
 
+https://github.com/apache/kafka/pull/11563/files:
+core/src/main/scala/kafka/zookeeper/ZooKeeperClient.scala
+

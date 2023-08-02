@@ -3,3 +3,6 @@ activemq-broker/src/main/java/org/apache/activemq/broker/TransportConnection.jav
 
 https://github.com/apache/activemq/commit/748ade7:
 activemq-broker/src/main/java/org/apache/activemq/broker/jmx/AnnotatedMBean.java
+
+https://github.com/apache/activemq/commit/1d8ae31:
+activemq-broker/src/main/java/org/apache/activemq/plugin/SubQueueSelectorCacheBroker.java

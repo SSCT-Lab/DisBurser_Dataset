@@ -1,6 +1,7 @@
 #!/bin/bash
 
-def=-D'KA_12702'
+def1=-D'KA_12702'
+def2=-D'KA_13407'
 cFile=inject.c
 exeFile=inject
 srcName=kafka-2.8.0-src
@@ -10,7 +11,7 @@ tar=kafka_2.13-2.8.0.tar.gz
 
 if [ -f $cFile ]
 then
-    gcc $def $cFile -o $exeFile
+    gcc $def1 $def2 $cFile -o $exeFile
     echo "gcc compile success"
     ./$exeFile
 else

@@ -120,4 +120,22 @@ int main()
     system("cp ./fixed/UtilAll.java ./rocketmq-all-4.0.0-incubating-src/common/src/main/java/org/apache/rocketmq/common/");
     printf("don't inject RMQ_189 ...\n");
 #endif
+
+
+#ifdef RMQ_153
+    system("cp ./buggy/MQClientInstance.java ./rocketmq-all-4.0.0-incubating-src/client/src/main/java/org/apache/rocketmq/client/impl/factory/");
+    printf("inject RMQ_153 ...\n");
+#else
+    system("cp ./fixed/MQClientInstance.java ./rocketmq-all-4.0.0-incubating-src/client/src/main/java/org/apache/rocketmq/client/impl/factory/");
+    printf("don't inject RMQ_153 ...\n");
+#endif
+
+
+#ifdef RMQ_270
+    system("cp ./buggy/MappedFileQueue.java ./rocketmq-all-4.0.0-incubating-src/store/src/main/java/org/apache/rocketmq/store/");
+    printf("inject RMQ_270 ...\n");
+#else
+    system("cp ./fixed/MappedFileQueue.java ./rocketmq-all-4.0.0-incubating-src/store/src/main/java/org/apache/rocketmq/store/");
+    printf("don't inject RMQ_270 ...\n");
+#endif
 }
